@@ -5,3 +5,5 @@
 *env/
 # ignore app.db
 app.db
+# migrations folder
+migrations/
