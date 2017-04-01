@@ -23,12 +23,29 @@ class User(db.Model):
     password_hash = db.Column(db.String(255), nullable=False)
     registered_on = db.Column(db.DateTime, nullable=False)
 
+
     def __init__(self, email, username, password):
         self.email = email
         self.username = username
         self.password_hash = flask_bcrypt.generate_password_hash(password, app.config.get('BCRYPT_LOG_ROUNDS')).decode()
         now = datetime.datetime.now()
         self.registered_on = now
+
+class Friendship(db.Model):
+    user1_id = db.Column(db.Integer, nullable=False)
+    user2_id = db.Column(db.Integer, nullable=False)    
+
+    def __init__(user1_id, user2_id):
+        self.user1_id = user1_id
+        self.user2_id = user2_id
+
+class FriendRequest(db.Model):
+    user1_id = db.Column(db.Integer, nullable=False)
+    user2_id = db.Column(db.Integer, nullable=False)    
+
+    def __init__(user1_id, user2_id):
+        self.user1_id = user1_id
+        self.user2_id = user2_id 
 
 
 
