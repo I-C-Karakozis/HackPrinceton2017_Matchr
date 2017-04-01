@@ -1,2 +1,9 @@
+# exclude .pyc, ~ files
+*.pyc
+*~
 # ignore virtual env
 *env/
+# ignore app.db
+app.db
+# migrations folder
+migrations/
