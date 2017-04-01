@@ -4,14 +4,31 @@ from app import app, db, flask_bcrypt
 
 class Match(db.Model):
     match_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    creator_facebook_id = db.Column(db.String, nullable=False)
-    target1_facebook_id = db.Column(db.String, nullable=False)
-    target2_facebook_id = db.Column(db.String, nullable=False)
+    creator_id = db.Column(db.Integer, nullable=False)
+    target1_id = db.Column(db.Integer, nullable=False)
+    target2_id = db.Column(db.Integer, nullable=False)
     matched_on = db.Column(db.DateTime, nullable=False)
 
     def __init__(creator_id, u1_id, u2_id):
-        self.creator_facebook_id = creator_id
-        self.target1_facebook_id = u1_id
-        self.target2_facebook_id = u2_id
+        self.creator_id = creator_id
+        self.target1_id = u1_id
+        self.target2_id = u2_id
         now = datetime.datetime.now()
         self.matched_on = now
+
+class User(db.Model):
+    user_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    username = db.Column(db.String(255), nullable=False)
+    email = db.Column(db.String(255), unique=True, nullable=False)
+    password_hash = db.Column(db.String(255), nullable=False)
+    registered_on = db.Column(db.DateTime, nullable=False)
+
+    def __init__(self, email, username, password):
+        self.email = email
+        self.username = username
+        self.password_hash = flask_bcrypt.generate_password_hash(password, app.config.get('BCRYPT_LOG_ROUNDS')).decode()
+        now = datetime.datetime.now()
+        self.registered_on = now
+
+
+
