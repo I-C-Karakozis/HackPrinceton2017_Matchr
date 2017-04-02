@@ -20,5 +20,7 @@
 		<Button Text="Prev" Clicked="{previousFriend(friend2)}"/>
 
 		<Button Text="Match" Clicked="{matchFriends}"/>
+
+		<Text Value="{status}"/>
 	</StackPanel>
 </Page>
