@@ -13,5 +13,6 @@ public partial class TitleText: Fuse.Controls.Text
     {
         this.TextAlignment = Fuse.Controls.TextAlignment.Center;
         this.Color = float4(1f, 1f, 1f, 1f);
+        this.Font = global::HomePage.Comfortaa;
     }
 }

@@ -1,6 +1,7 @@
 <Page ux:Class="SignUpPage">
+    
 	<Router ux:Dependency="router" />
-
+    <Image Layer="Background" File="balloon.jpg" StretchMode="UniformToFill" Opacity="0.9" ContentAlignment="Center"/>
 	<JavaScript File="SignUpPage.js" />
 
 	<Panel>
@@ -17,7 +18,7 @@
 
 <!-- Example usage -->
 		<StackPanel Margin="10" ItemSpacing="10" Alignment="VerticalCenter">
-            <Text Value="Sign Up" FontSize="25" Alignment="HorizontalCenter" Padding="10" />
+            <Text Font="Comfortaa" Value="Sign Up" FontSize="25" Alignment="HorizontalCenter" Padding="10" />
     		<MyTextInput PlaceholderText="Email Address" Value="{email}" InputHint="Email" ActionStyle="Next" />
     		<MyTextInput PlaceholderText="Username" Value="{username}" ActionStyle="Next"/>
     		<MyTextInput PlaceholderText="Password" Value="{passwd}" IsPassword="true" ActionStyle="Next"/>

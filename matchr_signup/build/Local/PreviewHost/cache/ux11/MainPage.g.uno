@@ -50,7 +50,7 @@ public partial class MainPage: Fuse.Controls.Page
         var temp13 = new Tab();
         var temp14 = new Fuse.Gestures.Clicked();
         var temp15 = new Fuse.Triggers.Actions.Set<Fuse.Visual>(navigation_Active_inst);
-        var temp16 = new Fuse.Drawing.StaticSolidColor(float4(0.7411765f, 0.7647059f, 0.7803922f, 1f));
+        var temp16 = new Fuse.Drawing.StaticSolidColor(float4(0.8705882f, 0.7254902f, 0.7098039f, 1f));
         page1 = new Fuse.Controls.Page();
         var temp17 = new Fuse.Navigation.WhileActive();
         var temp18 = new Fuse.Triggers.Actions.Set<Fuse.Elements.Element>(indicator_Element_LayoutMaster_inst);
@@ -73,7 +73,7 @@ public partial class MainPage: Fuse.Controls.Page
         var temp32 = new Fuse.Triggers.Actions.Set<Fuse.Elements.Element>(indicator_Element_LayoutMaster_inst);
         var temp33 = new profilePage();
         var temp34 = new Fuse.Drawing.StaticSolidColor(float4(0.9490196f, 0.945098f, 0.9372549f, 1f));
-        var temp35 = new Fuse.Drawing.StaticSolidColor(float4(0.2f, 0.2f, 0.2f, 1f));
+        var temp35 = new Fuse.Drawing.StaticSolidColor(float4(1f, 1f, 1f, 1f));
         indicator.Color = float4(0.4235294f, 0.4784314f, 0.5372549f, 1f);
         indicator.Height = new Uno.UX.Size(4f, Uno.UX.Unit.Unspecified);
         indicator.Alignment = Fuse.Elements.Alignment.Bottom;

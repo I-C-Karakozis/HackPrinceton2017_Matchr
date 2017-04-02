@@ -32,11 +32,12 @@ public partial class Tab: Fuse.Controls.Panel
         temp_Value_inst = new matchr_signup_FuseControlsTextControl_Value_Property(temp, __selector0);
         this_Text_inst = new matchr_signup_Tab_Text_Property(this, __selector1);
         var temp1 = new Fuse.Reactive.ReadPropertyBinding(temp_Value_inst, this_Text_inst);
-        var temp2 = new Fuse.Drawing.StaticSolidColor(float4(0.7411765f, 0.7647059f, 0.7803922f, 1f));
+        var temp2 = new Fuse.Drawing.StaticSolidColor(float4(0.9333333f, 0.9333333f, 0.9333333f, 1f));
         this.Margin = float4(0f, 0f, 0f, 4f);
         this.ClipToBounds = false;
-        temp.Color = float4(1f, 1f, 1f, 1f);
+        temp.Color = float4(0f, 0f, 0f, 1f);
         temp.Alignment = Fuse.Elements.Alignment.Center;
+        temp.Font = global::HomePage.Comfortaa;
         temp.Bindings.Add(temp1);
         this.Background = temp2;
         this.Children.Add(temp);

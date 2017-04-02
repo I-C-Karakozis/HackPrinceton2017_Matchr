@@ -13,5 +13,6 @@ public partial class BodyText: Fuse.Controls.Text
     {
         this.TextWrapping = Fuse.Controls.TextWrapping.Wrap;
         this.Color = float4(0.2078431f, 0.3333333f, 0.4f, 1f);
+        this.Font = global::HomePage.Comfortaa;
     }
 }

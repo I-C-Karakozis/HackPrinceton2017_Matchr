@@ -1,12 +1,93 @@
 [Uno.Compiler.UxGenerated]
 public partial class MainView: Fuse.App
 {
-    global::Uno.UX.Property<string> temp_Value_inst;
-    global::Uno.UX.Property<string> temp1_Value_inst;
-    global::Uno.UX.Property<string> temp2_Value_inst;
-    global::Uno.UX.Property<string> temp3_Value_inst;
-    internal Fuse.Controls.Panel transitionScaleGuide;
-    internal Fuse.Reactive.EventBinding temp_eb0;
+    [Uno.Compiler.UxGenerated]
+    public partial class Template: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template(MainView parent, MainView parentInstance): base("home", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template()
+        {
+        }
+        public override object New()
+        {
+            var self = new HomePage(__parent.router);
+            self.Name = __selector0;
+            return self;
+        }
+        static global::Uno.UX.Selector __selector0 = "home";
+    }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template1: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template1(MainView parent, MainView parentInstance): base("signuppage", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template1()
+        {
+        }
+        public override object New()
+        {
+            var self = new SignUpPage(__parent.router);
+            self.Name = __selector0;
+            return self;
+        }
+        static global::Uno.UX.Selector __selector0 = "signuppage";
+    }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template2: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template2(MainView parent, MainView parentInstance): base("signinpage", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template2()
+        {
+        }
+        public override object New()
+        {
+            var self = new SignInPage(__parent.router);
+            self.Name = __selector0;
+            return self;
+        }
+        static global::Uno.UX.Selector __selector0 = "signinpage";
+    }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template3: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template3(MainView parent, MainView parentInstance): base("mainpage", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template3()
+        {
+        }
+        public override object New()
+        {
+            var self = new MainPage(__parent.router);
+            self.Name = __selector0;
+            return self;
+        }
+        static global::Uno.UX.Selector __selector0 = "mainpage";
+    }
+    internal Fuse.Navigation.Router router;
+    [global::Uno.UX.UXGlobalResource("MainView/Comfortaa")] public static readonly Fuse.Font MainViewComfortaa;
+    [global::Uno.UX.UXGlobalResource("MainView/ComfortaaBold")] public static readonly Fuse.Font MainViewComfortaaBold;
     static MainView()
     {
         global::Uno.UX.Resource.SetGlobalKey(Fuse.Animations.Easing.Linear, "Linear");
@@ -105,6 +186,14 @@ public partial class MainView: Fuse.App
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.ParentSize, "ParentSize");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.Width, "Width");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.Height, "Height");
+        global::Uno.UX.Resource.SetGlobalKey(MainView.MainViewComfortaa, "MainView/Comfortaa");
+        global::Uno.UX.Resource.SetGlobalKey(MainView.MainViewComfortaaBold, "MainView/ComfortaaBold");
+        global::Uno.UX.Resource.SetGlobalKey(HomePage.Comfortaa, "Comfortaa");
+        global::Uno.UX.Resource.SetGlobalKey(HomePage.ComfortaaBold, "ComfortaaBold");
+        MainViewComfortaa = new Fuse.Font(new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../Pages/Comfortaa Regular.ttf")));
+        MainViewComfortaaBold = new Fuse.Font(new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../Pages/Comfortaa Bold.ttf")));
+        global::Uno.UX.Resource.SetGlobalKey(MainViewComfortaa, "MainView/Comfortaa");
+        global::Uno.UX.Resource.SetGlobalKey(MainViewComfortaaBold, "MainView/ComfortaaBold");
     }
     [global::Uno.UX.UXConstructor]
     public MainView()
@@ -113,80 +202,38 @@ public partial class MainView: Fuse.App
     }
     void InitializeUX()
     {
-        var temp4 = new Fuse.Reactive.FuseJS.DiagnosticsImplModule();
-        var temp5 = new Fuse.Reactive.FuseJS.Http();
-        var temp6 = new Fuse.Reactive.FuseJS.TimerModule();
-        var temp7 = new Fuse.Drawing.BrushConverter();
-        var temp8 = new Fuse.Triggers.BusyTaskModule();
-        var temp9 = new Fuse.FileSystem.FileSystemModule();
-        var temp10 = new Fuse.Storage.StorageModule();
-        var temp11 = new Fuse.WebSocket.WebSocketClientModule();
-        var temp12 = new Polyfills.Window.WindowModule();
-        var temp13 = new FuseJS.Globals();
-        var temp14 = new FuseJS.Lifecycle();
-        var temp15 = new FuseJS.Environment();
-        var temp16 = new FuseJS.Base64();
-        var temp17 = new FuseJS.Bundle();
-        var temp18 = new FuseJS.FileReaderImpl();
-        var temp19 = new FuseJS.UserEvents();
-        var temp = new MyTextInput();
-        temp_Value_inst = new matchr_signup_FuseControlsTextInputControl_Value_Property(temp, __selector0);
-        var temp1 = new MyTextInput();
-        temp1_Value_inst = new matchr_signup_FuseControlsTextInputControl_Value_Property(temp1, __selector0);
-        var temp2 = new MyTextInput();
-        temp2_Value_inst = new matchr_signup_FuseControlsTextInputControl_Value_Property(temp2, __selector0);
-        var temp3 = new MyTextInput();
-        temp3_Value_inst = new matchr_signup_FuseControlsTextInputControl_Value_Property(temp3, __selector0);
-        var temp20 = new Fuse.Controls.Panel();
-        var temp21 = new Fuse.iOS.StatusBarConfig();
-        transitionScaleGuide = new Fuse.Controls.Panel();
-        var temp22 = new Fuse.Controls.StackPanel();
-        var temp23 = new Fuse.Reactive.DataBinding<string>(temp_Value_inst, "email");
-        var temp24 = new Fuse.Reactive.DataBinding<string>(temp1_Value_inst, "userid");
-        var temp25 = new Fuse.Reactive.DataBinding<string>(temp2_Value_inst, "passwd");
-        var temp26 = new Fuse.Reactive.DataBinding<string>(temp3_Value_inst, "repasswd");
-        var temp27 = new Fuse.Controls.NativeViewHost();
-        var temp28 = new Fuse.Controls.Button();
-        temp_eb0 = new Fuse.Reactive.EventBinding("signup");
-        temp20.Children.Add(temp21);
-        temp20.Children.Add(transitionScaleGuide);
-        temp20.Children.Add(temp22);
-        temp21.Style = Fuse.Platform.StatusBarStyle.Light;
-        transitionScaleGuide.Aspect = 1f;
-        transitionScaleGuide.HitTestMode = Fuse.Elements.HitTestMode.None;
-        transitionScaleGuide.Width = new Uno.UX.Size(500f, Uno.UX.Unit.Percent);
-        transitionScaleGuide.Height = new Uno.UX.Size(500f, Uno.UX.Unit.Percent);
-        transitionScaleGuide.Alignment = Fuse.Elements.Alignment.Center;
-        transitionScaleGuide.BoxSizing = Fuse.Elements.Element.BoxSizingMode.FillAspect;
-        transitionScaleGuide.Name = __selector1;
-        temp22.ItemSpacing = 10f;
-        temp22.Alignment = Fuse.Elements.Alignment.VerticalCenter;
-        temp22.Margin = float4(10f, 10f, 10f, 10f);
-        temp22.Children.Add(temp);
-        temp22.Children.Add(temp1);
-        temp22.Children.Add(temp2);
-        temp22.Children.Add(temp3);
-        temp22.Children.Add(temp27);
-        temp.PlaceholderText = "Email Address";
-        temp.ActionStyle = Fuse.Controls.TextInputActionStyle.Next;
-        temp.InputHint = Fuse.Controls.TextInputHint.Email;
-        temp.Bindings.Add(temp23);
-        temp1.PlaceholderText = "User ID";
-        temp1.ActionStyle = Fuse.Controls.TextInputActionStyle.Next;
-        temp1.Bindings.Add(temp24);
-        temp2.IsPassword = true;
-        temp2.PlaceholderText = "Password";
-        temp2.ActionStyle = Fuse.Controls.TextInputActionStyle.Next;
-        temp2.Bindings.Add(temp25);
-        temp3.IsPassword = true;
-        temp3.PlaceholderText = "Repeat password";
-        temp3.Bindings.Add(temp26);
-        temp27.Children.Add(temp28);
-        temp28.Text = "Sign Up";
-        global::Fuse.Gestures.Clicked.AddHandler(temp28, temp_eb0.OnEvent);
-        temp28.Bindings.Add(temp_eb0);
-        this.Children.Add(temp20);
+        var temp = new Fuse.Reactive.FuseJS.DiagnosticsImplModule();
+        var temp1 = new Fuse.Reactive.FuseJS.Http();
+        var temp2 = new Fuse.Reactive.FuseJS.TimerModule();
+        var temp3 = new Fuse.Drawing.BrushConverter();
+        var temp4 = new Fuse.Triggers.BusyTaskModule();
+        var temp5 = new Fuse.FileSystem.FileSystemModule();
+        var temp6 = new Fuse.Storage.StorageModule();
+        var temp7 = new Fuse.WebSocket.WebSocketClientModule();
+        var temp8 = new Polyfills.Window.WindowModule();
+        var temp9 = new FuseJS.Globals();
+        var temp10 = new FuseJS.Lifecycle();
+        var temp11 = new FuseJS.Environment();
+        var temp12 = new FuseJS.Base64();
+        var temp13 = new FuseJS.Bundle();
+        var temp14 = new FuseJS.FileReaderImpl();
+        var temp15 = new FuseJS.UserEvents();
+        router = new Fuse.Navigation.Router();
+        var temp16 = new Fuse.Controls.ClientPanel();
+        var temp17 = new Fuse.Controls.Navigator();
+        var home = new Template(this, this);
+        var signuppage = new Template1(this, this);
+        var signinpage = new Template2(this, this);
+        var mainpage = new Template3(this, this);
+        router.Name = __selector0;
+        temp16.Children.Add(temp17);
+        temp17.DefaultPath = "home";
+        temp17.Templates.Add(home);
+        temp17.Templates.Add(signuppage);
+        temp17.Templates.Add(signinpage);
+        temp17.Templates.Add(mainpage);
+        this.Children.Add(router);
+        this.Children.Add(temp16);
     }
-    static global::Uno.UX.Selector __selector0 = "Value";
-    static global::Uno.UX.Selector __selector1 = "transitionScaleGuide";
+    static global::Uno.UX.Selector __selector0 = "router";
 }

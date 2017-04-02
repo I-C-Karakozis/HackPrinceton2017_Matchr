@@ -208,7 +208,7 @@ public class GeneratedApplication
 : Outracks.Simulator.Application
 {
 public GeneratedApplication()
-: base(new [] {new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("127.0.0.1"), 12124), new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("10.9.239.60"), 12124)}, "/Users/hdc/matchr/matchrapp/HackPrinceton2017_Matchr/matchr_signup/matchr_signup.unoproj", GetBundle, new string[] { ""})
+: base(new [] {new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("127.0.0.1"), 12124), new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("10.9.239.60"), 12124)}, "/Users/hdc/Downloads/matchr_signup/matchr_signup.unoproj", GetBundle, new string[] { ""})
 {
 
 							if defined(CPLUSPLUS)

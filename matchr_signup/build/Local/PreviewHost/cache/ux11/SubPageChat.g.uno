@@ -66,8 +66,8 @@ public partial class SubPageChat: Fuse.Controls.Page
     global::Uno.UX.Property<string> temp1_Value_inst;
     global::Uno.UX.Property<object> temp2_Items_inst;
     global::Uno.UX.Property<string> temp3_Value_inst;
-    internal Fuse.Reactive.EventBinding temp_eb9;
-    internal Fuse.Reactive.EventBinding temp_eb10;
+    internal Fuse.Reactive.EventBinding temp_eb19;
+    internal Fuse.Reactive.EventBinding temp_eb20;
     global::Uno.UX.NameTable __g_nametable;
     static string[] __g_static_nametable = new string[] {
         "navBar"
@@ -101,9 +101,9 @@ public partial class SubPageChat: Fuse.Controls.Page
         var temp9 = new Fuse.Controls.Rectangle();
         var temp10 = new Fuse.Drawing.StaticSolidColor(float4(0f, 0f, 0f, 1f));
         var temp11 = new Fuse.Reactive.DataBinding<bool>(temp_IsEnabled_inst, "canSendMessage");
-        temp_eb9 = new Fuse.Reactive.EventBinding("sendMessage");
+        temp_eb19 = new Fuse.Reactive.EventBinding("sendMessage");
         var temp12 = new Fuse.Reactive.DataBinding<string>(temp1_Value_inst, "message");
-        temp_eb10 = new Fuse.Reactive.EventBinding("sendMessage");
+        temp_eb20 = new Fuse.Reactive.EventBinding("sendMessage");
         var temp13 = new Fuse.Controls.ScrollView();
         var temp14 = new Fuse.Controls.StackPanel();
         var temp15 = new Template(this, this);
@@ -138,17 +138,17 @@ public partial class SubPageChat: Fuse.Controls.Page
         temp.Text = "Send";
         temp.Margin = float4(10f, 0f, 0f, 0f);
         global::Fuse.Controls.DockPanel.SetDock(temp, Fuse.Layouts.Dock.Right);
-        global::Fuse.Gestures.Clicked.AddHandler(temp, temp_eb9.OnEvent);
+        global::Fuse.Gestures.Clicked.AddHandler(temp, temp_eb19.OnEvent);
         temp.Bindings.Add(temp11);
-        temp.Bindings.Add(temp_eb9);
+        temp.Bindings.Add(temp_eb19);
         temp1.PlaceholderText = "Send a message!";
         temp1.PlaceholderColor = float4(0f, 0f, 0f, 0f);
         temp1.ActionStyle = Fuse.Controls.TextInputActionStyle.Send;
         temp1.TextColor = Fuse.Drawing.Colors.Black;
         temp1.CaretColor = float4(0f, 0f, 0f, 0f);
-        temp1.ActionTriggered += temp_eb10.OnEvent;
+        temp1.ActionTriggered += temp_eb20.OnEvent;
         temp1.Bindings.Add(temp12);
-        temp1.Bindings.Add(temp_eb10);
+        temp1.Bindings.Add(temp_eb20);
         temp13.Children.Add(temp14);
         temp14.Alignment = Fuse.Elements.Alignment.Bottom;
         temp14.Children.Add(temp2);

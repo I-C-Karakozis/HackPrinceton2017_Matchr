@@ -59,9 +59,46 @@ namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Pr
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* OutracksSimulatorClientUno_OutracksSimulatorErrorToast_StrokeColor_Property_typeof();}
 namespace g{uClassType* UnoCore_bundle_typeof();}
 namespace g{uType* WeakDictionary_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct TextControl_type;}} ::g::Fuse::Controls::TextControl_type* BodyText_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* chatPage__Template__Template1_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* chatPage__Template_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* chatPage__Template1_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* chatPage_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* HomePage_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* MainPage_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template1_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template2_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template3_typeof();}
 namespace g{namespace Fuse{struct AppBase_type;} ::g::Fuse::AppBase_type* MainView_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* matchesPage__Template__Template1_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* matchesPage__Template_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* matchesPage__Template1_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* matchesPage_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* matchPage_typeof();}
+namespace g{uClassType* matchr_signup_bundle_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* matchr_signup_FuseControlsNavigationControl_Active_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* matchr_signup_FuseControlsTextControl_Value_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* matchr_signup_FuseControlsTextInputControl_Value_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* matchr_signup_FuseElementsElement_DockPanelDock_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* matchr_signup_FuseElementsElement_ElementLayoutMaster_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* matchr_signup_FuseElementsElement_Opacity_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* matchr_signup_FuseiOSStatusBarConfig_Style_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* matchr_signup_FuseReactiveEach_Items_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* matchr_signup_FuseVisual_IsEnabled_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* matchr_signup_Tab_Text_Property_typeof();}
 namespace g{namespace Fuse{namespace Controls{struct TextInput_type;}} ::g::Fuse::Controls::TextInput_type* MyTextInput_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct TextControl_type;}} ::g::Fuse::Controls::TextControl_type* NavBarTitle_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct TextControl_type;}} ::g::Fuse::Controls::TextControl_type* NavBarTitleChat_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* profilePage_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* SignInPage_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* SignUpPage_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* SubPage_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* SubPageChat__Template_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* SubPageChat_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Control_type;}} ::g::Fuse::Controls::Control_type* Tab_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct TextControl_type;}} ::g::Fuse::Controls::TextControl_type* TitleText_typeof();}
 namespace g{namespace OpenGL{uClassType* GL_typeof();}}
 namespace g{namespace OpenGL{uStructType* GLBufferHandle_typeof();}}
 namespace g{namespace OpenGL{uStructType* GLFramebufferHandle_typeof();}}
@@ -1965,9 +2002,46 @@ void uInitRtti()
         (uType*(*)())&::g::OutracksSimulatorClientUno_OutracksSimulatorErrorToast_StrokeColor_Property_typeof,
         (uType*(*)())&::g::UnoCore_bundle_typeof,
         (uType*(*)())&::g::WeakDictionary_typeof,
+        (uType*(*)())&::g::BodyText_typeof,
+        (uType*(*)())&::g::chatPage__Template__Template1_typeof,
+        (uType*(*)())&::g::chatPage__Template_typeof,
+        (uType*(*)())&::g::chatPage__Template1_typeof,
+        (uType*(*)())&::g::chatPage_typeof,
+        (uType*(*)())&::g::HomePage_typeof,
+        (uType*(*)())&::g::MainPage_typeof,
+        (uType*(*)())&::g::MainView__Template_typeof,
+        (uType*(*)())&::g::MainView__Template1_typeof,
+        (uType*(*)())&::g::MainView__Template2_typeof,
+        (uType*(*)())&::g::MainView__Template3_typeof,
         (uType*(*)())&::g::MainView_typeof,
+        (uType*(*)())&::g::matchesPage__Template__Template1_typeof,
+        (uType*(*)())&::g::matchesPage__Template_typeof,
+        (uType*(*)())&::g::matchesPage__Template1_typeof,
+        (uType*(*)())&::g::matchesPage_typeof,
+        (uType*(*)())&::g::matchPage_typeof,
+        (uType*(*)())&::g::matchr_signup_bundle_typeof,
+        (uType*(*)())&::g::matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property_typeof,
+        (uType*(*)())&::g::matchr_signup_FuseControlsNavigationControl_Active_Property_typeof,
+        (uType*(*)())&::g::matchr_signup_FuseControlsTextControl_Value_Property_typeof,
         (uType*(*)())&::g::matchr_signup_FuseControlsTextInputControl_Value_Property_typeof,
+        (uType*(*)())&::g::matchr_signup_FuseElementsElement_DockPanelDock_Property_typeof,
+        (uType*(*)())&::g::matchr_signup_FuseElementsElement_ElementLayoutMaster_Property_typeof,
+        (uType*(*)())&::g::matchr_signup_FuseElementsElement_Opacity_Property_typeof,
+        (uType*(*)())&::g::matchr_signup_FuseiOSStatusBarConfig_Style_Property_typeof,
+        (uType*(*)())&::g::matchr_signup_FuseReactiveEach_Items_Property_typeof,
+        (uType*(*)())&::g::matchr_signup_FuseVisual_IsEnabled_Property_typeof,
+        (uType*(*)())&::g::matchr_signup_Tab_Text_Property_typeof,
         (uType*(*)())&::g::MyTextInput_typeof,
+        (uType*(*)())&::g::NavBarTitle_typeof,
+        (uType*(*)())&::g::NavBarTitleChat_typeof,
+        (uType*(*)())&::g::profilePage_typeof,
+        (uType*(*)())&::g::SignInPage_typeof,
+        (uType*(*)())&::g::SignUpPage_typeof,
+        (uType*(*)())&::g::SubPage_typeof,
+        (uType*(*)())&::g::SubPageChat__Template_typeof,
+        (uType*(*)())&::g::SubPageChat_typeof,
+        (uType*(*)())&::g::Tab_typeof,
+        (uType*(*)())&::g::TitleText_typeof,
         (uType*(*)())&::g::OpenGL::GL_typeof,
         (uType*(*)())&::g::OpenGL::GLBufferHandle_typeof,
         (uType*(*)())&::g::OpenGL::GLFramebufferHandle_typeof,

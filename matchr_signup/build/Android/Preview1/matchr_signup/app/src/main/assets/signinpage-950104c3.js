@@ -11,6 +11,8 @@ function signin() {
  	var url = "127.0.0.1:8080";
  	var signupUrl = url + "/Users";
 
+ 	router.push("mainpage");
+
  	fetch(signupUrl, {
  		method: 'POST',
  		headers: { "Content-type": "application/json"},

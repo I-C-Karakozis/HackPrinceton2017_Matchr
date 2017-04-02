@@ -22,7 +22,7 @@ namespace g{
 namespace Fuse{
 namespace Controls{
 
-// public sealed class Page :2004
+// public class Page :2004
 // {
 ::g::Fuse::Controls::Control_type* Page_typeof();
 void Page__ctor_7_fn(Page* __this);

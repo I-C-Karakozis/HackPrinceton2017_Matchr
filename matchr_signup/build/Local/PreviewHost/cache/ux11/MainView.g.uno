@@ -86,6 +86,8 @@ public partial class MainView: Fuse.App
         static global::Uno.UX.Selector __selector0 = "mainpage";
     }
     internal Fuse.Navigation.Router router;
+    [global::Uno.UX.UXGlobalResource("MainView/Comfortaa")] public static readonly Fuse.Font MainViewComfortaa;
+    [global::Uno.UX.UXGlobalResource("MainView/ComfortaaBold")] public static readonly Fuse.Font MainViewComfortaaBold;
     static MainView()
     {
         global::Uno.UX.Resource.SetGlobalKey(Fuse.Animations.Easing.Linear, "Linear");
@@ -184,6 +186,14 @@ public partial class MainView: Fuse.App
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.ParentSize, "ParentSize");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.Width, "Width");
         global::Uno.UX.Resource.SetGlobalKey(Fuse.TranslationModes.Height, "Height");
+        global::Uno.UX.Resource.SetGlobalKey(MainView.MainViewComfortaa, "MainView/Comfortaa");
+        global::Uno.UX.Resource.SetGlobalKey(MainView.MainViewComfortaaBold, "MainView/ComfortaaBold");
+        global::Uno.UX.Resource.SetGlobalKey(HomePage.Comfortaa, "Comfortaa");
+        global::Uno.UX.Resource.SetGlobalKey(HomePage.ComfortaaBold, "ComfortaaBold");
+        MainViewComfortaa = new Fuse.Font(new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../Pages/Comfortaa Regular.ttf")));
+        MainViewComfortaaBold = new Fuse.Font(new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../../../Pages/Comfortaa Bold.ttf")));
+        global::Uno.UX.Resource.SetGlobalKey(MainViewComfortaa, "MainView/Comfortaa");
+        global::Uno.UX.Resource.SetGlobalKey(MainViewComfortaaBold, "MainView/ComfortaaBold");
     }
     [global::Uno.UX.UXConstructor]
     public MainView()

@@ -101,9 +101,46 @@ libs/$(ABI)/$(SONAME): .uno/BootstrapperImpl_Android.cpp.o
 libs/$(ABI)/$(SONAME): .uno/hb-ft-cached.cc.o
 libs/$(ABI)/$(SONAME): .uno/Source/pugixml.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.g.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.BodyText.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.chatPage.Template.Template1.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.chatPage.Template.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.chatPage.Template1.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.chatPage.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.HomePage.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.MainPage.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.MainView.Template.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.MainView.Template1.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.MainView.Template2.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.MainView.Template3.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.MainView.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchesPage.Template.Template1.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchesPage.Template.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchesPage.Template1.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchesPage.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchPage.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchr_signup_bundle.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchr_signup_FuseControlsTextControl_Value_Property.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchr_signup_FuseElementsElement_Opacity_Property.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchr_signup_FuseReactiveEach_Items_Property.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchr_signup_FuseVisual_IsEnabled_Property.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.matchr_signup_Tab_Text_Property.cpp.o
 libs/$(ABI)/$(SONAME): .uno/_root.MyTextInput.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.NavBarTitle.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.NavBarTitleChat.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.profilePage.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.SignInPage.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.SignUpPage.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.SubPage.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.SubPageChat.Template.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.SubPageChat.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.Tab.cpp.o
+libs/$(ABI)/$(SONAME): .uno/_root.TitleText.cpp.o
 libs/$(ABI)/$(SONAME): .uno/OpenGL.g.cpp.o
 libs/$(ABI)/$(SONAME): .uno/Uno.g.cpp.o
 libs/$(ABI)/$(SONAME): .uno/Uno.Collections.g.cpp.o
@@ -442,43 +479,325 @@ libs/$(ABI)/libV8Simple.so: /Users/hdc/Library/Application\ Support/Fusetools/Pa
 	echo _root.g.cpp
 	$(CXX) $(CXX_FLAGS) -o .uno/_root.g.cpp.o -c jni/_root.g.cpp
 
+.uno/_root.BodyText.cpp.o: include/_root.BodyText.h
+.uno/_root.BodyText.cpp.o: include/_root.HomePage.h
+.uno/_root.BodyText.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.BodyText.cpp.o: include/Fuse.Controls.TextWrapping.h
+.uno/_root.BodyText.cpp.o: include/Fuse.Font.h
+.uno/_root.BodyText.cpp.o: include/Uno.Float.h
+.uno/_root.BodyText.cpp.o: include/Uno.Float4.h
+.uno/_root.BodyText.cpp.o: jni/_root.BodyText.cpp flags.txt | .uno
+	echo _root.BodyText.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.BodyText.cpp.o -c jni/_root.BodyText.cpp
+
+.uno/_root.chatPage.Template.Template1.cpp.o: include/_root.chatPage.Template.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/_root.chatPage.Template.Template1.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/_root.HomePage.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/_root.matchr_signup_bundle.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/_root.matchr_signup_FuseControlsTextControl_Value_Property.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Binding.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Controls.Image.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Controls.Page.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Controls.Rectangle.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Controls.Shape.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Font.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Gestures.Clicked.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Gestures.ClickedHandler.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Layer.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Node.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Reactive.EventBinding.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Fuse.Visual.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.Bool.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.Collections.ICollection-1.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.Collections.IList-1.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.Float.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.Float4.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.IO.BundleFile.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.Object.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.String.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.UX.BundleFileSource.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.UX.FileSource.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.UX.Size.h
+.uno/_root.chatPage.Template.Template1.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.chatPage.Template.Template1.cpp.o: jni/_root.chatPage.Template.Template1.cpp flags.txt | .uno
+	echo _root.chatPage.Template.Template1.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.chatPage.Template.Template1.cpp.o -c jni/_root.chatPage.Template.Template1.cpp
+
+.uno/_root.chatPage.Template.cpp.o: include/_root.chatPage.h
+.uno/_root.chatPage.Template.cpp.o: include/_root.chatPage.Template.h
+.uno/_root.chatPage.Template.cpp.o: include/_root.chatPage.Template.Template1.h
+.uno/_root.chatPage.Template.cpp.o: include/_root.HomePage.h
+.uno/_root.chatPage.Template.cpp.o: include/_root.matchr_signup_FuseReactiveEach_Items_Property.h
+.uno/_root.chatPage.Template.cpp.o: include/_root.NavBarTitleChat.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.AlternateRoot.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Binding.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Controls.Page.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Controls.ScrollView.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Font.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Node.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Reactive.Each.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Reactive.Instantiator.h
+.uno/_root.chatPage.Template.cpp.o: include/Fuse.Visual.h
+.uno/_root.chatPage.Template.cpp.o: include/Uno.Bool.h
+.uno/_root.chatPage.Template.cpp.o: include/Uno.Collections.ICollection-1.h
+.uno/_root.chatPage.Template.cpp.o: include/Uno.Collections.IList-1.h
+.uno/_root.chatPage.Template.cpp.o: include/Uno.Float.h
+.uno/_root.chatPage.Template.cpp.o: include/Uno.Float4.h
+.uno/_root.chatPage.Template.cpp.o: include/Uno.Object.h
+.uno/_root.chatPage.Template.cpp.o: include/Uno.String.h
+.uno/_root.chatPage.Template.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.chatPage.Template.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.chatPage.Template.cpp.o: jni/_root.chatPage.Template.cpp flags.txt | .uno
+	echo _root.chatPage.Template.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.chatPage.Template.cpp.o -c jni/_root.chatPage.Template.cpp
+
+.uno/_root.chatPage.Template1.cpp.o: include/_root.chatPage.h
+.uno/_root.chatPage.Template1.cpp.o: include/_root.chatPage.Template1.h
+.uno/_root.chatPage.Template1.cpp.o: include/_root.SubPageChat.h
+.uno/_root.chatPage.Template1.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.chatPage.Template1.cpp.o: include/Fuse.Node.h
+.uno/_root.chatPage.Template1.cpp.o: include/Fuse.Visual.h
+.uno/_root.chatPage.Template1.cpp.o: include/Uno.Bool.h
+.uno/_root.chatPage.Template1.cpp.o: include/Uno.Object.h
+.uno/_root.chatPage.Template1.cpp.o: include/Uno.String.h
+.uno/_root.chatPage.Template1.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.chatPage.Template1.cpp.o: jni/_root.chatPage.Template1.cpp flags.txt | .uno
+	echo _root.chatPage.Template1.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.chatPage.Template1.cpp.o -c jni/_root.chatPage.Template1.cpp
+
+.uno/_root.chatPage.cpp.o: include/_root.chatPage.h
+.uno/_root.chatPage.cpp.o: include/_root.chatPage.Template.h
+.uno/_root.chatPage.cpp.o: include/_root.chatPage.Template1.h
+.uno/_root.chatPage.cpp.o: include/_root.matchr_signup_bundle.h
+.uno/_root.chatPage.cpp.o: include/_root.matchr_signup_FuseElementsElement_Opacity_Property.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Animations.Animator.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Animations.Change-1.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Animations.TrackAnimator.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Controls.BottomBarBackground.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Controls.Control.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Controls.Image.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Controls.Navigator.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Controls.StatusBarBackground.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Drawing.Brush.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Elements.HitTestMode.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Gestures.Clicked.h
+.uno/_root.chatPage.cpp.o: include/Fuse.iOS.StatusBarConfig.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Navigation.GoBack.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Navigation.Router.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Navigation.WhileCanGoBack.h
+.uno/_root.chatPage.cpp.o: include/Fuse.NodeGroupBase.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Platform.StatusBarStyle.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Reactive.JavaScript.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Triggers.Actions.TriggerAction.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Triggers.AddingAnimation.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Triggers.RemovingAnimation.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Triggers.Trigger.h
+.uno/_root.chatPage.cpp.o: include/Fuse.Visual.h
+.uno/_root.chatPage.cpp.o: include/Uno.Double.h
+.uno/_root.chatPage.cpp.o: include/Uno.Float.h
+.uno/_root.chatPage.cpp.o: include/Uno.Float4.h
+.uno/_root.chatPage.cpp.o: include/Uno.Int.h
+.uno/_root.chatPage.cpp.o: include/Uno.IO.BundleFile.h
+.uno/_root.chatPage.cpp.o: include/Uno.Object.h
+.uno/_root.chatPage.cpp.o: include/Uno.String.h
+.uno/_root.chatPage.cpp.o: include/Uno.UX.BundleFileSource.h
+.uno/_root.chatPage.cpp.o: include/Uno.UX.FileSource.h
+.uno/_root.chatPage.cpp.o: include/Uno.UX.NameTable.h
+.uno/_root.chatPage.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.chatPage.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.chatPage.cpp.o: include/Uno.UX.Size.h
+.uno/_root.chatPage.cpp.o: include/Uno.UX.Template.h
+.uno/_root.chatPage.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.chatPage.cpp.o: jni/_root.chatPage.cpp flags.txt | .uno
+	echo _root.chatPage.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.chatPage.cpp.o -c jni/_root.chatPage.cpp
+
+.uno/_root.HomePage.cpp.o: include/_root.HomePage.h
+.uno/_root.HomePage.cpp.o: include/_root.matchr_signup_bundle.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Controls.Button.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Controls.ButtonBase.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Controls.Image.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Controls.NativeViewHost.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Controls.ScrollView.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Elements.StretchMode.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Font.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Gestures.Clicked.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Gestures.ClickedHandler.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Layer.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Navigation.Router.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Reactive.EventBinding.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Reactive.JavaScript.h
+.uno/_root.HomePage.cpp.o: include/Fuse.Visual.h
+.uno/_root.HomePage.cpp.o: include/Uno.Float.h
+.uno/_root.HomePage.cpp.o: include/Uno.Float4.h
+.uno/_root.HomePage.cpp.o: include/Uno.Int.h
+.uno/_root.HomePage.cpp.o: include/Uno.IO.BundleFile.h
+.uno/_root.HomePage.cpp.o: include/Uno.Object.h
+.uno/_root.HomePage.cpp.o: include/Uno.String.h
+.uno/_root.HomePage.cpp.o: include/Uno.UX.BundleFileSource.h
+.uno/_root.HomePage.cpp.o: include/Uno.UX.FileSource.h
+.uno/_root.HomePage.cpp.o: include/Uno.UX.NameTable.h
+.uno/_root.HomePage.cpp.o: include/Uno.UX.Resource.h
+.uno/_root.HomePage.cpp.o: jni/_root.HomePage.cpp flags.txt | .uno
+	echo _root.HomePage.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.HomePage.cpp.o -c jni/_root.HomePage.cpp
+
+.uno/_root.MainPage.cpp.o: include/_root.chatPage.h
+.uno/_root.MainPage.cpp.o: include/_root.MainPage.h
+.uno/_root.MainPage.cpp.o: include/_root.matchesPage.h
+.uno/_root.MainPage.cpp.o: include/_root.matchPage.h
+.uno/_root.MainPage.cpp.o: include/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.h
+.uno/_root.MainPage.cpp.o: include/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.h
+.uno/_root.MainPage.cpp.o: include/_root.profilePage.h
+.uno/_root.MainPage.cpp.o: include/_root.Tab.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Animations.Animator.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Animations.Easing.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Animations.Move.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Animations.TrackAnimator.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Animations.TransformAnimator-1.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Controls.Control.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Controls.Grid.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Controls.LayoutControl.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Controls.NavigationControl.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Controls.PageControl.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Controls.Rectangle.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Controls.Shape.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Drawing.Brush.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Gestures.Clicked.h
+.uno/_root.MainPage.cpp.o: include/Fuse.ITranslationMode.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Navigation.Router.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Navigation.WhileActive.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Navigation.WhileNavigationTrigger.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Translation.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Triggers.Actions.Set-1.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Triggers.Actions.TriggerAction.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Triggers.LayoutAnimation.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Triggers.LayoutTransition.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Triggers.Trigger.h
+.uno/_root.MainPage.cpp.o: include/Fuse.Visual.h
+.uno/_root.MainPage.cpp.o: include/Uno.Double.h
+.uno/_root.MainPage.cpp.o: include/Uno.Float.h
+.uno/_root.MainPage.cpp.o: include/Uno.Float4.h
+.uno/_root.MainPage.cpp.o: include/Uno.Int.h
+.uno/_root.MainPage.cpp.o: include/Uno.String.h
+.uno/_root.MainPage.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.MainPage.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.MainPage.cpp.o: include/Uno.UX.Size.h
+.uno/_root.MainPage.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.MainPage.cpp.o: jni/_root.MainPage.cpp flags.txt | .uno
+	echo _root.MainPage.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.MainPage.cpp.o -c jni/_root.MainPage.cpp
+
+.uno/_root.MainView.Template.cpp.o: include/_root.HomePage.h
+.uno/_root.MainView.Template.cpp.o: include/_root.MainView.h
+.uno/_root.MainView.Template.cpp.o: include/_root.MainView.Template.h
+.uno/_root.MainView.Template.cpp.o: include/Fuse.Navigation.Router.h
+.uno/_root.MainView.Template.cpp.o: include/Fuse.Node.h
+.uno/_root.MainView.Template.cpp.o: include/Uno.Bool.h
+.uno/_root.MainView.Template.cpp.o: include/Uno.Object.h
+.uno/_root.MainView.Template.cpp.o: include/Uno.String.h
+.uno/_root.MainView.Template.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.MainView.Template.cpp.o: jni/_root.MainView.Template.cpp flags.txt | .uno
+	echo _root.MainView.Template.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.MainView.Template.cpp.o -c jni/_root.MainView.Template.cpp
+
+.uno/_root.MainView.Template1.cpp.o: include/_root.MainView.h
+.uno/_root.MainView.Template1.cpp.o: include/_root.MainView.Template1.h
+.uno/_root.MainView.Template1.cpp.o: include/_root.SignUpPage.h
+.uno/_root.MainView.Template1.cpp.o: include/Fuse.Navigation.Router.h
+.uno/_root.MainView.Template1.cpp.o: include/Fuse.Node.h
+.uno/_root.MainView.Template1.cpp.o: include/Uno.Bool.h
+.uno/_root.MainView.Template1.cpp.o: include/Uno.Object.h
+.uno/_root.MainView.Template1.cpp.o: include/Uno.String.h
+.uno/_root.MainView.Template1.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.MainView.Template1.cpp.o: jni/_root.MainView.Template1.cpp flags.txt | .uno
+	echo _root.MainView.Template1.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.MainView.Template1.cpp.o -c jni/_root.MainView.Template1.cpp
+
+.uno/_root.MainView.Template2.cpp.o: include/_root.MainView.h
+.uno/_root.MainView.Template2.cpp.o: include/_root.MainView.Template2.h
+.uno/_root.MainView.Template2.cpp.o: include/_root.SignInPage.h
+.uno/_root.MainView.Template2.cpp.o: include/Fuse.Navigation.Router.h
+.uno/_root.MainView.Template2.cpp.o: include/Fuse.Node.h
+.uno/_root.MainView.Template2.cpp.o: include/Uno.Bool.h
+.uno/_root.MainView.Template2.cpp.o: include/Uno.Object.h
+.uno/_root.MainView.Template2.cpp.o: include/Uno.String.h
+.uno/_root.MainView.Template2.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.MainView.Template2.cpp.o: jni/_root.MainView.Template2.cpp flags.txt | .uno
+	echo _root.MainView.Template2.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.MainView.Template2.cpp.o -c jni/_root.MainView.Template2.cpp
+
+.uno/_root.MainView.Template3.cpp.o: include/_root.MainPage.h
+.uno/_root.MainView.Template3.cpp.o: include/_root.MainView.h
+.uno/_root.MainView.Template3.cpp.o: include/_root.MainView.Template3.h
+.uno/_root.MainView.Template3.cpp.o: include/Fuse.Navigation.Router.h
+.uno/_root.MainView.Template3.cpp.o: include/Fuse.Node.h
+.uno/_root.MainView.Template3.cpp.o: include/Uno.Bool.h
+.uno/_root.MainView.Template3.cpp.o: include/Uno.Object.h
+.uno/_root.MainView.Template3.cpp.o: include/Uno.String.h
+.uno/_root.MainView.Template3.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.MainView.Template3.cpp.o: jni/_root.MainView.Template3.cpp flags.txt | .uno
+	echo _root.MainView.Template3.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.MainView.Template3.cpp.o -c jni/_root.MainView.Template3.cpp
+
+.uno/_root.MainView.cpp.o: include/_root.HomePage.h
 .uno/_root.MainView.cpp.o: include/_root.MainView.h
-.uno/_root.MainView.cpp.o: include/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.h
-.uno/_root.MainView.cpp.o: include/_root.MyTextInput.h
+.uno/_root.MainView.cpp.o: include/_root.MainView.Template.h
+.uno/_root.MainView.cpp.o: include/_root.MainView.Template1.h
+.uno/_root.MainView.cpp.o: include/_root.MainView.Template2.h
+.uno/_root.MainView.cpp.o: include/_root.MainView.Template3.h
+.uno/_root.MainView.cpp.o: include/_root.matchr_signup_bundle.h
 .uno/_root.MainView.cpp.o: include/Fuse.Animations.Easing.h
 .uno/_root.MainView.cpp.o: include/Fuse.Animations.IResizeMode.h
-.uno/_root.MainView.cpp.o: include/Fuse.Binding.h
-.uno/_root.MainView.cpp.o: include/Fuse.Controls.Button.h
-.uno/_root.MainView.cpp.o: include/Fuse.Controls.ButtonBase.h
-.uno/_root.MainView.cpp.o: include/Fuse.Controls.NativeViewHost.h
-.uno/_root.MainView.cpp.o: include/Fuse.Controls.Panel.h
-.uno/_root.MainView.cpp.o: include/Fuse.Controls.StackPanel.h
-.uno/_root.MainView.cpp.o: include/Fuse.Controls.TextInput.h
-.uno/_root.MainView.cpp.o: include/Fuse.Controls.TextInputActionStyle.h
-.uno/_root.MainView.cpp.o: include/Fuse.Controls.TextInputControl.h
-.uno/_root.MainView.cpp.o: include/Fuse.Controls.TextInputHint.h
+.uno/_root.MainView.cpp.o: include/Fuse.Controls.ClientPanel.h
+.uno/_root.MainView.cpp.o: include/Fuse.Controls.Navigator.h
 .uno/_root.MainView.cpp.o: include/Fuse.Drawing.BrushConverter.h
 .uno/_root.MainView.cpp.o: include/Fuse.Drawing.Brushes.h
 .uno/_root.MainView.cpp.o: include/Fuse.Drawing.Colors.h
 .uno/_root.MainView.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
-.uno/_root.MainView.cpp.o: include/Fuse.Elements.Alignment.h
-.uno/_root.MainView.cpp.o: include/Fuse.Elements.Element.BoxSizingMode.h
-.uno/_root.MainView.cpp.o: include/Fuse.Elements.Element.h
-.uno/_root.MainView.cpp.o: include/Fuse.Elements.HitTestMode.h
 .uno/_root.MainView.cpp.o: include/Fuse.Elements.ITransformOrigin.h
 .uno/_root.MainView.cpp.o: include/Fuse.Elements.TransformOrigins.h
 .uno/_root.MainView.cpp.o: include/Fuse.Elements.TranslationModes.h
 .uno/_root.MainView.cpp.o: include/Fuse.FileSystem.FileSystemModule.h
 .uno/_root.MainView.cpp.o: include/Fuse.Font.h
-.uno/_root.MainView.cpp.o: include/Fuse.Gestures.Clicked.h
-.uno/_root.MainView.cpp.o: include/Fuse.Gestures.ClickedHandler.h
-.uno/_root.MainView.cpp.o: include/Fuse.iOS.StatusBarConfig.h
 .uno/_root.MainView.cpp.o: include/Fuse.IScalingMode.h
 .uno/_root.MainView.cpp.o: include/Fuse.ITranslationMode.h
+.uno/_root.MainView.cpp.o: include/Fuse.Navigation.Router.h
 .uno/_root.MainView.cpp.o: include/Fuse.Node.h
-.uno/_root.MainView.cpp.o: include/Fuse.Platform.StatusBarStyle.h
-.uno/_root.MainView.cpp.o: include/Fuse.Reactive.DataBinding-1.h
-.uno/_root.MainView.cpp.o: include/Fuse.Reactive.EventBinding.h
 .uno/_root.MainView.cpp.o: include/Fuse.Reactive.FuseJS.DiagnosticsImplModule.h
 .uno/_root.MainView.cpp.o: include/Fuse.Reactive.FuseJS.Http.h
 .uno/_root.MainView.cpp.o: include/Fuse.Reactive.FuseJS.TimerModule.h
@@ -503,21 +822,244 @@ libs/$(ABI)/libV8Simple.so: /Users/hdc/Library/Application\ Support/Fusetools/Pa
 .uno/_root.MainView.cpp.o: include/FuseJS.Lifecycle.h
 .uno/_root.MainView.cpp.o: include/FuseJS.UserEvents.h
 .uno/_root.MainView.cpp.o: include/Polyfills.Window.WindowModule.h
-.uno/_root.MainView.cpp.o: include/Uno.Bool.h
 .uno/_root.MainView.cpp.o: include/Uno.Collections.ICollection-1.h
 .uno/_root.MainView.cpp.o: include/Uno.Collections.IList-1.h
-.uno/_root.MainView.cpp.o: include/Uno.Float.h
 .uno/_root.MainView.cpp.o: include/Uno.Float4.h
+.uno/_root.MainView.cpp.o: include/Uno.IO.BundleFile.h
 .uno/_root.MainView.cpp.o: include/Uno.Object.h
 .uno/_root.MainView.cpp.o: include/Uno.String.h
-.uno/_root.MainView.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.MainView.cpp.o: include/Uno.UX.BundleFileSource.h
+.uno/_root.MainView.cpp.o: include/Uno.UX.FileSource.h
 .uno/_root.MainView.cpp.o: include/Uno.UX.Resource.h
 .uno/_root.MainView.cpp.o: include/Uno.UX.Selector.h
-.uno/_root.MainView.cpp.o: include/Uno.UX.Size.h
-.uno/_root.MainView.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.MainView.cpp.o: include/Uno.UX.Template.h
 .uno/_root.MainView.cpp.o: jni/_root.MainView.cpp flags.txt | .uno
 	echo _root.MainView.cpp
 	$(CXX) $(CXX_FLAGS) -o .uno/_root.MainView.cpp.o -c jni/_root.MainView.cpp
+
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/_root.HomePage.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/_root.matchesPage.Template.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/_root.matchesPage.Template.Template1.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/_root.matchr_signup_bundle.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/_root.matchr_signup_FuseControlsTextControl_Value_Property.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Binding.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Controls.Image.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Controls.Page.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Controls.Rectangle.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Controls.Shape.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Font.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Gestures.Clicked.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Gestures.ClickedHandler.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Layer.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Node.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Reactive.EventBinding.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Fuse.Visual.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.Bool.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.Collections.ICollection-1.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.Collections.IList-1.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.Float.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.Float4.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.IO.BundleFile.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.Object.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.String.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.UX.BundleFileSource.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.UX.FileSource.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.UX.Size.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.matchesPage.Template.Template1.cpp.o: jni/_root.matchesPage.Template.Template1.cpp flags.txt | .uno
+	echo _root.matchesPage.Template.Template1.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchesPage.Template.Template1.cpp.o -c jni/_root.matchesPage.Template.Template1.cpp
+
+.uno/_root.matchesPage.Template.cpp.o: include/_root.HomePage.h
+.uno/_root.matchesPage.Template.cpp.o: include/_root.matchesPage.h
+.uno/_root.matchesPage.Template.cpp.o: include/_root.matchesPage.Template.h
+.uno/_root.matchesPage.Template.cpp.o: include/_root.matchesPage.Template.Template1.h
+.uno/_root.matchesPage.Template.cpp.o: include/_root.matchr_signup_FuseReactiveEach_Items_Property.h
+.uno/_root.matchesPage.Template.cpp.o: include/_root.NavBarTitle.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.AlternateRoot.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Binding.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Controls.Page.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Controls.ScrollView.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Font.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Node.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Reactive.Each.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Reactive.Instantiator.h
+.uno/_root.matchesPage.Template.cpp.o: include/Fuse.Visual.h
+.uno/_root.matchesPage.Template.cpp.o: include/Uno.Bool.h
+.uno/_root.matchesPage.Template.cpp.o: include/Uno.Collections.ICollection-1.h
+.uno/_root.matchesPage.Template.cpp.o: include/Uno.Collections.IList-1.h
+.uno/_root.matchesPage.Template.cpp.o: include/Uno.Float.h
+.uno/_root.matchesPage.Template.cpp.o: include/Uno.Float4.h
+.uno/_root.matchesPage.Template.cpp.o: include/Uno.Object.h
+.uno/_root.matchesPage.Template.cpp.o: include/Uno.String.h
+.uno/_root.matchesPage.Template.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.matchesPage.Template.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchesPage.Template.cpp.o: jni/_root.matchesPage.Template.cpp flags.txt | .uno
+	echo _root.matchesPage.Template.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchesPage.Template.cpp.o -c jni/_root.matchesPage.Template.cpp
+
+.uno/_root.matchesPage.Template1.cpp.o: include/_root.matchesPage.h
+.uno/_root.matchesPage.Template1.cpp.o: include/_root.matchesPage.Template1.h
+.uno/_root.matchesPage.Template1.cpp.o: include/_root.SubPage.h
+.uno/_root.matchesPage.Template1.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.matchesPage.Template1.cpp.o: include/Fuse.Node.h
+.uno/_root.matchesPage.Template1.cpp.o: include/Fuse.Visual.h
+.uno/_root.matchesPage.Template1.cpp.o: include/Uno.Bool.h
+.uno/_root.matchesPage.Template1.cpp.o: include/Uno.Object.h
+.uno/_root.matchesPage.Template1.cpp.o: include/Uno.String.h
+.uno/_root.matchesPage.Template1.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchesPage.Template1.cpp.o: jni/_root.matchesPage.Template1.cpp flags.txt | .uno
+	echo _root.matchesPage.Template1.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchesPage.Template1.cpp.o -c jni/_root.matchesPage.Template1.cpp
+
+.uno/_root.matchesPage.cpp.o: include/_root.matchesPage.h
+.uno/_root.matchesPage.cpp.o: include/_root.matchesPage.Template.h
+.uno/_root.matchesPage.cpp.o: include/_root.matchesPage.Template1.h
+.uno/_root.matchesPage.cpp.o: include/_root.matchr_signup_bundle.h
+.uno/_root.matchesPage.cpp.o: include/_root.matchr_signup_FuseElementsElement_Opacity_Property.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Animations.Animator.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Animations.Change-1.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Animations.TrackAnimator.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Controls.BottomBarBackground.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Controls.Control.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Controls.Image.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Controls.Navigator.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Controls.StatusBarBackground.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Drawing.Brush.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Elements.HitTestMode.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Gestures.Clicked.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.iOS.StatusBarConfig.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Navigation.GoBack.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Navigation.Router.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Navigation.WhileCanGoBack.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.NodeGroupBase.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Platform.StatusBarStyle.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Reactive.JavaScript.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Triggers.Actions.TriggerAction.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Triggers.AddingAnimation.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Triggers.RemovingAnimation.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Triggers.Trigger.h
+.uno/_root.matchesPage.cpp.o: include/Fuse.Visual.h
+.uno/_root.matchesPage.cpp.o: include/Uno.Double.h
+.uno/_root.matchesPage.cpp.o: include/Uno.Float.h
+.uno/_root.matchesPage.cpp.o: include/Uno.Float4.h
+.uno/_root.matchesPage.cpp.o: include/Uno.Int.h
+.uno/_root.matchesPage.cpp.o: include/Uno.IO.BundleFile.h
+.uno/_root.matchesPage.cpp.o: include/Uno.Object.h
+.uno/_root.matchesPage.cpp.o: include/Uno.String.h
+.uno/_root.matchesPage.cpp.o: include/Uno.UX.BundleFileSource.h
+.uno/_root.matchesPage.cpp.o: include/Uno.UX.FileSource.h
+.uno/_root.matchesPage.cpp.o: include/Uno.UX.NameTable.h
+.uno/_root.matchesPage.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.matchesPage.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchesPage.cpp.o: include/Uno.UX.Size.h
+.uno/_root.matchesPage.cpp.o: include/Uno.UX.Template.h
+.uno/_root.matchesPage.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.matchesPage.cpp.o: jni/_root.matchesPage.cpp flags.txt | .uno
+	echo _root.matchesPage.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchesPage.cpp.o -c jni/_root.matchesPage.cpp
+
+.uno/_root.matchPage.cpp.o: include/_root.HomePage.h
+.uno/_root.matchPage.cpp.o: include/_root.matchPage.h
+.uno/_root.matchPage.cpp.o: include/_root.matchr_signup_bundle.h
+.uno/_root.matchPage.cpp.o: include/_root.matchr_signup_FuseControlsTextControl_Value_Property.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Controls.Button.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Controls.ButtonBase.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Controls.Circle.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Controls.Image.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Controls.Shape.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Controls.TextAlignment.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Drawing.Brush.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Drawing.ImageFill.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Drawing.Stroke.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Elements.Element.BoxSizingMode.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Font.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Gestures.Clicked.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Gestures.ClickedHandler.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Reactive.EventBinding.h
+.uno/_root.matchPage.cpp.o: include/Fuse.Visual.h
+.uno/_root.matchPage.cpp.o: include/Uno.Float.h
+.uno/_root.matchPage.cpp.o: include/Uno.Float4.h
+.uno/_root.matchPage.cpp.o: include/Uno.IO.BundleFile.h
+.uno/_root.matchPage.cpp.o: include/Uno.String.h
+.uno/_root.matchPage.cpp.o: include/Uno.UX.BundleFileSource.h
+.uno/_root.matchPage.cpp.o: include/Uno.UX.FileSource.h
+.uno/_root.matchPage.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.matchPage.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchPage.cpp.o: include/Uno.UX.Size.h
+.uno/_root.matchPage.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.matchPage.cpp.o: jni/_root.matchPage.cpp flags.txt | .uno
+	echo _root.matchPage.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchPage.cpp.o -c jni/_root.matchPage.cpp
+
+.uno/_root.matchr_signup_bundle.cpp.o: include/_root.matchr_signup_bundle.h
+.uno/_root.matchr_signup_bundle.cpp.o: include/Uno.IO.Bundle.h
+.uno/_root.matchr_signup_bundle.cpp.o: include/Uno.IO.BundleFile.h
+.uno/_root.matchr_signup_bundle.cpp.o: include/Uno.String.h
+.uno/_root.matchr_signup_bundle.cpp.o: jni/_root.matchr_signup_bundle.cpp flags.txt | .uno
+	echo _root.matchr_signup_bundle.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchr_signup_bundle.cpp.o -c jni/_root.matchr_signup_bundle.cpp
+
+.uno/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.cpp.o: include/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.h
+.uno/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.cpp.o: include/Fuse.Controls.MultiLayoutPanel.h
+.uno/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.cpp.o: include/Uno.Bool.h
+.uno/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.cpp.o: include/Uno.UX.IPropertyListener.h
+.uno/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.cpp.o: include/Uno.UX.PropertyObject.h
+.uno/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.cpp.o: jni/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.cpp flags.txt | .uno
+	echo _root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.cpp.o -c jni/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.cpp
+
+.uno/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.cpp.o: include/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.h
+.uno/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.cpp.o: include/Fuse.Controls.NavigationControl.h
+.uno/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.cpp.o: include/Uno.Bool.h
+.uno/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.cpp.o: include/Uno.UX.IPropertyListener.h
+.uno/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.cpp.o: include/Uno.UX.PropertyObject.h
+.uno/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.cpp.o: jni/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.cpp flags.txt | .uno
+	echo _root.matchr_signup_FuseControlsNavigationControl_Active_Property.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.cpp.o -c jni/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.cpp
+
+.uno/_root.matchr_signup_FuseControlsTextControl_Value_Property.cpp.o: include/_root.matchr_signup_FuseControlsTextControl_Value_Property.h
+.uno/_root.matchr_signup_FuseControlsTextControl_Value_Property.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.matchr_signup_FuseControlsTextControl_Value_Property.cpp.o: include/Uno.Bool.h
+.uno/_root.matchr_signup_FuseControlsTextControl_Value_Property.cpp.o: include/Uno.UX.IPropertyListener.h
+.uno/_root.matchr_signup_FuseControlsTextControl_Value_Property.cpp.o: include/Uno.UX.PropertyObject.h
+.uno/_root.matchr_signup_FuseControlsTextControl_Value_Property.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchr_signup_FuseControlsTextControl_Value_Property.cpp.o: jni/_root.matchr_signup_FuseControlsTextControl_Value_Property.cpp flags.txt | .uno
+	echo _root.matchr_signup_FuseControlsTextControl_Value_Property.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchr_signup_FuseControlsTextControl_Value_Property.cpp.o -c jni/_root.matchr_signup_FuseControlsTextControl_Value_Property.cpp
 
 .uno/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.cpp.o: include/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.h
 .uno/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.cpp.o: include/Fuse.Controls.TextInputControl.h
@@ -528,6 +1070,76 @@ libs/$(ABI)/libV8Simple.so: /Users/hdc/Library/Application\ Support/Fusetools/Pa
 .uno/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.cpp.o: jni/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.cpp flags.txt | .uno
 	echo _root.matchr_signup_FuseControlsTextInputControl_Value_Property.cpp
 	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.cpp.o -c jni/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.cpp
+
+.uno/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp.o: include/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.h
+.uno/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp.o: include/Uno.Bool.h
+.uno/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp.o: include/Uno.UX.IPropertyListener.h
+.uno/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp.o: include/Uno.UX.PropertyObject.h
+.uno/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp.o: jni/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp flags.txt | .uno
+	echo _root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp.o -c jni/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.cpp
+
+.uno/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.cpp.o: include/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.h
+.uno/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.cpp.o: include/Fuse.Controls.LayoutControl.h
+.uno/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.cpp.o: include/Uno.Bool.h
+.uno/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.cpp.o: include/Uno.UX.IPropertyListener.h
+.uno/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.cpp.o: include/Uno.UX.PropertyObject.h
+.uno/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.cpp.o: jni/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.cpp flags.txt | .uno
+	echo _root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.cpp.o -c jni/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.cpp
+
+.uno/_root.matchr_signup_FuseElementsElement_Opacity_Property.cpp.o: include/_root.matchr_signup_FuseElementsElement_Opacity_Property.h
+.uno/_root.matchr_signup_FuseElementsElement_Opacity_Property.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.matchr_signup_FuseElementsElement_Opacity_Property.cpp.o: include/Uno.Bool.h
+.uno/_root.matchr_signup_FuseElementsElement_Opacity_Property.cpp.o: include/Uno.UX.IPropertyListener.h
+.uno/_root.matchr_signup_FuseElementsElement_Opacity_Property.cpp.o: include/Uno.UX.PropertyObject.h
+.uno/_root.matchr_signup_FuseElementsElement_Opacity_Property.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchr_signup_FuseElementsElement_Opacity_Property.cpp.o: jni/_root.matchr_signup_FuseElementsElement_Opacity_Property.cpp flags.txt | .uno
+	echo _root.matchr_signup_FuseElementsElement_Opacity_Property.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchr_signup_FuseElementsElement_Opacity_Property.cpp.o -c jni/_root.matchr_signup_FuseElementsElement_Opacity_Property.cpp
+
+.uno/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.cpp.o: include/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.h
+.uno/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.cpp.o: include/Fuse.iOS.StatusBarConfig.h
+.uno/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.cpp.o: include/Uno.Bool.h
+.uno/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.cpp.o: include/Uno.UX.IPropertyListener.h
+.uno/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.cpp.o: include/Uno.UX.PropertyObject.h
+.uno/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.cpp.o: jni/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.cpp flags.txt | .uno
+	echo _root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.cpp.o -c jni/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.cpp
+
+.uno/_root.matchr_signup_FuseReactiveEach_Items_Property.cpp.o: include/_root.matchr_signup_FuseReactiveEach_Items_Property.h
+.uno/_root.matchr_signup_FuseReactiveEach_Items_Property.cpp.o: include/Fuse.Reactive.Each.h
+.uno/_root.matchr_signup_FuseReactiveEach_Items_Property.cpp.o: include/Uno.Bool.h
+.uno/_root.matchr_signup_FuseReactiveEach_Items_Property.cpp.o: include/Uno.UX.IPropertyListener.h
+.uno/_root.matchr_signup_FuseReactiveEach_Items_Property.cpp.o: include/Uno.UX.PropertyObject.h
+.uno/_root.matchr_signup_FuseReactiveEach_Items_Property.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchr_signup_FuseReactiveEach_Items_Property.cpp.o: jni/_root.matchr_signup_FuseReactiveEach_Items_Property.cpp flags.txt | .uno
+	echo _root.matchr_signup_FuseReactiveEach_Items_Property.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchr_signup_FuseReactiveEach_Items_Property.cpp.o -c jni/_root.matchr_signup_FuseReactiveEach_Items_Property.cpp
+
+.uno/_root.matchr_signup_FuseVisual_IsEnabled_Property.cpp.o: include/_root.matchr_signup_FuseVisual_IsEnabled_Property.h
+.uno/_root.matchr_signup_FuseVisual_IsEnabled_Property.cpp.o: include/Fuse.Visual.h
+.uno/_root.matchr_signup_FuseVisual_IsEnabled_Property.cpp.o: include/Uno.UX.IPropertyListener.h
+.uno/_root.matchr_signup_FuseVisual_IsEnabled_Property.cpp.o: include/Uno.UX.PropertyObject.h
+.uno/_root.matchr_signup_FuseVisual_IsEnabled_Property.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchr_signup_FuseVisual_IsEnabled_Property.cpp.o: jni/_root.matchr_signup_FuseVisual_IsEnabled_Property.cpp flags.txt | .uno
+	echo _root.matchr_signup_FuseVisual_IsEnabled_Property.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchr_signup_FuseVisual_IsEnabled_Property.cpp.o -c jni/_root.matchr_signup_FuseVisual_IsEnabled_Property.cpp
+
+.uno/_root.matchr_signup_Tab_Text_Property.cpp.o: include/_root.matchr_signup_Tab_Text_Property.h
+.uno/_root.matchr_signup_Tab_Text_Property.cpp.o: include/_root.Tab.h
+.uno/_root.matchr_signup_Tab_Text_Property.cpp.o: include/Uno.Bool.h
+.uno/_root.matchr_signup_Tab_Text_Property.cpp.o: include/Uno.UX.IPropertyListener.h
+.uno/_root.matchr_signup_Tab_Text_Property.cpp.o: include/Uno.UX.PropertyObject.h
+.uno/_root.matchr_signup_Tab_Text_Property.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.matchr_signup_Tab_Text_Property.cpp.o: jni/_root.matchr_signup_Tab_Text_Property.cpp flags.txt | .uno
+	echo _root.matchr_signup_Tab_Text_Property.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.matchr_signup_Tab_Text_Property.cpp.o -c jni/_root.matchr_signup_Tab_Text_Property.cpp
 
 .uno/_root.MyTextInput.cpp.o: include/_root.MyTextInput.h
 .uno/_root.MyTextInput.cpp.o: include/Fuse.Controls.Rectangle.h
@@ -545,6 +1157,414 @@ libs/$(ABI)/libV8Simple.so: /Users/hdc/Library/Application\ Support/Fusetools/Pa
 .uno/_root.MyTextInput.cpp.o: jni/_root.MyTextInput.cpp flags.txt | .uno
 	echo _root.MyTextInput.cpp
 	$(CXX) $(CXX_FLAGS) -o .uno/_root.MyTextInput.cpp.o -c jni/_root.MyTextInput.cpp
+
+.uno/_root.NavBarTitle.cpp.o: include/_root.matchr_signup_FuseElementsElement_Opacity_Property.h
+.uno/_root.NavBarTitle.cpp.o: include/_root.NavBarTitle.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Animations.Animator.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Animations.Change-1.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Animations.Easing.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Animations.Move.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Animations.TrackAnimator.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Animations.TransformAnimator-1.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Elements.HitTestMode.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Navigation.EnteringAnimation.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Navigation.ExitingAnimation.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Translation.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Triggers.Trigger.h
+.uno/_root.NavBarTitle.cpp.o: include/Fuse.Visual.h
+.uno/_root.NavBarTitle.cpp.o: include/Uno.Double.h
+.uno/_root.NavBarTitle.cpp.o: include/Uno.Float.h
+.uno/_root.NavBarTitle.cpp.o: include/Uno.Float4.h
+.uno/_root.NavBarTitle.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.NavBarTitle.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.NavBarTitle.cpp.o: jni/_root.NavBarTitle.cpp flags.txt | .uno
+	echo _root.NavBarTitle.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.NavBarTitle.cpp.o -c jni/_root.NavBarTitle.cpp
+
+.uno/_root.NavBarTitleChat.cpp.o: include/_root.matchr_signup_FuseElementsElement_Opacity_Property.h
+.uno/_root.NavBarTitleChat.cpp.o: include/_root.NavBarTitleChat.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Animations.Animator.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Animations.Change-1.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Animations.Easing.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Animations.Move.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Animations.TrackAnimator.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Animations.TransformAnimator-1.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Elements.HitTestMode.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Navigation.EnteringAnimation.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Navigation.ExitingAnimation.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Translation.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Triggers.Trigger.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Fuse.Visual.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Uno.Double.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Uno.Float.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Uno.Float4.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.NavBarTitleChat.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.NavBarTitleChat.cpp.o: jni/_root.NavBarTitleChat.cpp flags.txt | .uno
+	echo _root.NavBarTitleChat.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.NavBarTitleChat.cpp.o -c jni/_root.NavBarTitleChat.cpp
+
+.uno/_root.profilePage.cpp.o: include/_root.BodyText.h
+.uno/_root.profilePage.cpp.o: include/_root.HomePage.h
+.uno/_root.profilePage.cpp.o: include/_root.matchr_signup_bundle.h
+.uno/_root.profilePage.cpp.o: include/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.h
+.uno/_root.profilePage.cpp.o: include/_root.matchr_signup_FuseElementsElement_Opacity_Property.h
+.uno/_root.profilePage.cpp.o: include/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.h
+.uno/_root.profilePage.cpp.o: include/_root.profilePage.h
+.uno/_root.profilePage.cpp.o: include/_root.TitleText.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Animations.Animator.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Animations.Change-1.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Animations.Easing.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Animations.Move.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Animations.Scale.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Animations.TrackAnimator.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Animations.TransformAnimator-1.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.BottomBarBackground.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.Control.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.Image.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.MultiLayoutPanel.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.Placeholder.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.Rectangle.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.ScrollView.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.Shape.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.StatusBarBackground.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Drawing.Brush.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Drawing.Brushes.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Elements.HitTestMode.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Elements.ITransformOrigin.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Elements.StretchMode.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Elements.TransformOrigins.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Font.h
+.uno/_root.profilePage.cpp.o: include/Fuse.iOS.StatusBarConfig.h
+.uno/_root.profilePage.cpp.o: include/Fuse.ITranslationMode.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Platform.StatusBarStyle.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Scaling.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Translation.h
+.uno/_root.profilePage.cpp.o: include/Fuse.TranslationModes.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Triggers.Actions.Set-1.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Triggers.Actions.TriggerAction.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Triggers.ScrollingAnimation.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Triggers.Trigger.h
+.uno/_root.profilePage.cpp.o: include/Fuse.Visual.h
+.uno/_root.profilePage.cpp.o: include/Uno.Float.h
+.uno/_root.profilePage.cpp.o: include/Uno.Float4.h
+.uno/_root.profilePage.cpp.o: include/Uno.IO.BundleFile.h
+.uno/_root.profilePage.cpp.o: include/Uno.String.h
+.uno/_root.profilePage.cpp.o: include/Uno.UX.BundleFileSource.h
+.uno/_root.profilePage.cpp.o: include/Uno.UX.FileSource.h
+.uno/_root.profilePage.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.profilePage.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.profilePage.cpp.o: include/Uno.UX.Size.h
+.uno/_root.profilePage.cpp.o: include/Uno.UX.Size2.h
+.uno/_root.profilePage.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.profilePage.cpp.o: jni/_root.profilePage.cpp flags.txt | .uno
+	echo _root.profilePage.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.profilePage.cpp.o -c jni/_root.profilePage.cpp
+
+.uno/_root.SignInPage.cpp.o: include/_root.HomePage.h
+.uno/_root.SignInPage.cpp.o: include/_root.matchr_signup_bundle.h
+.uno/_root.SignInPage.cpp.o: include/_root.matchr_signup_FuseControlsTextControl_Value_Property.h
+.uno/_root.SignInPage.cpp.o: include/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.h
+.uno/_root.SignInPage.cpp.o: include/_root.MyTextInput.h
+.uno/_root.SignInPage.cpp.o: include/_root.SignInPage.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Controls.Button.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Controls.ButtonBase.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Controls.Image.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Controls.NativeViewHost.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Controls.TextInput.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Controls.TextInputActionStyle.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Controls.TextInputControl.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Controls.TextInputHint.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Drawing.Colors.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Elements.Element.BoxSizingMode.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Elements.HitTestMode.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Elements.StretchMode.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Font.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Gestures.Clicked.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Gestures.ClickedHandler.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.iOS.StatusBarConfig.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Layer.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Navigation.Router.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Platform.StatusBarStyle.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Reactive.EventBinding.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Reactive.JavaScript.h
+.uno/_root.SignInPage.cpp.o: include/Fuse.Visual.h
+.uno/_root.SignInPage.cpp.o: include/Uno.Bool.h
+.uno/_root.SignInPage.cpp.o: include/Uno.Float.h
+.uno/_root.SignInPage.cpp.o: include/Uno.Float4.h
+.uno/_root.SignInPage.cpp.o: include/Uno.Int.h
+.uno/_root.SignInPage.cpp.o: include/Uno.IO.BundleFile.h
+.uno/_root.SignInPage.cpp.o: include/Uno.Object.h
+.uno/_root.SignInPage.cpp.o: include/Uno.String.h
+.uno/_root.SignInPage.cpp.o: include/Uno.UX.BundleFileSource.h
+.uno/_root.SignInPage.cpp.o: include/Uno.UX.FileSource.h
+.uno/_root.SignInPage.cpp.o: include/Uno.UX.NameTable.h
+.uno/_root.SignInPage.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.SignInPage.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.SignInPage.cpp.o: include/Uno.UX.Size.h
+.uno/_root.SignInPage.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.SignInPage.cpp.o: jni/_root.SignInPage.cpp flags.txt | .uno
+	echo _root.SignInPage.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.SignInPage.cpp.o -c jni/_root.SignInPage.cpp
+
+.uno/_root.SignUpPage.cpp.o: include/_root.HomePage.h
+.uno/_root.SignUpPage.cpp.o: include/_root.matchr_signup_bundle.h
+.uno/_root.SignUpPage.cpp.o: include/_root.matchr_signup_FuseControlsTextControl_Value_Property.h
+.uno/_root.SignUpPage.cpp.o: include/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.h
+.uno/_root.SignUpPage.cpp.o: include/_root.MyTextInput.h
+.uno/_root.SignUpPage.cpp.o: include/_root.SignUpPage.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Controls.Button.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Controls.ButtonBase.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Controls.Image.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Controls.NativeViewHost.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Controls.TextInput.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Controls.TextInputActionStyle.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Controls.TextInputControl.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Controls.TextInputHint.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Drawing.Colors.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Elements.Element.BoxSizingMode.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Elements.HitTestMode.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Elements.StretchMode.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Font.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Gestures.Clicked.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Gestures.ClickedHandler.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.iOS.StatusBarConfig.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Layer.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Navigation.Router.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Platform.StatusBarStyle.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Reactive.EventBinding.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Reactive.JavaScript.h
+.uno/_root.SignUpPage.cpp.o: include/Fuse.Visual.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.Bool.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.Float.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.Float4.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.Int.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.IO.BundleFile.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.Object.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.String.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.UX.BundleFileSource.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.UX.FileSource.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.UX.NameTable.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.UX.Size.h
+.uno/_root.SignUpPage.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.SignUpPage.cpp.o: jni/_root.SignUpPage.cpp flags.txt | .uno
+	echo _root.SignUpPage.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.SignUpPage.cpp.o -c jni/_root.SignUpPage.cpp
+
+.uno/_root.SubPage.cpp.o: include/_root.matchr_signup_FuseControlsTextControl_Value_Property.h
+.uno/_root.SubPage.cpp.o: include/_root.NavBarTitle.h
+.uno/_root.SubPage.cpp.o: include/_root.SubPage.h
+.uno/_root.SubPage.cpp.o: include/Fuse.AlternateRoot.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Controls.Button.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Controls.ButtonBase.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Controls.Circle.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Controls.Shape.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Drawing.Brush.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Drawing.ImageFill.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Drawing.Stroke.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Elements.Element.BoxSizingMode.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Gestures.Clicked.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Gestures.ClickedHandler.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Reactive.EventBinding.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Reactive.JavaScript.h
+.uno/_root.SubPage.cpp.o: include/Fuse.Visual.h
+.uno/_root.SubPage.cpp.o: include/Uno.Float.h
+.uno/_root.SubPage.cpp.o: include/Uno.Float4.h
+.uno/_root.SubPage.cpp.o: include/Uno.Int.h
+.uno/_root.SubPage.cpp.o: include/Uno.Object.h
+.uno/_root.SubPage.cpp.o: include/Uno.String.h
+.uno/_root.SubPage.cpp.o: include/Uno.UX.NameTable.h
+.uno/_root.SubPage.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.SubPage.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.SubPage.cpp.o: include/Uno.UX.Size.h
+.uno/_root.SubPage.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.SubPage.cpp.o: jni/_root.SubPage.cpp flags.txt | .uno
+	echo _root.SubPage.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.SubPage.cpp.o -c jni/_root.SubPage.cpp
+
+.uno/_root.SubPageChat.Template.cpp.o: include/_root.matchr_signup_FuseControlsTextControl_Value_Property.h
+.uno/_root.SubPageChat.Template.cpp.o: include/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.h
+.uno/_root.SubPageChat.Template.cpp.o: include/_root.SubPageChat.h
+.uno/_root.SubPageChat.Template.cpp.o: include/_root.SubPageChat.Template.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Animations.Animator.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Animations.Easing.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Animations.Scale.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Animations.TrackAnimator.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Binding.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Controls.Rectangle.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Controls.Shape.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Controls.TextWrapping.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Layer.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Node.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Triggers.AddingAnimation.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Triggers.Trigger.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Fuse.Visual.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Uno.Bool.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Uno.Collections.ICollection-1.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Uno.Collections.IList-1.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Uno.Double.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Uno.Float.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Uno.Float4.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Uno.Object.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Uno.String.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.SubPageChat.Template.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.SubPageChat.Template.cpp.o: jni/_root.SubPageChat.Template.cpp flags.txt | .uno
+	echo _root.SubPageChat.Template.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.SubPageChat.Template.cpp.o -c jni/_root.SubPageChat.Template.cpp
+
+.uno/_root.SubPageChat.cpp.o: include/_root.matchr_signup_bundle.h
+.uno/_root.SubPageChat.cpp.o: include/_root.matchr_signup_FuseControlsTextControl_Value_Property.h
+.uno/_root.SubPageChat.cpp.o: include/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.h
+.uno/_root.SubPageChat.cpp.o: include/_root.matchr_signup_FuseReactiveEach_Items_Property.h
+.uno/_root.SubPageChat.cpp.o: include/_root.matchr_signup_FuseVisual_IsEnabled_Property.h
+.uno/_root.SubPageChat.cpp.o: include/_root.NavBarTitle.h
+.uno/_root.SubPageChat.cpp.o: include/_root.SubPageChat.h
+.uno/_root.SubPageChat.cpp.o: include/_root.SubPageChat.Template.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.AlternateRoot.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Animations.Animator.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Animations.Easing.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Animations.Move.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Animations.TrackAnimator.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Animations.TransformAnimator-1.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.Button.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.ButtonBase.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.DockPanel.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.Panel.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.Rectangle.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.ScrollView.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.Shape.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.StackPanel.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.TextInput.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.TextInputActionHandler.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.TextInputActionStyle.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Controls.TextInputControl.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Drawing.Brush.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Drawing.Colors.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Gestures.Clicked.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Gestures.ClickedHandler.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.ITranslationMode.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Layer.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Layouts.Dock.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Reactive.DataBinding-1.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Reactive.Each.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Reactive.EventBinding.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Reactive.Instantiator.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Reactive.JavaScript.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Translation.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Triggers.LayoutAnimation.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Triggers.LayoutTransition.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Triggers.Trigger.h
+.uno/_root.SubPageChat.cpp.o: include/Fuse.Visual.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.Bool.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.Double.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.Float.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.Float4.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.Int.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.IO.BundleFile.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.Object.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.String.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.UX.BundleFileSource.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.UX.FileSource.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.UX.NameTable.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.UX.Size.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.UX.Template.h
+.uno/_root.SubPageChat.cpp.o: include/Uno.UX.Unit.h
+.uno/_root.SubPageChat.cpp.o: jni/_root.SubPageChat.cpp flags.txt | .uno
+	echo _root.SubPageChat.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.SubPageChat.cpp.o -c jni/_root.SubPageChat.cpp
+
+.uno/_root.Tab.cpp.o: include/_root.HomePage.h
+.uno/_root.Tab.cpp.o: include/_root.matchr_signup_FuseControlsTextControl_Value_Property.h
+.uno/_root.Tab.cpp.o: include/_root.matchr_signup_Tab_Text_Property.h
+.uno/_root.Tab.cpp.o: include/_root.Tab.h
+.uno/_root.Tab.cpp.o: include/Fuse.Controls.Control.h
+.uno/_root.Tab.cpp.o: include/Fuse.Controls.Text.h
+.uno/_root.Tab.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.Tab.cpp.o: include/Fuse.Drawing.Brush.h
+.uno/_root.Tab.cpp.o: include/Fuse.Drawing.StaticSolidColor.h
+.uno/_root.Tab.cpp.o: include/Fuse.Elements.Alignment.h
+.uno/_root.Tab.cpp.o: include/Fuse.Elements.Element.h
+.uno/_root.Tab.cpp.o: include/Fuse.Font.h
+.uno/_root.Tab.cpp.o: include/Fuse.Reactive.ReadPropertyBinding.h
+.uno/_root.Tab.cpp.o: include/Fuse.Visual.h
+.uno/_root.Tab.cpp.o: include/Uno.Bool.h
+.uno/_root.Tab.cpp.o: include/Uno.Float.h
+.uno/_root.Tab.cpp.o: include/Uno.Float4.h
+.uno/_root.Tab.cpp.o: include/Uno.String.h
+.uno/_root.Tab.cpp.o: include/Uno.UX.Property.h
+.uno/_root.Tab.cpp.o: include/Uno.UX.Property-1.h
+.uno/_root.Tab.cpp.o: include/Uno.UX.PropertyObject.h
+.uno/_root.Tab.cpp.o: include/Uno.UX.Selector.h
+.uno/_root.Tab.cpp.o: jni/_root.Tab.cpp flags.txt | .uno
+	echo _root.Tab.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.Tab.cpp.o -c jni/_root.Tab.cpp
+
+.uno/_root.TitleText.cpp.o: include/_root.HomePage.h
+.uno/_root.TitleText.cpp.o: include/_root.TitleText.h
+.uno/_root.TitleText.cpp.o: include/Fuse.Controls.TextAlignment.h
+.uno/_root.TitleText.cpp.o: include/Fuse.Controls.TextControl.h
+.uno/_root.TitleText.cpp.o: include/Fuse.Font.h
+.uno/_root.TitleText.cpp.o: include/Uno.Float.h
+.uno/_root.TitleText.cpp.o: include/Uno.Float4.h
+.uno/_root.TitleText.cpp.o: jni/_root.TitleText.cpp flags.txt | .uno
+	echo _root.TitleText.cpp
+	$(CXX) $(CXX_FLAGS) -o .uno/_root.TitleText.cpp.o -c jni/_root.TitleText.cpp
 
 .uno/OpenGL.g.cpp.o: include/OpenGL.GL.h
 .uno/OpenGL.g.cpp.o: include/OpenGL.GLBlendEquation.h
@@ -7691,10 +8711,148 @@ include/_root.UnoCore_bundle.h: include/Uno.h
 
 include/_root.WeakDictionary-2.h: include/Uno.Object.h
 
+include/_root.BodyText.h: include/Fuse.Animations.IResize.h
+include/_root.BodyText.h: include/Fuse.Binding.h
+include/_root.BodyText.h: include/Fuse.Controls.Text.h
+include/_root.BodyText.h: include/Fuse.IActualPlacement.h
+include/_root.BodyText.h: include/Fuse.Node.h
+include/_root.BodyText.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.BodyText.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.BodyText.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.BodyText.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.BodyText.h: include/Fuse.Triggers.IValue-1.h
+include/_root.BodyText.h: include/Uno.Collections.ICollection-1.h
+include/_root.BodyText.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.BodyText.h: include/Uno.Collections.IList-1.h
+include/_root.BodyText.h: include/Uno.String.h
+include/_root.BodyText.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.chatPage.Template.Template1.h: include/Uno.UX.Template.h
+
+include/_root.chatPage.Template.h: include/Uno.UX.Template.h
+
+include/_root.chatPage.Template1.h: include/Uno.UX.Template.h
+
+include/_root.chatPage.h: include/Fuse.Animations.IResize.h
+include/_root.chatPage.h: include/Fuse.Binding.h
+include/_root.chatPage.h: include/Fuse.Controls.Page.h
+include/_root.chatPage.h: include/Fuse.IActualPlacement.h
+include/_root.chatPage.h: include/Fuse.Node.h
+include/_root.chatPage.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.chatPage.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.chatPage.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.chatPage.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.chatPage.h: include/Uno.Collections.ICollection-1.h
+include/_root.chatPage.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.chatPage.h: include/Uno.Collections.IList-1.h
+include/_root.chatPage.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.HomePage.h: include/Fuse.Animations.IResize.h
+include/_root.HomePage.h: include/Fuse.Binding.h
+include/_root.HomePage.h: include/Fuse.Controls.Page.h
+include/_root.HomePage.h: include/Fuse.IActualPlacement.h
+include/_root.HomePage.h: include/Fuse.Node.h
+include/_root.HomePage.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.HomePage.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.HomePage.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.HomePage.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.HomePage.h: include/Uno.Collections.ICollection-1.h
+include/_root.HomePage.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.HomePage.h: include/Uno.Collections.IList-1.h
+include/_root.HomePage.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.MainPage.h: include/Fuse.Animations.IResize.h
+include/_root.MainPage.h: include/Fuse.Binding.h
+include/_root.MainPage.h: include/Fuse.Controls.Page.h
+include/_root.MainPage.h: include/Fuse.IActualPlacement.h
+include/_root.MainPage.h: include/Fuse.Node.h
+include/_root.MainPage.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.MainPage.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.MainPage.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.MainPage.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.MainPage.h: include/Uno.Collections.ICollection-1.h
+include/_root.MainPage.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.MainPage.h: include/Uno.Collections.IList-1.h
+include/_root.MainPage.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.MainView.Template.h: include/Uno.UX.Template.h
+
+include/_root.MainView.Template1.h: include/Uno.UX.Template.h
+
+include/_root.MainView.Template2.h: include/Uno.UX.Template.h
+
+include/_root.MainView.Template3.h: include/Uno.UX.Template.h
+
 include/_root.MainView.h: include/Fuse.App.h
+
+include/_root.matchesPage.Template.Template1.h: include/Uno.UX.Template.h
+
+include/_root.matchesPage.Template.h: include/Uno.UX.Template.h
+
+include/_root.matchesPage.Template1.h: include/Uno.UX.Template.h
+
+include/_root.matchesPage.h: include/Fuse.Animations.IResize.h
+include/_root.matchesPage.h: include/Fuse.Binding.h
+include/_root.matchesPage.h: include/Fuse.Controls.Page.h
+include/_root.matchesPage.h: include/Fuse.IActualPlacement.h
+include/_root.matchesPage.h: include/Fuse.Node.h
+include/_root.matchesPage.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.matchesPage.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.matchesPage.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.matchesPage.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.matchesPage.h: include/Uno.Collections.ICollection-1.h
+include/_root.matchesPage.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.matchesPage.h: include/Uno.Collections.IList-1.h
+include/_root.matchesPage.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.matchPage.h: include/Fuse.Animations.IResize.h
+include/_root.matchPage.h: include/Fuse.Binding.h
+include/_root.matchPage.h: include/Fuse.Controls.Page.h
+include/_root.matchPage.h: include/Fuse.IActualPlacement.h
+include/_root.matchPage.h: include/Fuse.Node.h
+include/_root.matchPage.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.matchPage.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.matchPage.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.matchPage.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.matchPage.h: include/Uno.Collections.ICollection-1.h
+include/_root.matchPage.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.matchPage.h: include/Uno.Collections.IList-1.h
+include/_root.matchPage.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.matchr_signup_bundle.h: include/Uno.h
+
+include/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.h: include/Fuse.Elements.Element.h
+include/_root.matchr_signup_FuseControlsMultiLayoutPanel_LayoutElement_Property.h: include/Uno.UX.Property-1.h
+
+include/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.h: include/Fuse.Visual.h
+include/_root.matchr_signup_FuseControlsNavigationControl_Active_Property.h: include/Uno.UX.Property-1.h
+
+include/_root.matchr_signup_FuseControlsTextControl_Value_Property.h: include/Uno.String.h
+include/_root.matchr_signup_FuseControlsTextControl_Value_Property.h: include/Uno.UX.Property-1.h
 
 include/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.h: include/Uno.String.h
 include/_root.matchr_signup_FuseControlsTextInputControl_Value_Property.h: include/Uno.UX.Property-1.h
+
+include/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.h: include/Fuse.Layouts.Dock.h
+include/_root.matchr_signup_FuseElementsElement_DockPanelDock_Property.h: include/Uno.UX.Property-1.h
+
+include/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.h: include/Fuse.Elements.Element.h
+include/_root.matchr_signup_FuseElementsElement_ElementLayoutMaster_Property.h: include/Uno.UX.Property-1.h
+
+include/_root.matchr_signup_FuseElementsElement_Opacity_Property.h: include/Uno.Float.h
+include/_root.matchr_signup_FuseElementsElement_Opacity_Property.h: include/Uno.UX.Property-1.h
+
+include/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.h: include/Fuse.Platform.StatusBarStyle.h
+include/_root.matchr_signup_FuseiOSStatusBarConfig_Style_Property.h: include/Uno.UX.Property-1.h
+
+include/_root.matchr_signup_FuseReactiveEach_Items_Property.h: include/Uno.Object.h
+include/_root.matchr_signup_FuseReactiveEach_Items_Property.h: include/Uno.UX.Property-1.h
+
+include/_root.matchr_signup_FuseVisual_IsEnabled_Property.h: include/Uno.Bool.h
+include/_root.matchr_signup_FuseVisual_IsEnabled_Property.h: include/Uno.UX.Property-1.h
+
+include/_root.matchr_signup_Tab_Text_Property.h: include/Uno.String.h
+include/_root.matchr_signup_Tab_Text_Property.h: include/Uno.UX.Property-1.h
 
 include/_root.MyTextInput.h: include/Fuse.Animations.IResize.h
 include/_root.MyTextInput.h: include/Fuse.Binding.h
@@ -7712,6 +8870,140 @@ include/_root.MyTextInput.h: include/Uno.Collections.IEnumerable-1.h
 include/_root.MyTextInput.h: include/Uno.Collections.IList-1.h
 include/_root.MyTextInput.h: include/Uno.String.h
 include/_root.MyTextInput.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.NavBarTitle.h: include/Fuse.Animations.IResize.h
+include/_root.NavBarTitle.h: include/Fuse.Binding.h
+include/_root.NavBarTitle.h: include/Fuse.Controls.Text.h
+include/_root.NavBarTitle.h: include/Fuse.IActualPlacement.h
+include/_root.NavBarTitle.h: include/Fuse.Node.h
+include/_root.NavBarTitle.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.NavBarTitle.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.NavBarTitle.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.NavBarTitle.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.NavBarTitle.h: include/Fuse.Triggers.IValue-1.h
+include/_root.NavBarTitle.h: include/Uno.Collections.ICollection-1.h
+include/_root.NavBarTitle.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.NavBarTitle.h: include/Uno.Collections.IList-1.h
+include/_root.NavBarTitle.h: include/Uno.String.h
+include/_root.NavBarTitle.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.NavBarTitleChat.h: include/Fuse.Animations.IResize.h
+include/_root.NavBarTitleChat.h: include/Fuse.Binding.h
+include/_root.NavBarTitleChat.h: include/Fuse.Controls.Text.h
+include/_root.NavBarTitleChat.h: include/Fuse.IActualPlacement.h
+include/_root.NavBarTitleChat.h: include/Fuse.Node.h
+include/_root.NavBarTitleChat.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.NavBarTitleChat.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.NavBarTitleChat.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.NavBarTitleChat.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.NavBarTitleChat.h: include/Fuse.Triggers.IValue-1.h
+include/_root.NavBarTitleChat.h: include/Uno.Collections.ICollection-1.h
+include/_root.NavBarTitleChat.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.NavBarTitleChat.h: include/Uno.Collections.IList-1.h
+include/_root.NavBarTitleChat.h: include/Uno.String.h
+include/_root.NavBarTitleChat.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.profilePage.h: include/Fuse.Animations.IResize.h
+include/_root.profilePage.h: include/Fuse.Binding.h
+include/_root.profilePage.h: include/Fuse.Controls.Page.h
+include/_root.profilePage.h: include/Fuse.IActualPlacement.h
+include/_root.profilePage.h: include/Fuse.Node.h
+include/_root.profilePage.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.profilePage.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.profilePage.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.profilePage.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.profilePage.h: include/Uno.Collections.ICollection-1.h
+include/_root.profilePage.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.profilePage.h: include/Uno.Collections.IList-1.h
+include/_root.profilePage.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.SignInPage.h: include/Fuse.Animations.IResize.h
+include/_root.SignInPage.h: include/Fuse.Binding.h
+include/_root.SignInPage.h: include/Fuse.Controls.Page.h
+include/_root.SignInPage.h: include/Fuse.IActualPlacement.h
+include/_root.SignInPage.h: include/Fuse.Node.h
+include/_root.SignInPage.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.SignInPage.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.SignInPage.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.SignInPage.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.SignInPage.h: include/Uno.Collections.ICollection-1.h
+include/_root.SignInPage.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.SignInPage.h: include/Uno.Collections.IList-1.h
+include/_root.SignInPage.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.SignUpPage.h: include/Fuse.Animations.IResize.h
+include/_root.SignUpPage.h: include/Fuse.Binding.h
+include/_root.SignUpPage.h: include/Fuse.Controls.Page.h
+include/_root.SignUpPage.h: include/Fuse.IActualPlacement.h
+include/_root.SignUpPage.h: include/Fuse.Node.h
+include/_root.SignUpPage.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.SignUpPage.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.SignUpPage.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.SignUpPage.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.SignUpPage.h: include/Uno.Collections.ICollection-1.h
+include/_root.SignUpPage.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.SignUpPage.h: include/Uno.Collections.IList-1.h
+include/_root.SignUpPage.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.SubPage.h: include/Fuse.Animations.IResize.h
+include/_root.SubPage.h: include/Fuse.Binding.h
+include/_root.SubPage.h: include/Fuse.Controls.Page.h
+include/_root.SubPage.h: include/Fuse.IActualPlacement.h
+include/_root.SubPage.h: include/Fuse.Node.h
+include/_root.SubPage.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.SubPage.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.SubPage.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.SubPage.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.SubPage.h: include/Uno.Collections.ICollection-1.h
+include/_root.SubPage.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.SubPage.h: include/Uno.Collections.IList-1.h
+include/_root.SubPage.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.SubPageChat.Template.h: include/Uno.UX.Template.h
+
+include/_root.SubPageChat.h: include/Fuse.Animations.IResize.h
+include/_root.SubPageChat.h: include/Fuse.Binding.h
+include/_root.SubPageChat.h: include/Fuse.Controls.Page.h
+include/_root.SubPageChat.h: include/Fuse.IActualPlacement.h
+include/_root.SubPageChat.h: include/Fuse.Node.h
+include/_root.SubPageChat.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.SubPageChat.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.SubPageChat.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.SubPageChat.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.SubPageChat.h: include/Uno.Collections.ICollection-1.h
+include/_root.SubPageChat.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.SubPageChat.h: include/Uno.Collections.IList-1.h
+include/_root.SubPageChat.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.Tab.h: include/Fuse.Animations.IResize.h
+include/_root.Tab.h: include/Fuse.Binding.h
+include/_root.Tab.h: include/Fuse.Controls.Panel.h
+include/_root.Tab.h: include/Fuse.IActualPlacement.h
+include/_root.Tab.h: include/Fuse.Node.h
+include/_root.Tab.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.Tab.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.Tab.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.Tab.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.Tab.h: include/Uno.Collections.ICollection-1.h
+include/_root.Tab.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.Tab.h: include/Uno.Collections.IList-1.h
+include/_root.Tab.h: include/Uno.UX.IPropertyListener.h
+
+include/_root.TitleText.h: include/Fuse.Animations.IResize.h
+include/_root.TitleText.h: include/Fuse.Binding.h
+include/_root.TitleText.h: include/Fuse.Controls.Text.h
+include/_root.TitleText.h: include/Fuse.IActualPlacement.h
+include/_root.TitleText.h: include/Fuse.Node.h
+include/_root.TitleText.h: include/Fuse.Scripting.IScriptObject.h
+include/_root.TitleText.h: include/Fuse.Triggers.Actions.ICollapse.h
+include/_root.TitleText.h: include/Fuse.Triggers.Actions.IHide.h
+include/_root.TitleText.h: include/Fuse.Triggers.Actions.IShow.h
+include/_root.TitleText.h: include/Fuse.Triggers.IValue-1.h
+include/_root.TitleText.h: include/Uno.Collections.ICollection-1.h
+include/_root.TitleText.h: include/Uno.Collections.IEnumerable-1.h
+include/_root.TitleText.h: include/Uno.Collections.IList-1.h
+include/_root.TitleText.h: include/Uno.String.h
+include/_root.TitleText.h: include/Uno.UX.IPropertyListener.h
 
 include/OpenGL.GL.h: include/Uno.h
 

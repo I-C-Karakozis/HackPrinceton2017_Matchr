@@ -1,5 +1,7 @@
 <App>
 	<Router ux:Name="router" />
+	<Font File="Pages/Comfortaa Regular.ttf" ux:Global="MainView/Comfortaa" />
+    <Font File="Pages/Comfortaa Bold.ttf" ux:Global="MainView/ComfortaaBold" />
 
     <ClientPanel>
         <Navigator DefaultPath="home">

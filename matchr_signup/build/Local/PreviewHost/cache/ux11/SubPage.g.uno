@@ -3,8 +3,8 @@ public partial class SubPage: Fuse.Controls.Page
 {
     readonly Fuse.Visual navBar;
     global::Uno.UX.Property<string> temp_Value_inst;
-    internal Fuse.Reactive.EventBinding temp_eb7;
-    internal Fuse.Reactive.EventBinding temp_eb8;
+    internal Fuse.Reactive.EventBinding temp_eb17;
+    internal Fuse.Reactive.EventBinding temp_eb18;
     global::Uno.UX.NameTable __g_nametable;
     static string[] __g_static_nametable = new string[] {
         "navBar"
@@ -40,9 +40,9 @@ public partial class SubPage: Fuse.Controls.Page
         var temp14 = new Fuse.Controls.Text();
         var temp15 = new Fuse.Controls.DockPanel();
         var temp16 = new Fuse.Controls.Button();
-        temp_eb7 = new Fuse.Reactive.EventBinding("onClick");
+        temp_eb17 = new Fuse.Reactive.EventBinding("onClick");
         var temp17 = new Fuse.Controls.Button();
-        temp_eb8 = new Fuse.Reactive.EventBinding("onClick");
+        temp_eb18 = new Fuse.Reactive.EventBinding("onClick");
         var temp18 = new Fuse.Controls.Text();
         var temp19 = new Fuse.Controls.Panel();
         var temp20 = new Fuse.AlternateRoot();
@@ -80,14 +80,14 @@ public partial class SubPage: Fuse.Controls.Page
         temp16.Aspect = 5f;
         temp16.BoxSizing = Fuse.Elements.Element.BoxSizingMode.FillAspect;
         global::Fuse.Controls.DockPanel.SetDock(temp16, Fuse.Layouts.Dock.Left);
-        global::Fuse.Gestures.Clicked.AddHandler(temp16, temp_eb7.OnEvent);
-        temp16.Bindings.Add(temp_eb7);
+        global::Fuse.Gestures.Clicked.AddHandler(temp16, temp_eb17.OnEvent);
+        temp16.Bindings.Add(temp_eb17);
         temp17.Text = "Message";
         temp17.Aspect = 5f;
         temp17.BoxSizing = Fuse.Elements.Element.BoxSizingMode.FillAspect;
         global::Fuse.Controls.DockPanel.SetDock(temp17, Fuse.Layouts.Dock.Right);
-        global::Fuse.Gestures.Clicked.AddHandler(temp17, temp_eb8.OnEvent);
-        temp17.Bindings.Add(temp_eb8);
+        global::Fuse.Gestures.Clicked.AddHandler(temp17, temp_eb18.OnEvent);
+        temp17.Bindings.Add(temp_eb18);
         temp19.Children.Add(temp20);
         temp20.ParentNode = navBar;
         temp20.Node = temp;

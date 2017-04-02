@@ -1,9 +1,9 @@
-<Page ux:Class="MainPage" Background="#333">
+<Page ux:Class="MainPage" Background="#FFFF">
     <Router ux:Dependency="router" />
     
-    <Panel ux:Class="Tab" ClipToBounds="false" Margin="0,0,0,4" Background="#bdc3c7">
+    <Panel ux:Class="Tab" ClipToBounds="false" Margin="0,0,0,4" Background="#eee">
         <string ux:Property="Text" />
-        <Text Value="{ReadProperty Text}" Color="#FFF" Alignment="Center" />
+        <Text Font="Comfortaa" Value="{ReadProperty Text}" Color="#000" Alignment="Center" />
     </Panel>
 
     <Rectangle ux:Name="indicator" LayoutMaster="page1Tab" Alignment="Bottom" Height="4" Color="#6c7a89">
@@ -13,7 +13,7 @@
     </Rectangle>
 
     <DockPanel>
-		<Grid Dock="Top" ColumnCount="4" Height="50" Background="#bdc3c7">
+		<Grid Dock="Top" ColumnCount="4" Height="50" Background="#DEB9B5">
             <Panel ux:Name="page1Tab">
                 <Tab Text="match">
                     <Clicked>

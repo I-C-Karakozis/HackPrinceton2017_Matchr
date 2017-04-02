@@ -22,7 +22,7 @@ public partial class matchesPage: Fuse.Controls.Page
                 __parentInstance = parentInstance;
             }
             global::Uno.UX.Property<string> temp_Value_inst;
-            internal Fuse.Reactive.EventBinding temp_eb20;
+            internal Fuse.Reactive.EventBinding temp_eb2;
             static Template1()
             {
             }
@@ -37,16 +37,16 @@ public partial class matchesPage: Fuse.Controls.Page
                 var temp4 = new Fuse.Controls.Text();
                 var temp5 = new Fuse.Controls.Image();
                 var temp6 = new Fuse.Reactive.DataBinding<string>(temp_Value_inst, "title");
-                var temp_eb20 = new Fuse.Reactive.EventBinding("clicked");
+                var temp_eb2 = new Fuse.Reactive.EventBinding("clicked");
                 self.Height = new Uno.UX.Size(100f, Uno.UX.Unit.Unspecified);
-                global::Fuse.Gestures.Clicked.AddHandler(self, temp_eb20.OnEvent);
+                global::Fuse.Gestures.Clicked.AddHandler(self, temp_eb2.OnEvent);
                 temp1.Children.Add(temp2);
                 temp1.Children.Add(temp3);
                 temp1.Children.Add(temp4);
                 temp1.Children.Add(temp5);
                 temp1.Children.Add(temp);
                 temp2.CornerRadius = float4(3f, 3f, 3f, 3f);
-                temp2.Color = float4(0.6705883f, 0.7176471f, 0.7176471f, 1f);
+                temp2.Color = float4(0.4235294f, 0.4784314f, 0.5372549f, 1f);
                 temp2.Layer = Fuse.Layer.Background;
                 temp3.Color = float4(1f, 1f, 1f, 1f);
                 temp3.Height = new Uno.UX.Size(100f, Uno.UX.Unit.Unspecified);
@@ -58,6 +58,7 @@ public partial class matchesPage: Fuse.Controls.Page
                 temp4.Alignment = Fuse.Elements.Alignment.CenterRight;
                 temp4.Margin = float4(5f, 0f, 0f, 0f);
                 global::Fuse.Controls.DockPanel.SetDock(temp4, Fuse.Layouts.Dock.Left);
+                temp4.Font = global::HomePage.Comfortaa;
                 temp5.Color = float4(1f, 1f, 1f, 1f);
                 temp5.Height = new Uno.UX.Size(20f, Uno.UX.Unit.Unspecified);
                 global::Fuse.Controls.DockPanel.SetDock(temp5, Fuse.Layouts.Dock.Right);
@@ -67,9 +68,10 @@ public partial class matchesPage: Fuse.Controls.Page
                 temp.Alignment = Fuse.Elements.Alignment.CenterRight;
                 temp.Margin = float4(5f, 0f, 0f, 0f);
                 global::Fuse.Controls.DockPanel.SetDock(temp, Fuse.Layouts.Dock.Right);
+                temp.Font = global::HomePage.Comfortaa;
                 temp.Bindings.Add(temp6);
                 self.Children.Add(temp1);
-                self.Bindings.Add(temp_eb20);
+                self.Bindings.Add(temp_eb2);
                 return self;
             }
             static global::Uno.UX.Selector __selector0 = "Value";
@@ -98,7 +100,9 @@ public partial class matchesPage: Fuse.Controls.Page
             temp.Bindings.Add(temp4);
             temp5.ParentNode = __parent.navBar;
             temp5.Node = temp6;
-            temp6.Value = "Your Matches";
+            temp6.Value = "your matches";
+            temp6.FontSize = 20f;
+            temp6.Font = global::HomePage.Comfortaa;
             self.Children.Add(temp1);
             self.Children.Add(temp5);
             return self;
@@ -185,6 +189,7 @@ public partial class matchesPage: Fuse.Controls.Page
         temp2.Children.Add(temp4);
         temp2.Children.Add(navBar);
         temp4.Style = Fuse.Platform.StatusBarStyle.Light;
+        navBar.Color = float4(0.4235294f, 0.4784314f, 0.5372549f, 1f);
         navBar.Height = new Uno.UX.Size(50f, Uno.UX.Unit.Unspecified);
         navBar.Name = __selector2;
         global::Fuse.Controls.DockPanel.SetDock(navBar, Fuse.Layouts.Dock.Top);

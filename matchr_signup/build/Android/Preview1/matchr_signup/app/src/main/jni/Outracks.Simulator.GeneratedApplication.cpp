@@ -1,4 +1,4 @@
-// This file was generated based on /Users/hdc/matchr/matchrapp/matchr_signup/build/Android/Preview1/preamble/$.uno.
+// This file was generated based on /Users/hdc/matchr/matchrapp/HackPrinceton2017_Matchr/matchr_signup/build/Android/Preview1/preamble/$.uno.
 // WARNING: Changes might be lost if you edit this file directly.
 
 #include <Outracks.Simulator.GeneratedApplication.h>
@@ -25,7 +25,7 @@ static void GeneratedApplication_build(uType* type)
 {
     ::STRINGS[0] = uString::Const("127.0.0.1");
     ::STRINGS[1] = uString::Const("10.9.239.60");
-    ::STRINGS[2] = uString::Const("/Users/hdc/matchr/matchrapp/matchr_signup/matchr_signup.unoproj");
+    ::STRINGS[2] = uString::Const("/Users/hdc/matchr/matchrapp/HackPrinceton2017_Matchr/matchr_signup/matchr_signup.unoproj");
     ::STRINGS[3] = uString::Const("matchr_signup");
     ::TYPES[0] = ::g::Uno::Net::IPEndPoint_typeof()->Array();
     ::TYPES[1] = ::g::Uno::Func_typeof()->MakeType(::g::Uno::IO::Bundle_typeof(), NULL);

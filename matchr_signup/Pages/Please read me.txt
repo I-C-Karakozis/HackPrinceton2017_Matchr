@@ -1,0 +1,46 @@
+	Read me V1.3 - 22/6 - 2009
+(revised read-me file - copyright rules made less strict)
+
+
+	Thank you for downloading Comfortaa!
+
+If you like Comfortaa and use it, you are very welcome to leave a donation!
+Making fonts is much work and even a very small amount of money will be highly appreciated,
+encouraging me to keep making fonts available free of charge.  
+To make a donation, use the link "donate" included in the comfortaa folder.
+
+(Note that it is entirely up to you if you want to leave a donation, and not doing so should by no means ethically stop you from using Comfortaa)
+
+
+
+	To install:
+
+Windows:
+Copy the font files to C:\windows\fonts
+
+Mac:
+Put the files into /Library/Fonts (for all users),
+or into /Users/Your_username/Library/Fonts (for you only).
+
+Linux:
+Copy the font files to fonts:// in the File manager
+
+
+I hope you will enjoy using it.
+
+
+
+	Important copyright information:
+
+Comfortaa is free for personal/noncommercial use, AND commercial use.
+
+Comfortaa is licensed under a Creative Commons Attribution-No Derivative Works 3.0 License: http://creativecommons.org/licenses/by-nd/3.0/
+Which means, that you can share the font as you like, but not make a new version of the font (e.g. an italic version) and publish it 
+without my permission. Other than that, you are free to use it as you like in any way (mix it with other fonts/ change letters etc. etc.)
+
+If you still have questions or comments, you can write to my email: aajohan@gmail.com
+
+
+
+		22/6 - 2009
+		Johan Aakerlund

@@ -1,10 +1,13 @@
-// This file was generated based on /Users/hdc/matchr/matchrapp/matchr_signup/build/Android/Preview1/cache/ux11/MainView.g.uno.
+// This file was generated based on /Users/hdc/matchr/matchrapp/HackPrinceton2017_Matchr/matchr_signup/build/Android/Preview1/cache/ux11/MainView.g.uno.
 // WARNING: Changes might be lost if you edit this file directly.
 
+#include <_root.HomePage.h>
 #include <_root.MainView.h>
 #include <_root.MainView.Template.h>
 #include <_root.MainView.Template1.h>
 #include <_root.MainView.Template2.h>
+#include <_root.MainView.Template3.h>
+#include <_root.matchr_signup_bundle.h>
 #include <Fuse.Animations.Easing.h>
 #include <Fuse.Animations.IResizeMode.h>
 #include <Fuse.Controls.ClientPanel.h>
@@ -49,19 +52,22 @@
 #include <Uno.Collections.ICollection-1.h>
 #include <Uno.Collections.IList-1.h>
 #include <Uno.Float4.h>
+#include <Uno.IO.BundleFile.h>
 #include <Uno.Object.h>
 #include <Uno.String.h>
+#include <Uno.UX.BundleFileSource.h>
+#include <Uno.UX.FileSource.h>
 #include <Uno.UX.Resource.h>
 #include <Uno.UX.Selector.h>
 #include <Uno.UX.Template.h>
-static uString* STRINGS[78];
+static uString* STRINGS[82];
 static uType* TYPES[2];
 
 namespace g{
 
 // public partial sealed class MainView :2
 // {
-// static MainView() :68
+// static MainView() :91
 static void MainView__cctor_1_fn(uType* __type)
 {
     MainView::__selector0_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[0/*"router"*/]);
@@ -161,6 +167,14 @@ static void MainView__cctor_1_fn(uType* __type)
     ::g::Uno::UX::Resource::SetGlobalKey(::g::Fuse::TranslationModes::ParentSize(), ::STRINGS[74/*"ParentSize"*/]);
     ::g::Uno::UX::Resource::SetGlobalKey(::g::Fuse::TranslationModes::Width(), ::STRINGS[75/*"Width"*/]);
     ::g::Uno::UX::Resource::SetGlobalKey(::g::Fuse::TranslationModes::Height(), ::STRINGS[76/*"Height"*/]);
+    ::g::Uno::UX::Resource::SetGlobalKey(MainView::MainViewComfortaa_, ::STRINGS[77/*"MainView/Co...*/]);
+    ::g::Uno::UX::Resource::SetGlobalKey(MainView::MainViewComfortaaBold_, ::STRINGS[78/*"MainView/Co...*/]);
+    ::g::Uno::UX::Resource::SetGlobalKey(::g::HomePage::Comfortaa(), ::STRINGS[79/*"Comfortaa"*/]);
+    ::g::Uno::UX::Resource::SetGlobalKey(::g::HomePage::ComfortaaBold(), ::STRINGS[80/*"ComfortaaBold"*/]);
+    MainView::MainViewComfortaa_ = ::g::Fuse::Font::New2(::g::Uno::UX::BundleFileSource::New1(::g::matchr_signup_bundle::ComfortaaRegulara5c14941()));
+    MainView::MainViewComfortaaBold_ = ::g::Fuse::Font::New2(::g::Uno::UX::BundleFileSource::New1(::g::matchr_signup_bundle::ComfortaaBoldabe7fd1c()));
+    ::g::Uno::UX::Resource::SetGlobalKey(MainView::MainViewComfortaa_, ::STRINGS[77/*"MainView/Co...*/]);
+    ::g::Uno::UX::Resource::SetGlobalKey(MainView::MainViewComfortaaBold_, ::STRINGS[78/*"MainView/Co...*/]);
 }
 
 static void MainView_build(uType* type)
@@ -242,12 +256,21 @@ static void MainView_build(uType* type)
     ::STRINGS[74] = uString::Const("ParentSize");
     ::STRINGS[75] = uString::Const("Width");
     ::STRINGS[76] = uString::Const("Height");
-    ::STRINGS[77] = uString::Const("home");
+    ::STRINGS[77] = uString::Const("MainView/Comfortaa");
+    ::STRINGS[78] = uString::Const("MainView/ComfortaaBold");
+    ::STRINGS[79] = uString::Const("Comfortaa");
+    ::STRINGS[80] = uString::Const("ComfortaaBold");
+    ::STRINGS[81] = uString::Const("home");
     ::TYPES[0] = ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Fuse::Node_typeof(), NULL);
     ::TYPES[1] = ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Uno::UX::Template_typeof(), NULL);
     type->SetFields(7,
         ::g::Fuse::Navigation::Router_typeof(), offsetof(::g::MainView, router), 0,
-        ::g::Uno::UX::Selector_typeof(), (uintptr_t)&::g::MainView::__selector0_, uFieldFlagsStatic);
+        ::g::Uno::UX::Selector_typeof(), (uintptr_t)&::g::MainView::__selector0_, uFieldFlagsStatic,
+        ::g::Fuse::Font_typeof(), (uintptr_t)&::g::MainView::MainViewComfortaa_, uFieldFlagsStatic,
+        ::g::Fuse::Font_typeof(), (uintptr_t)&::g::MainView::MainViewComfortaaBold_, uFieldFlagsStatic);
+    type->Reflection.SetFields(2,
+        new uField("MainViewComfortaa", 9),
+        new uField("MainViewComfortaaBold", 10));
     type->Reflection.SetFunctions(1,
         new uFunction(".ctor", NULL, (void*)MainView__New1_fn, 0, true, type, 0));
 }
@@ -259,7 +282,7 @@ static void MainView_build(uType* type)
 
     uTypeOptions options;
     options.BaseDefinition = ::g::Fuse::App_typeof();
-    options.FieldCount = 9;
+    options.FieldCount = 11;
     options.ObjectSize = sizeof(MainView);
     options.TypeSize = sizeof(::g::Fuse::AppBase_type);
     type = (::g::Fuse::AppBase_type*)uClassType::New("MainView", options);
@@ -269,27 +292,29 @@ static void MainView_build(uType* type)
     return type;
 }
 
-// public MainView() :168
+// public MainView() :199
 void MainView__ctor_4_fn(MainView* __this)
 {
     __this->ctor_4();
 }
 
-// private void InitializeUX() :172
+// private void InitializeUX() :203
 void MainView__InitializeUX_fn(MainView* __this)
 {
     __this->InitializeUX();
 }
 
-// public MainView New() :168
+// public MainView New() :199
 void MainView__New1_fn(MainView** __retval)
 {
     *__retval = MainView::New1();
 }
 
 ::g::Uno::UX::Selector MainView::__selector0_;
+uSStrong< ::g::Fuse::Font*> MainView::MainViewComfortaa_;
+uSStrong< ::g::Fuse::Font*> MainView::MainViewComfortaaBold_;
 
-// public MainView() [instance] :168
+// public MainView() [instance] :199
 void MainView::ctor_4()
 {
     uStackFrame __("MainView", ".ctor()");
@@ -297,7 +322,7 @@ void MainView::ctor_4()
     InitializeUX();
 }
 
-// private void InitializeUX() [instance] :172
+// private void InitializeUX() [instance] :203
 void MainView::InitializeUX()
 {
     uStackFrame __("MainView", "InitializeUX()");
@@ -323,17 +348,19 @@ void MainView::InitializeUX()
     MainView__Template* home = MainView__Template::New2(this, this);
     MainView__Template1* signuppage = MainView__Template1::New2(this, this);
     MainView__Template2* signinpage = MainView__Template2::New2(this, this);
+    MainView__Template3* mainpage = MainView__Template3::New2(this, this);
     uPtr(router)->Name(MainView::__selector0());
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp16->Children()), ::TYPES[0/*Uno.Collections.ICollection<Fuse.Node>*/]), temp17);
-    temp17->DefaultPath(::STRINGS[77/*"home"*/]);
+    temp17->DefaultPath(::STRINGS[81/*"home"*/]);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp17->Templates()), ::TYPES[1/*Uno.Collections.ICollection<Uno.UX.Template>*/]), home);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp17->Templates()), ::TYPES[1/*Uno.Collections.ICollection<Uno.UX.Template>*/]), signuppage);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp17->Templates()), ::TYPES[1/*Uno.Collections.ICollection<Uno.UX.Template>*/]), signinpage);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp17->Templates()), ::TYPES[1/*Uno.Collections.ICollection<Uno.UX.Template>*/]), mainpage);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[0/*Uno.Collections.ICollection<Fuse.Node>*/]), router);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[0/*Uno.Collections.ICollection<Fuse.Node>*/]), temp16);
 }
 
-// public MainView New() [static] :168
+// public MainView New() [static] :199
 MainView* MainView::New1()
 {
     MainView* obj1 = (MainView*)uNew(MainView_typeof());

@@ -1,11 +1,10 @@
-// This file was generated based on /Users/hdc/matchr/matchrapp/matchr_signup/build/Android/Preview/cache/ux11/MainView.g.uno.
+// This file was generated based on /Users/hdc/Downloads/matchr_signup/build/Android/Preview/cache/ux11/MainView.g.uno.
 // WARNING: Changes might be lost if you edit this file directly.
 
 #pragma once
 #include <Fuse.App.h>
-namespace g{namespace Fuse{namespace Controls{struct Panel;}}}
-namespace g{namespace Fuse{namespace Reactive{struct EventBinding;}}}
-namespace g{namespace Uno{namespace UX{struct Property1;}}}
+namespace g{namespace Fuse{namespace Navigation{struct Router;}}}
+namespace g{namespace Fuse{struct Font;}}
 namespace g{namespace Uno{namespace UX{struct Selector;}}}
 namespace g{struct MainView;}
 
@@ -22,14 +21,11 @@ struct MainView : ::g::Fuse::App
 {
     static ::g::Uno::UX::Selector __selector0_;
     static ::g::Uno::UX::Selector& __selector0() { return MainView_typeof()->Init(), __selector0_; }
-    static ::g::Uno::UX::Selector __selector1_;
-    static ::g::Uno::UX::Selector& __selector1() { return MainView_typeof()->Init(), __selector1_; }
-    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb0;
-    uStrong< ::g::Uno::UX::Property1*> temp_Value_inst;
-    uStrong< ::g::Uno::UX::Property1*> temp1_Value_inst;
-    uStrong< ::g::Uno::UX::Property1*> temp2_Value_inst;
-    uStrong< ::g::Uno::UX::Property1*> temp3_Value_inst;
-    uStrong< ::g::Fuse::Controls::Panel*> transitionScaleGuide;
+    static uSStrong< ::g::Fuse::Font*> MainViewComfortaa_;
+    static uSStrong< ::g::Fuse::Font*>& MainViewComfortaa() { return MainView_typeof()->Init(), MainViewComfortaa_; }
+    static uSStrong< ::g::Fuse::Font*> MainViewComfortaaBold_;
+    static uSStrong< ::g::Fuse::Font*>& MainViewComfortaaBold() { return MainView_typeof()->Init(), MainViewComfortaaBold_; }
+    uStrong< ::g::Fuse::Navigation::Router*> router;
 
     void ctor_4();
     void InitializeUX();

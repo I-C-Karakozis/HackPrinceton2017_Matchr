@@ -12970,7 +12970,7 @@ Number* Number::New4()
 // /Users/hdc/Library/Application Support/Fusetools/Packages/Fuse.Controls.Navigation/0.46.1/$.uno
 // -----------------------------------------------------------------------------------------------
 
-// public sealed class Page :2004
+// public class Page :2004
 // {
 static void Page_build(uType* type)
 {

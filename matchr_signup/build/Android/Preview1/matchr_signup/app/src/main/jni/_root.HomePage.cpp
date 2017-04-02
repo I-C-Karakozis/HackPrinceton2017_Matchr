@@ -1,17 +1,23 @@
-// This file was generated based on /Users/hdc/matchr/matchrapp/matchr_signup/build/Android/Preview1/cache/ux11/HomePage.g.uno.
+// This file was generated based on /Users/hdc/matchr/matchrapp/HackPrinceton2017_Matchr/matchr_signup/build/Android/Preview1/cache/ux11/HomePage.g.uno.
 // WARNING: Changes might be lost if you edit this file directly.
 
 #include <_root.HomePage.h>
 #include <_root.matchr_signup_bundle.h>
 #include <Fuse.Controls.Button.h>
 #include <Fuse.Controls.ButtonBase.h>
+#include <Fuse.Controls.Image.h>
 #include <Fuse.Controls.NativeViewHost.h>
 #include <Fuse.Controls.ScrollView.h>
 #include <Fuse.Controls.StackPanel.h>
+#include <Fuse.Controls.Text.h>
+#include <Fuse.Controls.TextControl.h>
 #include <Fuse.Elements.Alignment.h>
 #include <Fuse.Elements.Element.h>
+#include <Fuse.Elements.StretchMode.h>
+#include <Fuse.Font.h>
 #include <Fuse.Gestures.Clicked.h>
 #include <Fuse.Gestures.ClickedHandler.h>
+#include <Fuse.Layer.h>
 #include <Fuse.Navigation.Router.h>
 #include <Fuse.Reactive.EventBinding.h>
 #include <Fuse.Reactive.JavaScript.h>
@@ -25,27 +31,35 @@
 #include <Uno.UX.BundleFileSource.h>
 #include <Uno.UX.FileSource.h>
 #include <Uno.UX.NameTable.h>
-static uString* STRINGS[6];
+#include <Uno.UX.Resource.h>
+static uString* STRINGS[9];
 static uType* TYPES[5];
 
 namespace g{
 
 // public partial sealed class HomePage :2
 // {
-// static HomePage() :11
+// static HomePage() :13
 static void HomePage__cctor_4_fn(uType* __type)
 {
     HomePage::__g_static_nametable1_ = uArray::Init<uString*>(::TYPES[0/*string[]*/], 1, ::STRINGS[0/*"router"*/]);
+    HomePage::Comfortaa_ = ::g::Fuse::Font::New2(::g::Uno::UX::BundleFileSource::New1(::g::matchr_signup_bundle::ComfortaaRegulara5c14941()));
+    HomePage::ComfortaaBold_ = ::g::Fuse::Font::New2(::g::Uno::UX::BundleFileSource::New1(::g::matchr_signup_bundle::ComfortaaBoldabe7fd1c()));
+    ::g::Uno::UX::Resource::SetGlobalKey(HomePage::Comfortaa_, ::STRINGS[1/*"Comfortaa"*/]);
+    ::g::Uno::UX::Resource::SetGlobalKey(HomePage::ComfortaaBold_, ::STRINGS[2/*"ComfortaaBold"*/]);
 }
 
 static void HomePage_build(uType* type)
 {
     ::STRINGS[0] = uString::Const("router");
-    ::STRINGS[1] = uString::Const("gotosignup");
-    ::STRINGS[2] = uString::Const("gotosignin");
-    ::STRINGS[3] = uString::Const("Pages/HomePage.ux");
-    ::STRINGS[4] = uString::Const("Sign Up");
-    ::STRINGS[5] = uString::Const("Sign In");
+    ::STRINGS[1] = uString::Const("Comfortaa");
+    ::STRINGS[2] = uString::Const("ComfortaaBold");
+    ::STRINGS[3] = uString::Const("gotosignup");
+    ::STRINGS[4] = uString::Const("gotosignin");
+    ::STRINGS[5] = uString::Const("Pages/HomePage.ux");
+    ::STRINGS[6] = uString::Const(" matchr");
+    ::STRINGS[7] = uString::Const("Sign Up");
+    ::STRINGS[8] = uString::Const("Sign In");
     ::TYPES[0] = ::g::Uno::String_typeof()->Array();
     ::TYPES[1] = ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Fuse::Node_typeof(), NULL);
     ::TYPES[2] = ::g::Fuse::Gestures::ClickedHandler_typeof();
@@ -70,7 +84,12 @@ static void HomePage_build(uType* type)
         ::g::Fuse::Navigation::Router_typeof(), offsetof(::g::HomePage, router), 0,
         ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::HomePage, temp_eb0), 0,
         ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::HomePage, temp_eb1), 0,
-        ::TYPES[0/*string[]*/], (uintptr_t)&::g::HomePage::__g_static_nametable1_, uFieldFlagsStatic);
+        ::TYPES[0/*string[]*/], (uintptr_t)&::g::HomePage::__g_static_nametable1_, uFieldFlagsStatic,
+        ::g::Fuse::Font_typeof(), (uintptr_t)&::g::HomePage::Comfortaa_, uFieldFlagsStatic,
+        ::g::Fuse::Font_typeof(), (uintptr_t)&::g::HomePage::ComfortaaBold_, uFieldFlagsStatic);
+    type->Reflection.SetFields(2,
+        new uField("Comfortaa", 107),
+        new uField("ComfortaaBold", 108));
     type->Reflection.SetFunctions(1,
         new uFunction(".ctor", NULL, (void*)HomePage__New5_fn, 0, true, type, 1, ::g::Fuse::Navigation::Router_typeof()));
 }
@@ -82,7 +101,7 @@ static void HomePage_build(uType* type)
 
     uTypeOptions options;
     options.BaseDefinition = ::g::Fuse::Controls::Page_typeof();
-    options.FieldCount = 107;
+    options.FieldCount = 109;
     options.InterfaceCount = 13;
     options.ObjectSize = sizeof(HomePage);
     options.TypeSize = sizeof(::g::Fuse::Controls::Control_type);
@@ -122,27 +141,29 @@ static void HomePage_build(uType* type)
     return type;
 }
 
-// public HomePage(Fuse.Navigation.Router router) :15
+// public HomePage(Fuse.Navigation.Router router) :21
 void HomePage__ctor_8_fn(HomePage* __this, ::g::Fuse::Navigation::Router* router1)
 {
     __this->ctor_8(router1);
 }
 
-// private void InitializeUX() :21
+// private void InitializeUX() :27
 void HomePage__InitializeUX_fn(HomePage* __this)
 {
     __this->InitializeUX();
 }
 
-// public HomePage New(Fuse.Navigation.Router router) :15
+// public HomePage New(Fuse.Navigation.Router router) :21
 void HomePage__New5_fn(::g::Fuse::Navigation::Router* router1, HomePage** __retval)
 {
     *__retval = HomePage::New5(router1);
 }
 
 uSStrong<uArray*> HomePage::__g_static_nametable1_;
+uSStrong< ::g::Fuse::Font*> HomePage::Comfortaa_;
+uSStrong< ::g::Fuse::Font*> HomePage::ComfortaaBold_;
 
-// public HomePage(Fuse.Navigation.Router router) [instance] :15
+// public HomePage(Fuse.Navigation.Router router) [instance] :21
 void HomePage::ctor_8(::g::Fuse::Navigation::Router* router1)
 {
     uStackFrame __("HomePage", ".ctor(Fuse.Navigation.Router)");
@@ -151,46 +172,60 @@ void HomePage::ctor_8(::g::Fuse::Navigation::Router* router1)
     InitializeUX();
 }
 
-// private void InitializeUX() [instance] :21
+// private void InitializeUX() [instance] :27
 void HomePage::InitializeUX()
 {
     uStackFrame __("HomePage", "InitializeUX()");
     __g_nametable1 = ::g::Uno::UX::NameTable::New1(NULL, HomePage::__g_static_nametable1());
     ::g::Fuse::Reactive::JavaScript* temp = ::g::Fuse::Reactive::JavaScript::New2(__g_nametable1);
-    ::g::Fuse::Controls::ScrollView* temp1 = ::g::Fuse::Controls::ScrollView::New4();
-    ::g::Fuse::Controls::StackPanel* temp2 = ::g::Fuse::Controls::StackPanel::New4();
-    ::g::Fuse::Controls::NativeViewHost* temp3 = ::g::Fuse::Controls::NativeViewHost::New3();
-    ::g::Fuse::Controls::Button* temp4 = ::g::Fuse::Controls::Button::New5();
-    temp_eb0 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[1/*"gotosignup"*/]);
+    ::g::Fuse::Controls::Image* temp1 = ::g::Fuse::Controls::Image::New3();
+    ::g::Fuse::Controls::ScrollView* temp2 = ::g::Fuse::Controls::ScrollView::New4();
+    ::g::Fuse::Controls::StackPanel* temp3 = ::g::Fuse::Controls::StackPanel::New4();
+    ::g::Fuse::Controls::Text* temp4 = ::g::Fuse::Controls::Text::New3();
     ::g::Fuse::Controls::NativeViewHost* temp5 = ::g::Fuse::Controls::NativeViewHost::New3();
     ::g::Fuse::Controls::Button* temp6 = ::g::Fuse::Controls::Button::New5();
-    temp_eb1 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[2/*"gotosignin"*/]);
-    temp->LineNumber(4);
-    temp->FileName(::STRINGS[3/*"Pages/HomeP...*/]);
-    temp->File(::g::Uno::UX::BundleFileSource::New1(::g::matchr_signup_bundle::HomePage4794569a()));
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp1->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp2);
-    temp2->Alignment(8);
+    temp_eb0 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[3/*"gotosignup"*/]);
+    ::g::Fuse::Controls::NativeViewHost* temp7 = ::g::Fuse::Controls::NativeViewHost::New3();
+    ::g::Fuse::Controls::Button* temp8 = ::g::Fuse::Controls::Button::New5();
+    temp_eb1 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[4/*"gotosignin"*/]);
+    temp->LineNumber(3);
+    temp->FileName(::STRINGS[5/*"Pages/HomeP...*/]);
+    temp->File(::g::Uno::UX::BundleFileSource::New1(::g::matchr_signup_bundle::HomePage2485c09e()));
+    temp1->StretchMode(6);
+    temp1->ContentAlignment(1);
+    temp1->Opacity(0.9f);
+    temp1->Layer(1);
+    temp1->File(::g::Uno::UX::BundleFileSource::New1(::g::matchr_signup_bundle::balloonf86f5a8f()));
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp2->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp3);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp2->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp5);
+    temp3->Alignment(8);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp3->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp4);
-    temp4->Text(::STRINGS[4/*"Sign Up"*/]);
-    temp4->Alignment(8);
-    temp4->Padding(::g::Uno::Float4__New2(15.0f, 15.0f, 15.0f, 15.0f));
-    ::g::Fuse::Gestures::Clicked::AddHandler(temp4, uDelegate::New(::TYPES[2/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb0)));
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp4->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb0);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp3->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp5);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp3->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp7);
+    temp4->Value(::STRINGS[6/*" matchr"*/]);
+    temp4->FontSize(60.0f);
+    temp4->Alignment(10);
+    temp4->Padding(::g::Uno::Float4__New2(10.0f, 10.0f, 10.0f, 10.0f));
+    temp4->Font(HomePage::ComfortaaBold());
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp5->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp6);
-    temp6->Text(::STRINGS[5/*"Sign In"*/]);
+    temp6->Text(::STRINGS[7/*"Sign Up"*/]);
     temp6->Alignment(8);
     temp6->Padding(::g::Uno::Float4__New2(15.0f, 15.0f, 15.0f, 15.0f));
-    ::g::Fuse::Gestures::Clicked::AddHandler(temp6, uDelegate::New(::TYPES[2/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb1)));
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb1);
+    ::g::Fuse::Gestures::Clicked::AddHandler(temp6, uDelegate::New(::TYPES[2/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb0)));
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb0);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp7->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp8);
+    temp8->Text(::STRINGS[8/*"Sign In"*/]);
+    temp8->Alignment(8);
+    temp8->Padding(::g::Uno::Float4__New2(15.0f, 15.0f, 15.0f, 15.0f));
+    ::g::Fuse::Gestures::Clicked::AddHandler(temp8, uDelegate::New(::TYPES[2/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb1)));
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp8->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb1);
     uPtr(__g_nametable1)->This(this);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(uPtr(__g_nametable1)->Objects()), ::TYPES[4/*Uno.Collections.ICollection<object>*/]), router);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp1);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp2);
 }
 
-// public HomePage New(Fuse.Navigation.Router router) [static] :15
+// public HomePage New(Fuse.Navigation.Router router) [static] :21
 HomePage* HomePage::New5(::g::Fuse::Navigation::Router* router1)
 {
     HomePage* obj1 = (HomePage*)uNew(HomePage_typeof());
