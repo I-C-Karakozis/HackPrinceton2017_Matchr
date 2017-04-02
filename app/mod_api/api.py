@@ -2,7 +2,7 @@
 from flask import Blueprint
 from flask_restful import Api
 
-from resources import matches, users, auth, friendrequest, friendships
+from resources import matches, users, auth, friendrequests, friendships
 from app import db
 
 mod_api = Blueprint('api', __name__, url_prefix='/api')

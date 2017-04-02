@@ -4,12 +4,9 @@ from flask_restful import Resource, reqparse
 from app import app, db, flask_bcrypt
 from app.mod_api import models
 
-import datetime
-
-now = datetime.datetime.now()
 parser = reqparse.RequestParser()
 
-class Friendship(Resource):
+class Friendships(Resource):
     def post(self):
         """Creates a friendship between user1 to user2
         
@@ -59,8 +56,8 @@ class Friendship(Resource):
                 response = {
                     'status': 'success',
                     'data': {
-                        'user1_id' = user1_id ,
-                        'user2_id' = user2_id
+                        'user1_id' : user1_id ,
+                        'user2_id' : user2_id
                         }
                     }
                 return make_response(jsonify(response), 201)
@@ -166,7 +163,7 @@ class Friendship(Resource):
                 response = {
                     'status': 'success',
                     'data': {
-                        'user1_id': user1_id
+                        'user1_id': user1_id ,
                         'user2_id': user2_id
                         }
                     }

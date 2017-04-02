@@ -57,8 +57,8 @@ class FriendRequest(Resource):
             if existing_request2:
                 response = {
                     'status': 'success',
-                    'message': 'Friend request from user2 to user1 exists. Create friendship'
-                    'sigil': True
+                    'message': 'Friend request from user2 to user1 exists. Create friendship' ,
+                    'sigil': 'True'
                     }
                 return make_response(jsonify(response), 202)
 
@@ -73,10 +73,10 @@ class FriendRequest(Resource):
 
                 response = {
                     'status': 'success',
-                    'sigil': False
+                    'sigil': 'False' ,
                     'data': {
-                        'user1_id' = user1_id ,
-                        'user2_id' = user2_id
+                        'user1_id' : user1_id ,
+                        'user2_id' : user2_id
                         }
                     }
                 return make_response(jsonify(response), 201)
@@ -130,20 +130,20 @@ class FriendRequest(Resource):
             existing_request = models.FriendRequest.query(user1_id = user1_id, user2_id = user2_id).first()
             if existing_request:                
                 response = {
-                    'status': 'success'
+                    'status': 'success' ,
                     'data': {
-                        'user1_id': user1_id
-                        'user2_id': user2_id
+                        'user1_id': user1_id ,
+                        'user2_id': user2_id ,
                         'friendrequest': 'yes'
                         }
                     }
                 return make_response(jsonify(response), 200)
             else:
                 response = {
-                    'status': 'success'
+                    'status': 'success' ,
                     'data': {
-                        'user1_id': user1_id
-                        'user2_id': user2_id
+                        'user1_id': user1_id ,
+                        'user2_id': user2_id ,
                         'friendrequest': 'no'
                         }
                     } 
@@ -200,7 +200,7 @@ class FriendRequest(Resource):
                 response = {
                     'status': 'success',
                     'data': {
-                        'user1_id': user1_id
+                        'user1_id': user1_id ,
                         'user2_id': user2_id
                         }
                     }
