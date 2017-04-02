@@ -28,7 +28,6 @@ class Matches(Resource):
                 'match_id': match_id
                 }
         }
-        Returns 404 if no match with the given id was found.
         """
         args = parser.parse_args()
         if request.query_string:
@@ -89,26 +88,47 @@ class Matches(Resource):
 
         
     def get(self):
-        """Returns all information of the user with the id corresponding to the authentication token presented in the Authorizaton header. If the token is invalid, returns an error.
+        """Returns all the matches that match the given query
         
-        Request: GET /Matches
-        {
-            'status': 'success',
-            'data': {
-                'target_id' = target_id
-                }
-        }
+        Request: GET /Matches?user_id=id&user2_id=id2
+            only user_id is required; user2_id should be input when a specific match is requested
         Response: HTTP 200 OK
         {
             'status': 'success',
-            'data': [
+            'matches': {
                 { creator_id, target1_id, target2_id,  matched_on } ,
                 { creator_id, target1_id, target2_id,  matched_on } ,
                 ...
-                ]
+                }
         }
-        Returns 404 if no user with the given id was found.
         """
+        parser = reqparse.RequestParser()
+        parser.add_argument('user_id', type = int, required = True, location = 'args', help = 'User_id must be an integer; required argument')
+        parser.add_argument('user2_id', type = int, location = 'args')
+        args = parser.parse_args()
+
+        if len(args) == 2:
+            matches = models.Match.query.filter_by(target1_id = user_id, target2_id = user2_id)
+            response = {
+                'status': 'success',
+                'matches': matches
+                }
+            return make_response(jsonify(response), 200)
+        elif len(args) == 1:
+            matches = models.Match.query.filter_by(target1_id = user_id)
+            matches2 = models.Match.query.filter_by(target2_id = user_id)
+            matches = matches + matches2
+            response = {
+                'status': 'success',
+                'matches': matches
+                }
+            return make_response(jsonify(response), 200)
+        else:
+            response = {
+                'status': 'failed',
+                'message': 'Wrong number of arguments passed.'
+                }
+            return make_response(jsonify(response), 400)        
 
 class Match(Resource):
     def patch(self, match_id): 

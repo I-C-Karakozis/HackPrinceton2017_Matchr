@@ -43,7 +43,7 @@ class Friendships(Resource):
             user1 = min(user1_id, user2_id)
             user2 = min(user1_id, user2_id)
 
-            existing_friendship = models.FriendRequest.query(user1_id = user1, user2_id = user2).first()
+            existing_friendship = models.Friendship.query(user1_id = user1, user2_id = user2).first()
             if not existing_friendship:
                 friendship = models.Friendship(
                     user1_id = user1 ,
@@ -75,47 +75,47 @@ class Friendships(Resource):
             return make_response(jsonify(response), 400)
 
     def get(self):
-        """Returns all friendships of user
-
-        Request: GET /Friendships
-        {
-            'user_id' = user_id
-        }
+        """Returns all the friendships that match the given query
+        
+        Request: GET /friendships?user_id=id&user2_id=id2
+            only user_id is required; user2_id should be input when a specific match is requested
         Response: HTTP 200 OK
         {
-            'status': 'success'
-            'data': {
-                'user_id': user_id
-                }
-        }
-        Returns 404 if no user with the given id was found.
-        """
-        args = parser.parse_args()
-        if request.query_string:
-            abort(400)
-        post_data = request.get_json()           
-        if post_data.has_key('user_id'):
-            user_id = post_data.get('user_id')
-
-            existing_request = models.FriendRequest.query(user1_id = user1_id, user2_id = user2_id).first()
-            if existing_request:
-                
-                response = {
-                    'status': 'success',
+            'status': 'success',
+            friendships': {
+                    { user1_id, user2_id, friended_on } ,
+                    { user1_id, user2_id, friended_on } ,
+                    ...
                     }
-                return make_response(jsonify(response), 200)
-            else:
-                response = {
-                    'status': 'failed',
-                    'message': "Friend request does not exist"
-                    } 
-                return make_response(jsonify(response), 400)
+        }
+        """
+        parser = reqparse.RequestParser()
+        parser.add_argument('user_id', type = int, required = True, location = 'args', help = 'User_id must be an integer; required argument')
+        parser.add_argument('user2_id', type = int, location = 'args')
+        args = parser.parse_args()
+
+        if len(args) == 2:
+            friendships = models.Friendship.query.filter_by(user1_id = user_id, user2_id = user2_id)
+            response = {
+                'status': 'success',
+                'friendships': friendships
+                }
+            return make_response(jsonify(response), 200)
+        elif len(args) == 1:
+            friendships = models.Friendship.query.filter_by(target1_id = user_id)
+            friendships2 = models.Friendship.query.filter_by(target2_id = user_id)
+            friendships = friendships + friendships2
+            response = {
+                'status': 'success',
+                'friendships': friendships
+                }
+            return make_response(jsonify(response), 200)
         else:
             response = {
-                    'status': 'failed',
-                    'message': "Incomplete information passed."
-                    } 
-            return make_response(jsonify(response), 400)    
+                'status': 'failed',
+                'message': 'Wrong number of arguments passed.'
+                }
+            return make_response(jsonify(response), 400)   
 
     def delete(self): 
         """Deletes the friendship between user1 and user2 if it exists
@@ -154,7 +154,7 @@ class Friendships(Resource):
             user1 = min(user1_id, user2_id)
             user2 = min(user1_id, user2_id)
 
-            existing_request = models.FriendRequest.query(user1_id = user1, user2_id = user2).first()
+            existing_request = models.Friendship.query(user1_id = user1, user2_id = user2).first()
             if existing_request:
                 
                 db.session.delete(existing_request)
