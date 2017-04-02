@@ -23,7 +23,6 @@ class User(db.Model):
     password_hash = db.Column(db.String(255), nullable=False)
     registered_on = db.Column(db.DateTime, nullable=False)
 
-
     def __init__(self, email, username, password):
         self.email = email
         self.username = username
@@ -39,6 +38,7 @@ class Friendship(db.Model):
         self.user1_id = user1_id
         self.user2_id = user2_id
 
+# directed relationships
 class FriendRequest(db.Model):
     user1_id = db.Column(db.Integer, nullable=False)
     user2_id = db.Column(db.Integer, nullable=False)    
@@ -46,6 +46,3 @@ class FriendRequest(db.Model):
     def __init__(user1_id, user2_id):
         self.user1_id = user1_id
         self.user2_id = user2_id 
-
-
-

@@ -14,4 +14,7 @@ api_v1.add_resource(matches.Match, '/Matches/<int:match_id>')
 api_v1.add_resource(users.Users, '/Users')
 api_v1.add_resource(users.User, '/Users/<int:user_id>')
 
+api_v1.add_resource(friendrequests.FriendRequest, '/FriendRequests')
+api_v1.add_resource(friendships.Friendships, '/Friendships')
+
 api_v1.add_resource(auth.Login, '/Auth/Login')
