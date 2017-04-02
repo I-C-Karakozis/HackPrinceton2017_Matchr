@@ -9,13 +9,11 @@ friends = shuffle(friends);
 var userId = 0;
 
 // Randomize what friend shows up first
-var index1 = new Observable();
-index1.value = randomIndex(-1);
+var index1 = randomIndex(-1);
 var friend1 = Observable(friends[index1]);
 
 // Randomize what friend shows up next (cannot match the first one)
-var index2 = new Observable();
-index2.value = randomIndex(index1);
+var index2 = randomIndex(index1);
 var friend2 = Observable(friends[index2]);
 
 var matchId = Observable();
@@ -25,6 +23,42 @@ console.log("Before fetch...");
 
 var status = 0;
 var response_ok = false;
+
+fetch('http://10.9.49.162:8080/api/Matches', {
+	method: 'POST',
+	headers: {
+		'Accept': 'application/json',
+		'Content-type': 'application/json'
+	},
+	body: JSON.stringify({
+		creator_id: userId,
+		target1_id: friend1.id,
+		target2_id: friend2.id
+	})
+}).then(function(response) {
+	console.log("Then response");
+	status = response.status;
+	response_ok = response.ok;
+	if (response.ok) {
+		console.log("Response was okay");
+	} else {
+		console.log("Reponse is not okay");
+	}
+	return response.json();
+}).then(function(responseObject) {
+	matchId = responseObject.data.match_id;
+	status = responseObject.status;
+	console.log("MatchId: ");
+	console.log(matchId.toString());
+	console.log("Status: ");
+	console.log(status.toString());
+}).catch(function(err) {
+	console.log(JSON.stringify(err, null, 2));
+	console.log(err.name.toString());
+	console.log(err.number.toString());
+	console.log(err.description.toString());
+});
+
 
 console.log("After fetch");
 
@@ -95,11 +129,11 @@ function nextFriend(currentFriend) {
 
 	// Update friend
 	if (friend === friend1) {
+		friend1 = friends[thisIndex];
 		index1 = thisIndex;
-		friend1 = friends[index1];
 	} else {
+		friend2 = friends[thisIndex];
 		index2 = thisIndex;
-		friend2 = friends[index2];
 	}
 };
 
@@ -139,38 +173,27 @@ function previousFriend(currentFriend) {
 };
 
 function matchFriends() {
-	fetch('http://10.9.49.162:8080/api/Matches', {
+	fetch('http://localhost/api/Matches', {
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
 			'Content-type': 'application/json'
 		},
 		body: JSON.stringify({
-			creator_id: userId,
-			target1_id: friend1.id,
-			target2_id: friend2.id
+			'creator_id': userId,
+			'target1_id': friend1.id,
+			'target2_id': friend2.id
 		})
 	}).then(function(response) {
-		console.log("Then response");
 		status = response.status;
 		response_ok = response.ok;
-		if (response.ok) {
-			console.log("Response was okay");
-		} else {
-			console.log("Reponse is not okay");
-		}
 		return response.json();
 	}).then(function(responseObject) {
-		matchId = responseObject.data.match_id;
-		status = responseObject.status;
-		console.log("MatchId: ");
-		console.log(matchId.toString());
-		console.log("Status: ");
-		console.log(status.toString());
+		var object = responseObject.data;
+		matchId = object.match_id;
+
+		module.exports = matchId;
 	}).catch(function(err) {
-		console.log(JSON.stringify(err, null, 2));
-		console.log(err.name.toString());
-		console.log(err.number.toString());
-		console.log(err.description.toString());
+		// Do something
 	});
 };
