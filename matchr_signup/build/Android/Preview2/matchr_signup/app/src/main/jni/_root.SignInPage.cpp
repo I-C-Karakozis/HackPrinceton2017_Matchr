@@ -1,4 +1,4 @@
-// This file was generated based on /Users/hdc/matchr/matchrapp/matchr_signup/build/Android/Preview2/cache/ux11/SignInPage.g.uno.
+// This file was generated based on /Users/hdc/matchr/matchrapp/HackPrinceton2017_Matchr/matchr_signup/build/Android/Preview2/cache/ux11/SignInPage.g.uno.
 // WARNING: Changes might be lost if you edit this file directly.
 
 #include <_root.matchr_signup_bundle.h>
@@ -17,6 +17,7 @@
 #include <Fuse.Controls.TextInputActionStyle.h>
 #include <Fuse.Controls.TextInputControl.h>
 #include <Fuse.Controls.TextInputHint.h>
+#include <Fuse.Drawing.Colors.h>
 #include <Fuse.Elements.Alignment.h>
 #include <Fuse.Elements.Element.BoxSizingMode.h>
 #include <Fuse.Elements.Element.h>
@@ -70,9 +71,9 @@ static void SignInPage_build(uType* type)
     ::STRINGS[6] = uString::Const("signin");
     ::STRINGS[7] = uString::Const("goBack");
     ::STRINGS[8] = uString::Const("Pages/SignInPage.ux");
-    ::STRINGS[9] = uString::Const("Email Address");
-    ::STRINGS[10] = uString::Const("Password");
-    ::STRINGS[11] = uString::Const("Sign In");
+    ::STRINGS[9] = uString::Const("Sign In");
+    ::STRINGS[10] = uString::Const("Email Address");
+    ::STRINGS[11] = uString::Const("Password");
     ::STRINGS[12] = uString::Const("Back");
     ::TYPES[0] = ::g::Uno::String_typeof()->Array();
     ::TYPES[1] = ::g::Fuse::Reactive::DataBinding_typeof()->MakeType(::g::Uno::String_typeof(), NULL);
@@ -97,8 +98,8 @@ static void SignInPage_build(uType* type)
     type->SetFields(102,
         ::g::Uno::UX::NameTable_typeof(), offsetof(::g::SignInPage, __g_nametable1), 0,
         ::g::Fuse::Navigation::Router_typeof(), offsetof(::g::SignInPage, router), 0,
-        ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::SignInPage, temp_eb1), 0,
-        ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::SignInPage, temp_eb2), 0,
+        ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::SignInPage, temp_eb3), 0,
+        ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::SignInPage, temp_eb4), 0,
         ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::SignInPage, temp_Value_inst), 0,
         ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::SignInPage, temp1_Value_inst), 0,
         ::g::Uno::UX::Property1_typeof()->MakeType(::g::Uno::String_typeof(), NULL), offsetof(::g::SignInPage, temp2_Value_inst), 0,
@@ -204,18 +205,19 @@ void SignInPage::InitializeUX()
     ::g::Fuse::iOS::StatusBarConfig* temp5 = ::g::Fuse::iOS::StatusBarConfig::New2();
     transitionScaleGuide = ::g::Fuse::Controls::Panel::New3();
     ::g::Fuse::Controls::StackPanel* temp6 = ::g::Fuse::Controls::StackPanel::New4();
-    ::g::Fuse::Reactive::DataBinding* temp7 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[1/*Fuse.Reactive.DataBinding<string>*/], temp_Value_inst, ::STRINGS[3/*"email"*/]);
-    ::g::Fuse::Reactive::DataBinding* temp8 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[1/*Fuse.Reactive.DataBinding<string>*/], temp1_Value_inst, ::STRINGS[4/*"passwd"*/]);
-    ::g::Fuse::Reactive::DataBinding* temp9 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[1/*Fuse.Reactive.DataBinding<string>*/], temp2_Value_inst, ::STRINGS[5/*"loginerr"*/]);
-    ::g::Fuse::Controls::NativeViewHost* temp10 = ::g::Fuse::Controls::NativeViewHost::New3();
-    ::g::Fuse::Controls::Button* temp11 = ::g::Fuse::Controls::Button::New5();
-    temp_eb1 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[6/*"signin"*/]);
-    ::g::Fuse::Controls::NativeViewHost* temp12 = ::g::Fuse::Controls::NativeViewHost::New3();
-    ::g::Fuse::Controls::Button* temp13 = ::g::Fuse::Controls::Button::New5();
-    temp_eb2 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[7/*"goBack"*/]);
+    ::g::Fuse::Controls::Text* temp7 = ::g::Fuse::Controls::Text::New3();
+    ::g::Fuse::Reactive::DataBinding* temp8 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[1/*Fuse.Reactive.DataBinding<string>*/], temp_Value_inst, ::STRINGS[3/*"email"*/]);
+    ::g::Fuse::Reactive::DataBinding* temp9 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[1/*Fuse.Reactive.DataBinding<string>*/], temp1_Value_inst, ::STRINGS[4/*"passwd"*/]);
+    ::g::Fuse::Reactive::DataBinding* temp10 = (::g::Fuse::Reactive::DataBinding*)::g::Fuse::Reactive::DataBinding::New1(::TYPES[1/*Fuse.Reactive.DataBinding<string>*/], temp2_Value_inst, ::STRINGS[5/*"loginerr"*/]);
+    ::g::Fuse::Controls::NativeViewHost* temp11 = ::g::Fuse::Controls::NativeViewHost::New3();
+    ::g::Fuse::Controls::Button* temp12 = ::g::Fuse::Controls::Button::New5();
+    temp_eb3 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[6/*"signin"*/]);
+    ::g::Fuse::Controls::NativeViewHost* temp13 = ::g::Fuse::Controls::NativeViewHost::New3();
+    ::g::Fuse::Controls::Button* temp14 = ::g::Fuse::Controls::Button::New5();
+    temp_eb4 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[7/*"goBack"*/]);
     temp3->LineNumber(4);
     temp3->FileName(::STRINGS[8/*"Pages/SignI...*/]);
-    temp3->File(::g::Uno::UX::BundleFileSource::New1(::g::matchr_signup_bundle::SignInPageb93fffe7()));
+    temp3->File(::g::Uno::UX::BundleFileSource::New1(::g::matchr_signup_bundle::SignInPage53c4bc09()));
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp4->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp5);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp4->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), transitionScaleGuide);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp4->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp6);
@@ -230,29 +232,35 @@ void SignInPage::InitializeUX()
     temp6->ItemSpacing(10.0f);
     temp6->Alignment(8);
     temp6->Margin(::g::Uno::Float4__New2(10.0f, 10.0f, 10.0f, 10.0f));
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp7);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp1);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp2);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp10);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp12);
-    temp->PlaceholderText(::STRINGS[9/*"Email Address"*/]);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp11);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp13);
+    temp7->Value(::STRINGS[9/*"Sign In"*/]);
+    temp7->FontSize(25.0f);
+    temp7->Alignment(2);
+    temp7->Padding(::g::Uno::Float4__New2(10.0f, 10.0f, 10.0f, 10.0f));
+    temp->PlaceholderText(::STRINGS[10/*"Email Address"*/]);
     temp->ActionStyle(2);
     temp->InputHint(1);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp7);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp8);
     temp1->IsPassword(true);
-    temp1->PlaceholderText(::STRINGS[10/*"Password"*/]);
+    temp1->PlaceholderText(::STRINGS[11/*"Password"*/]);
     temp1->ActionStyle(2);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp1->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp8);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp1->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp9);
+    temp2->TextColor(::g::Fuse::Drawing::Colors::Red());
     temp2->Alignment(2);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp2->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp9);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp10->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp11);
-    temp11->Text(::STRINGS[11/*"Sign In"*/]);
-    ::g::Fuse::Gestures::Clicked::AddHandler(temp11, uDelegate::New(::TYPES[4/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb1)));
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp11->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb1);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp12->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp13);
-    temp13->Text(::STRINGS[12/*"Back"*/]);
-    ::g::Fuse::Gestures::Clicked::AddHandler(temp13, uDelegate::New(::TYPES[4/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb2)));
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp13->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb2);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp2->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp10);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp11->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp12);
+    temp12->Text(::STRINGS[9/*"Sign In"*/]);
+    ::g::Fuse::Gestures::Clicked::AddHandler(temp12, uDelegate::New(::TYPES[4/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb3)));
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp12->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb3);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp13->Children()), ::TYPES[2/*Uno.Collections.ICollection<Fuse.Node>*/]), temp14);
+    temp14->Text(::STRINGS[12/*"Back"*/]);
+    ::g::Fuse::Gestures::Clicked::AddHandler(temp14, uDelegate::New(::TYPES[4/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb4)));
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp14->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb4);
     uPtr(__g_nametable1)->This(this);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(uPtr(__g_nametable1)->Objects()), ::TYPES[5/*Uno.Collections.ICollection<object>*/]), router);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(uPtr(__g_nametable1)->Objects()), ::TYPES[5/*Uno.Collections.ICollection<object>*/]), transitionScaleGuide);

@@ -1,4 +1,4 @@
-// This file was generated based on /Users/hdc/matchr/matchrapp/matchr_signup/build/Android/Preview2/cache/ux11/HomePage.g.uno.
+// This file was generated based on /Users/hdc/matchr/matchrapp/HackPrinceton2017_Matchr/matchr_signup/build/Android/Preview2/cache/ux11/HomePage.g.uno.
 // WARNING: Changes might be lost if you edit this file directly.
 
 #include <_root.HomePage.h>
@@ -8,6 +8,8 @@
 #include <Fuse.Controls.NativeViewHost.h>
 #include <Fuse.Controls.ScrollView.h>
 #include <Fuse.Controls.StackPanel.h>
+#include <Fuse.Controls.Text.h>
+#include <Fuse.Controls.TextControl.h>
 #include <Fuse.Elements.Alignment.h>
 #include <Fuse.Elements.Element.h>
 #include <Fuse.Gestures.Clicked.h>
@@ -25,14 +27,14 @@
 #include <Uno.UX.BundleFileSource.h>
 #include <Uno.UX.FileSource.h>
 #include <Uno.UX.NameTable.h>
-static uString* STRINGS[4];
+static uString* STRINGS[7];
 static uType* TYPES[5];
 
 namespace g{
 
 // public partial sealed class HomePage :2
 // {
-// static HomePage() :10
+// static HomePage() :11
 static void HomePage__cctor_4_fn(uType* __type)
 {
     HomePage::__g_static_nametable1_ = uArray::Init<uString*>(::TYPES[0/*string[]*/], 1, ::STRINGS[0/*"router"*/]);
@@ -42,8 +44,11 @@ static void HomePage_build(uType* type)
 {
     ::STRINGS[0] = uString::Const("router");
     ::STRINGS[1] = uString::Const("gotosignup");
-    ::STRINGS[2] = uString::Const("Pages/HomePage.ux");
-    ::STRINGS[3] = uString::Const("Sign Up");
+    ::STRINGS[2] = uString::Const("gotosignin");
+    ::STRINGS[3] = uString::Const("Pages/HomePage.ux");
+    ::STRINGS[4] = uString::Const(" matchr");
+    ::STRINGS[5] = uString::Const("Sign Up");
+    ::STRINGS[6] = uString::Const("Sign In");
     ::TYPES[0] = ::g::Uno::String_typeof()->Array();
     ::TYPES[1] = ::g::Uno::Collections::ICollection_typeof()->MakeType(::g::Fuse::Node_typeof(), NULL);
     ::TYPES[2] = ::g::Fuse::Gestures::ClickedHandler_typeof();
@@ -67,6 +72,7 @@ static void HomePage_build(uType* type)
         ::g::Uno::UX::NameTable_typeof(), offsetof(::g::HomePage, __g_nametable1), 0,
         ::g::Fuse::Navigation::Router_typeof(), offsetof(::g::HomePage, router), 0,
         ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::HomePage, temp_eb0), 0,
+        ::g::Fuse::Reactive::EventBinding_typeof(), offsetof(::g::HomePage, temp_eb1), 0,
         ::TYPES[0/*string[]*/], (uintptr_t)&::g::HomePage::__g_static_nametable1_, uFieldFlagsStatic);
     type->Reflection.SetFunctions(1,
         new uFunction(".ctor", NULL, (void*)HomePage__New5_fn, 0, true, type, 1, ::g::Fuse::Navigation::Router_typeof()));
@@ -79,7 +85,7 @@ static void HomePage_build(uType* type)
 
     uTypeOptions options;
     options.BaseDefinition = ::g::Fuse::Controls::Page_typeof();
-    options.FieldCount = 106;
+    options.FieldCount = 107;
     options.InterfaceCount = 13;
     options.ObjectSize = sizeof(HomePage);
     options.TypeSize = sizeof(::g::Fuse::Controls::Control_type);
@@ -119,19 +125,19 @@ static void HomePage_build(uType* type)
     return type;
 }
 
-// public HomePage(Fuse.Navigation.Router router) :14
+// public HomePage(Fuse.Navigation.Router router) :15
 void HomePage__ctor_8_fn(HomePage* __this, ::g::Fuse::Navigation::Router* router1)
 {
     __this->ctor_8(router1);
 }
 
-// private void InitializeUX() :20
+// private void InitializeUX() :21
 void HomePage__InitializeUX_fn(HomePage* __this)
 {
     __this->InitializeUX();
 }
 
-// public HomePage New(Fuse.Navigation.Router router) :14
+// public HomePage New(Fuse.Navigation.Router router) :15
 void HomePage__New5_fn(::g::Fuse::Navigation::Router* router1, HomePage** __retval)
 {
     *__retval = HomePage::New5(router1);
@@ -139,7 +145,7 @@ void HomePage__New5_fn(::g::Fuse::Navigation::Router* router1, HomePage** __retv
 
 uSStrong<uArray*> HomePage::__g_static_nametable1_;
 
-// public HomePage(Fuse.Navigation.Router router) [instance] :14
+// public HomePage(Fuse.Navigation.Router router) [instance] :15
 void HomePage::ctor_8(::g::Fuse::Navigation::Router* router1)
 {
     uStackFrame __("HomePage", ".ctor(Fuse.Navigation.Router)");
@@ -148,7 +154,7 @@ void HomePage::ctor_8(::g::Fuse::Navigation::Router* router1)
     InitializeUX();
 }
 
-// private void InitializeUX() [instance] :20
+// private void InitializeUX() [instance] :21
 void HomePage::InitializeUX()
 {
     uStackFrame __("HomePage", "InitializeUX()");
@@ -156,28 +162,44 @@ void HomePage::InitializeUX()
     ::g::Fuse::Reactive::JavaScript* temp = ::g::Fuse::Reactive::JavaScript::New2(__g_nametable1);
     ::g::Fuse::Controls::ScrollView* temp1 = ::g::Fuse::Controls::ScrollView::New4();
     ::g::Fuse::Controls::StackPanel* temp2 = ::g::Fuse::Controls::StackPanel::New4();
-    ::g::Fuse::Controls::NativeViewHost* temp3 = ::g::Fuse::Controls::NativeViewHost::New3();
-    ::g::Fuse::Controls::Button* temp4 = ::g::Fuse::Controls::Button::New5();
+    ::g::Fuse::Controls::Text* temp3 = ::g::Fuse::Controls::Text::New3();
+    ::g::Fuse::Controls::NativeViewHost* temp4 = ::g::Fuse::Controls::NativeViewHost::New3();
+    ::g::Fuse::Controls::Button* temp5 = ::g::Fuse::Controls::Button::New5();
     temp_eb0 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[1/*"gotosignup"*/]);
+    ::g::Fuse::Controls::NativeViewHost* temp6 = ::g::Fuse::Controls::NativeViewHost::New3();
+    ::g::Fuse::Controls::Button* temp7 = ::g::Fuse::Controls::Button::New5();
+    temp_eb1 = ::g::Fuse::Reactive::EventBinding::New1(::STRINGS[2/*"gotosignin"*/]);
     temp->LineNumber(4);
-    temp->FileName(::STRINGS[2/*"Pages/HomeP...*/]);
-    temp->File(::g::Uno::UX::BundleFileSource::New1(::g::matchr_signup_bundle::HomePage4794569a()));
+    temp->FileName(::STRINGS[3/*"Pages/HomeP...*/]);
+    temp->File(::g::Uno::UX::BundleFileSource::New1(::g::matchr_signup_bundle::HomePage2485c09e()));
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp1->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp2);
     temp2->Alignment(8);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp2->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp3);
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp3->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp4);
-    temp4->Text(::STRINGS[3/*"Sign Up"*/]);
-    temp4->Alignment(8);
-    temp4->Padding(::g::Uno::Float4__New2(15.0f, 15.0f, 15.0f, 15.0f));
-    ::g::Fuse::Gestures::Clicked::AddHandler(temp4, uDelegate::New(::TYPES[2/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb0)));
-    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp4->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb0);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp2->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp4);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp2->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp6);
+    temp3->Value(::STRINGS[4/*" matchr"*/]);
+    temp3->FontSize(60.0f);
+    temp3->Alignment(10);
+    temp3->Padding(::g::Uno::Float4__New2(10.0f, 10.0f, 10.0f, 10.0f));
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp4->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp5);
+    temp5->Text(::STRINGS[5/*"Sign Up"*/]);
+    temp5->Alignment(8);
+    temp5->Padding(::g::Uno::Float4__New2(15.0f, 15.0f, 15.0f, 15.0f));
+    ::g::Fuse::Gestures::Clicked::AddHandler(temp5, uDelegate::New(::TYPES[2/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb0)));
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp5->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb0);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp6->Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp7);
+    temp7->Text(::STRINGS[6/*"Sign In"*/]);
+    temp7->Alignment(8);
+    temp7->Padding(::g::Uno::Float4__New2(15.0f, 15.0f, 15.0f, 15.0f));
+    ::g::Fuse::Gestures::Clicked::AddHandler(temp7, uDelegate::New(::TYPES[2/*Fuse.Gestures.ClickedHandler*/], (void*)::g::Fuse::Reactive::EventBinding__OnEvent_fn, uPtr(temp_eb1)));
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp7->Bindings()), ::TYPES[3/*Uno.Collections.ICollection<Fuse.Binding>*/]), temp_eb1);
     uPtr(__g_nametable1)->This(this);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(uPtr(__g_nametable1)->Objects()), ::TYPES[4/*Uno.Collections.ICollection<object>*/]), router);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[1/*Uno.Collections.ICollection<Fuse.Node>*/]), temp1);
 }
 
-// public HomePage New(Fuse.Navigation.Router router) [static] :14
+// public HomePage New(Fuse.Navigation.Router router) [static] :15
 HomePage* HomePage::New5(::g::Fuse::Navigation::Router* router1)
 {
     HomePage* obj1 = (HomePage*)uNew(HomePage_typeof());

@@ -64,6 +64,27 @@ public partial class MainView: Fuse.App
         }
         static global::Uno.UX.Selector __selector0 = "signinpage";
     }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template3: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template3(MainView parent, MainView parentInstance): base("mainpage", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template3()
+        {
+        }
+        public override object New()
+        {
+            var self = new MainPage(__parent.router);
+            self.Name = __selector0;
+            return self;
+        }
+        static global::Uno.UX.Selector __selector0 = "mainpage";
+    }
     internal Fuse.Navigation.Router router;
     static MainView()
     {
@@ -193,12 +214,14 @@ public partial class MainView: Fuse.App
         var home = new Template(this, this);
         var signuppage = new Template1(this, this);
         var signinpage = new Template2(this, this);
+        var mainpage = new Template3(this, this);
         router.Name = __selector0;
         temp16.Children.Add(temp17);
         temp17.DefaultPath = "home";
         temp17.Templates.Add(home);
         temp17.Templates.Add(signuppage);
         temp17.Templates.Add(signinpage);
+        temp17.Templates.Add(mainpage);
         this.Children.Add(router);
         this.Children.Add(temp16);
     }

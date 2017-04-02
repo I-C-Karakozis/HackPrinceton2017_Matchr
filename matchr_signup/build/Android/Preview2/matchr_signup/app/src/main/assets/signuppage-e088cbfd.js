@@ -44,12 +44,17 @@ function signup() {
 }
 
 function goBack() {
+	email.value = "";
+	username.value = "";
+	passwd.value = "";
+	repasswd.value = "";
+	passwderr.value = "";
 	router.goBack();
 }
 
 module.exports = {
 	email: email,
-	userid: username,
+	username: username,
 	passwd: passwd,
 	repasswd: repasswd,
 	passwderr: passwderr,

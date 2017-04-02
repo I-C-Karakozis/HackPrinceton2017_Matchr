@@ -1,4 +1,4 @@
-// This file was generated based on /Users/hdc/matchr/matchrapp/matchr_signup/build/Android/Preview2/cache/ux11/matchr_signup.unoproj.g.uno.
+// This file was generated based on /Users/hdc/matchr/matchrapp/HackPrinceton2017_Matchr/matchr_signup/build/Android/Preview2/cache/ux11/matchr_signup.unoproj.g.uno.
 // WARNING: Changes might be lost if you edit this file directly.
 
 #include <_root.matchr_signup_FuseControlsTextControl_Value_Property.h>
@@ -10,7 +10,7 @@
 
 namespace g{
 
-// internal sealed class matchr_signup_FuseControlsTextControl_Value_Property :10
+// internal sealed class matchr_signup_FuseControlsTextControl_Value_Property :1
 // {
 static void matchr_signup_FuseControlsTextControl_Value_Property_build(uType* type)
 {
@@ -38,52 +38,52 @@ static void matchr_signup_FuseControlsTextControl_Value_Property_build(uType* ty
     return type;
 }
 
-// public matchr_signup_FuseControlsTextControl_Value_Property(Fuse.Controls.TextControl obj, Uno.UX.Selector name) :13
+// public matchr_signup_FuseControlsTextControl_Value_Property(Fuse.Controls.TextControl obj, Uno.UX.Selector name) :4
 void matchr_signup_FuseControlsTextControl_Value_Property__ctor_2_fn(matchr_signup_FuseControlsTextControl_Value_Property* __this, ::g::Fuse::Controls::TextControl* obj, ::g::Uno::UX::Selector* name)
 {
     __this->ctor_2(obj, *name);
 }
 
-// public override sealed string Get() :15
+// public override sealed string Get() :6
 void matchr_signup_FuseControlsTextControl_Value_Property__Get_fn(matchr_signup_FuseControlsTextControl_Value_Property* __this, uString** __retval)
 {
     uStackFrame __("matchr_signup_FuseControlsTextControl_Value_Property", "Get()");
     return *__retval = uPtr(__this->_obj)->Value(), void();
 }
 
-// public matchr_signup_FuseControlsTextControl_Value_Property New(Fuse.Controls.TextControl obj, Uno.UX.Selector name) :13
+// public matchr_signup_FuseControlsTextControl_Value_Property New(Fuse.Controls.TextControl obj, Uno.UX.Selector name) :4
 void matchr_signup_FuseControlsTextControl_Value_Property__New1_fn(::g::Fuse::Controls::TextControl* obj, ::g::Uno::UX::Selector* name, matchr_signup_FuseControlsTextControl_Value_Property** __retval)
 {
     *__retval = matchr_signup_FuseControlsTextControl_Value_Property::New1(obj, *name);
 }
 
-// public override sealed Uno.UX.PropertyObject get_Object() :14
+// public override sealed Uno.UX.PropertyObject get_Object() :5
 void matchr_signup_FuseControlsTextControl_Value_Property__get_Object_fn(matchr_signup_FuseControlsTextControl_Value_Property* __this, ::g::Uno::UX::PropertyObject** __retval)
 {
     return *__retval = __this->_obj, void();
 }
 
-// public override sealed void Set(string v, Uno.UX.IPropertyListener origin) :16
+// public override sealed void Set(string v, Uno.UX.IPropertyListener origin) :7
 void matchr_signup_FuseControlsTextControl_Value_Property__Set_fn(matchr_signup_FuseControlsTextControl_Value_Property* __this, uString* v, uObject* origin)
 {
     uStackFrame __("matchr_signup_FuseControlsTextControl_Value_Property", "Set(string,Uno.UX.IPropertyListener)");
     uPtr(__this->_obj)->SetValue(v, origin);
 }
 
-// public override sealed bool get_SupportsOriginSetter() :17
+// public override sealed bool get_SupportsOriginSetter() :8
 void matchr_signup_FuseControlsTextControl_Value_Property__get_SupportsOriginSetter_fn(matchr_signup_FuseControlsTextControl_Value_Property* __this, bool* __retval)
 {
     return *__retval = true, void();
 }
 
-// public matchr_signup_FuseControlsTextControl_Value_Property(Fuse.Controls.TextControl obj, Uno.UX.Selector name) [instance] :13
+// public matchr_signup_FuseControlsTextControl_Value_Property(Fuse.Controls.TextControl obj, Uno.UX.Selector name) [instance] :4
 void matchr_signup_FuseControlsTextControl_Value_Property::ctor_2(::g::Fuse::Controls::TextControl* obj, ::g::Uno::UX::Selector name)
 {
     ctor_1(name);
     _obj = obj;
 }
 
-// public matchr_signup_FuseControlsTextControl_Value_Property New(Fuse.Controls.TextControl obj, Uno.UX.Selector name) [static] :13
+// public matchr_signup_FuseControlsTextControl_Value_Property New(Fuse.Controls.TextControl obj, Uno.UX.Selector name) [static] :4
 matchr_signup_FuseControlsTextControl_Value_Property* matchr_signup_FuseControlsTextControl_Value_Property::New1(::g::Fuse::Controls::TextControl* obj, ::g::Uno::UX::Selector name)
 {
     matchr_signup_FuseControlsTextControl_Value_Property* obj1 = (matchr_signup_FuseControlsTextControl_Value_Property*)uNew(matchr_signup_FuseControlsTextControl_Value_Property_typeof());

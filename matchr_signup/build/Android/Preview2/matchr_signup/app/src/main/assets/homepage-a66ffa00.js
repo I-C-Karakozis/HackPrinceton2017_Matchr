@@ -4,6 +4,11 @@ function gotosignup() {
 	router.push("signuppage");
 }
 
+function gotosignin() {
+	router.push("signinpage");
+}
+
 module.exports = {
-	gotosignup: gotosignup
+	gotosignup: gotosignup,
+	gotosignin: gotosignin
 };

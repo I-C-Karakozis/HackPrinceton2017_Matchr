@@ -1,4 +1,4 @@
-ar Observable = require("FuseJS/Observable");
+var Observable = require("FuseJS/Observable");
 
 var email = new Observable();
 var passwd = new Observable();
@@ -10,6 +10,8 @@ function signin() {
 
  	var url = "127.0.0.1:8080";
  	var signupUrl = url + "/Users";
+
+ 	router.push("mainpage");
 
  	fetch(signupUrl, {
  		method: 'POST',
@@ -31,13 +33,15 @@ function signin() {
 }
 
 function goBack() {
+	email.value = "";
+	passwd.value = "";
+	loginerr.value = "";
 	router.goBack();
 }
 
 module.exports = {
 	email: email,
 	passwd: passwd,
-	repasswd: repasswd,
 	loginerr: loginerr,
 	signin: signin,
 	goBack: goBack

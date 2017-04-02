@@ -1,10 +1,11 @@
-// This file was generated based on /Users/hdc/matchr/matchrapp/matchr_signup/build/Android/Preview2/cache/ux11/MainView.g.uno.
+// This file was generated based on /Users/hdc/matchr/matchrapp/HackPrinceton2017_Matchr/matchr_signup/build/Android/Preview2/cache/ux11/MainView.g.uno.
 // WARNING: Changes might be lost if you edit this file directly.
 
 #include <_root.MainView.h>
 #include <_root.MainView.Template.h>
 #include <_root.MainView.Template1.h>
 #include <_root.MainView.Template2.h>
+#include <_root.MainView.Template3.h>
 #include <Fuse.Animations.Easing.h>
 #include <Fuse.Animations.IResizeMode.h>
 #include <Fuse.Controls.ClientPanel.h>
@@ -61,7 +62,7 @@ namespace g{
 
 // public partial sealed class MainView :2
 // {
-// static MainView() :68
+// static MainView() :89
 static void MainView__cctor_1_fn(uType* __type)
 {
     MainView::__selector0_ = ::g::Uno::UX::Selector__op_Implicit(::STRINGS[0/*"router"*/]);
@@ -269,19 +270,19 @@ static void MainView_build(uType* type)
     return type;
 }
 
-// public MainView() :168
+// public MainView() :189
 void MainView__ctor_4_fn(MainView* __this)
 {
     __this->ctor_4();
 }
 
-// private void InitializeUX() :172
+// private void InitializeUX() :193
 void MainView__InitializeUX_fn(MainView* __this)
 {
     __this->InitializeUX();
 }
 
-// public MainView New() :168
+// public MainView New() :189
 void MainView__New1_fn(MainView** __retval)
 {
     *__retval = MainView::New1();
@@ -289,7 +290,7 @@ void MainView__New1_fn(MainView** __retval)
 
 ::g::Uno::UX::Selector MainView::__selector0_;
 
-// public MainView() [instance] :168
+// public MainView() [instance] :189
 void MainView::ctor_4()
 {
     uStackFrame __("MainView", ".ctor()");
@@ -297,7 +298,7 @@ void MainView::ctor_4()
     InitializeUX();
 }
 
-// private void InitializeUX() [instance] :172
+// private void InitializeUX() [instance] :193
 void MainView::InitializeUX()
 {
     uStackFrame __("MainView", "InitializeUX()");
@@ -323,17 +324,19 @@ void MainView::InitializeUX()
     MainView__Template* home = MainView__Template::New2(this, this);
     MainView__Template1* signuppage = MainView__Template1::New2(this, this);
     MainView__Template2* signinpage = MainView__Template2::New2(this, this);
+    MainView__Template3* mainpage = MainView__Template3::New2(this, this);
     uPtr(router)->Name(MainView::__selector0());
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp16->Children()), ::TYPES[0/*Uno.Collections.ICollection<Fuse.Node>*/]), temp17);
     temp17->DefaultPath(::STRINGS[77/*"home"*/]);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp17->Templates()), ::TYPES[1/*Uno.Collections.ICollection<Uno.UX.Template>*/]), home);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp17->Templates()), ::TYPES[1/*Uno.Collections.ICollection<Uno.UX.Template>*/]), signuppage);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp17->Templates()), ::TYPES[1/*Uno.Collections.ICollection<Uno.UX.Template>*/]), signinpage);
+    ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(temp17->Templates()), ::TYPES[1/*Uno.Collections.ICollection<Uno.UX.Template>*/]), mainpage);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[0/*Uno.Collections.ICollection<Fuse.Node>*/]), router);
     ::g::Uno::Collections::ICollection::Add_ex(uInterface(uPtr(Children()), ::TYPES[0/*Uno.Collections.ICollection<Fuse.Node>*/]), temp16);
 }
 
-// public MainView New() [static] :168
+// public MainView New() [static] :189
 MainView* MainView::New1()
 {
     MainView* obj1 = (MainView*)uNew(MainView_typeof());

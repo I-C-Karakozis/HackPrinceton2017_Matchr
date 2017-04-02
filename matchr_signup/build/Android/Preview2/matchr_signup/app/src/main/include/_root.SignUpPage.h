@@ -1,4 +1,4 @@
-// This file was generated based on /Users/hdc/matchr/matchrapp/matchr_signup/build/Android/Preview2/cache/ux11/SignUpPage.g.uno.
+// This file was generated based on /Users/hdc/matchr/matchrapp/HackPrinceton2017_Matchr/matchr_signup/build/Android/Preview2/cache/ux11/SignUpPage.g.uno.
 // WARNING: Changes might be lost if you edit this file directly.
 
 #pragma once
@@ -42,8 +42,8 @@ struct SignUpPage : ::g::Fuse::Controls::Page
     static ::g::Uno::UX::Selector __selector1_;
     static ::g::Uno::UX::Selector& __selector1() { return SignUpPage_typeof()->Init(), __selector1_; }
     uStrong< ::g::Fuse::Navigation::Router*> router;
-    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb3;
-    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb4;
+    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb5;
+    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb6;
     uStrong< ::g::Uno::UX::Property1*> temp_Value_inst;
     uStrong< ::g::Uno::UX::Property1*> temp1_Value_inst;
     uStrong< ::g::Uno::UX::Property1*> temp2_Value_inst;

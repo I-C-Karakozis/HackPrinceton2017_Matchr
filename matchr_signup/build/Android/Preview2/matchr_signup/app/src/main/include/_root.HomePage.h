@@ -1,4 +1,4 @@
-// This file was generated based on /Users/hdc/matchr/matchrapp/matchr_signup/build/Android/Preview2/cache/ux11/HomePage.g.uno.
+// This file was generated based on /Users/hdc/matchr/matchrapp/HackPrinceton2017_Matchr/matchr_signup/build/Android/Preview2/cache/ux11/HomePage.g.uno.
 // WARNING: Changes might be lost if you edit this file directly.
 
 #pragma once
@@ -36,6 +36,7 @@ struct HomePage : ::g::Fuse::Controls::Page
     static uSStrong<uArray*>& __g_static_nametable1() { return HomePage_typeof()->Init(), __g_static_nametable1_; }
     uStrong< ::g::Fuse::Navigation::Router*> router;
     uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb0;
+    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb1;
 
     void ctor_8(::g::Fuse::Navigation::Router* router1);
     void InitializeUX();
