@@ -1,6 +1,4 @@
 import datetime
-#from db import PrimaryKeyConstraint
-
 from app import app, db, flask_bcrypt
 
 class Match(db.Model):
@@ -34,11 +32,14 @@ class User(db.Model):
 class Friendship(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user1_id = db.Column(db.Integer, nullable=False)
-    user2_id = db.Column(db.Integer, nullable=False)    
+    user2_id = db.Column(db.Integer, nullable=False)
+    friended_on = db.Column(db.DateTime, nullable=False)    
 
     def __init__(self, user1_id, user2_id):
         self.user1_id = user1_id
         self.user2_id = user2_id
+        now = datetime.datetime.now()
+        self.friended_on = now
 
 # directed relationships
 class FriendRequest(db.Model):
@@ -48,4 +49,5 @@ class FriendRequest(db.Model):
 
     def __init__(self, user1_id, user2_id):
         self.user1_id = user1_id
-        self.user2_id = user2_id 
+        self.user2_id = user2_id
+
