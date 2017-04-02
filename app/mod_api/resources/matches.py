@@ -28,7 +28,7 @@ class Matches(Resource):
                 'match_id': match_id
                 }
         }
-        Returns 404 if no user with the given id was found.
+        Returns 404 if no match with the given id was found.
         """
         args = parser.parse_args()
         if request.query_string:
@@ -91,7 +91,7 @@ class Matches(Resource):
     def get(self):
         """Returns all information of the user with the id corresponding to the authentication token presented in the Authorizaton header. If the token is invalid, returns an error.
         
-        Request: GET /Users
+        Request: GET /Matches
         {
             'status': 'success',
             'data': {
@@ -109,7 +109,6 @@ class Matches(Resource):
         }
         Returns 404 if no user with the given id was found.
         """
-
 
 class Match(Resource):
     def patch(self, match_id): 

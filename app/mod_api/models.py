@@ -30,5 +30,19 @@ class User(db.Model):
         now = datetime.datetime.now()
         self.registered_on = now
 
+class Friendship(db.Model):
+    user1_id = db.Column(db.Integer, nullable=False)
+    user2_id = db.Column(db.Integer, nullable=False)    
 
+    def __init__(user1_id, user2_id):
+        self.user1_id = user1_id
+        self.user2_id = user2_id
 
+# directed relationships
+class FriendRequest(db.Model):
+    user1_id = db.Column(db.Integer, nullable=False)
+    user2_id = db.Column(db.Integer, nullable=False)    
+
+    def __init__(user1_id, user2_id):
+        self.user1_id = user1_id
+        self.user2_id = user2_id 
