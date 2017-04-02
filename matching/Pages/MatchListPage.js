@@ -1,4 +1,5 @@
 var Observable = require("FuseJS/Observable");
+
 var matches = require("matches");
 var userMatches = [];
 
