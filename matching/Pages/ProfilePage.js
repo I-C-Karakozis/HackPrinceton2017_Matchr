@@ -17,24 +17,15 @@ var responseResult = "";
 // 		httpRequest.send(null);
 // 	}
 // }
+var status = 0;
+var response_ok = false;
 
-fetch('http://localhost/api/Matches', {
+fetch('http://10.9.49.162:8080/api/Matches', {
 	method: 'GET',
 	headers: {
-		"Content-type": "application/json"
-	},
-	body: JSON.stringify(requestObject)
+		'Accept': 'application/json',
+		'Content-type': 'application/json'
+	}
 }).then(function(response) {
-	status = response.status;
-	response_ok = response.ok;
-	return response.json();
-}).then(function(responseObject) {
-	console.log(responseObject);
-	responseResult = responseObject;
-}).catch(function(err) {
-
-});
-
-console.log(responseResult);
-
-module.exports = responseResult;
+	
+})

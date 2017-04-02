@@ -1,12 +1,10 @@
 var Observable = require("FuseJS/Observable");
 var friends = require("friends");
 
-console.log("Hi");
+userId = 100;
 
 // Shuffle friends list (so it is not the same order)
 friends = shuffle(friends);
-
-var userId = 0;
 
 // Randomize what friend shows up first
 var index1 = randomIndex(-1);
@@ -16,57 +14,224 @@ var friend1 = Observable(friends[index1]);
 var index2 = randomIndex(index1);
 var friend2 = Observable(friends[index2]);
 
-var matchId = Observable();
-var status = Observable();
+// fetch('http://10.9.49.162:8080/api/Users', {
+// 	method: 'POST',
+// 	headers: {
+// 		'Accept': 'application/json',
+// 		'Content-type': 'application/json'
+// 	},
+// 	body: JSON.stringify({
+// 		email: 'hchung@princeton.edu',
+// 		username: 'hchung',
+// 		password: '123'
+// 	})
+// }).then(function(response) {
+// 	console.log("Then response");
+// 	status = response.status;
+// 	response_ok = response.ok
+// 	console.log(response.status);
+// 	if (response.ok) {
+// 		console.log("Response was okay");
+// 	} else {
+// 		console.log("Response was not okay");
+// 	}
+// 	return response.json();
+// }).then(function(responseObject) {
+// 	var uId = responseObject.data.user_id;
+// 	console.log("User ID: ");
+// 	console.log(uId.toString());
+// 	console.log("Status: ");
+// 	console.log(status.toString());
+// }).catch(function(err) {
+// 	console.log(JSON.stringify(err, null, 2));
+// 	console.log(err.name.toString());
+// })
 
-console.log("Before fetch...");
+// fetch('http://10.9.49.162:8080/api/Users/1', {
+// 	method: 'GET',
+// 	headers: {
+// 		'Accept': 'application/json',
+// 		'Content-type': 'application/json'
+// 	}
+// }).then(function(response) {
+// 	console.log("Then response");
+// 	status = response.status;
+// 	response_ok = response.ok
+// 	console.log(response.status);
+// 	if (response.ok) {
+// 		console.log("Response was okay");
+// 	} else {
+// 		console.log("Response was not okay");
+// 	}
+// 	return response.json();
+// }).then(function(responseObject) {
+// 	var uId = responseObject.data.user_id;
+// 	console.log("User ID: ");
+// 	console.log(uId.toString());
+// 	var username = responseObject.data.username;
+// 	console.log("Username: ");
+// 	console.log(username.toString());
+// 	console.log("Status: ");
+// 	console.log(status.toString());
+// }).catch(function(err) {
+// 	console.log(JSON.stringify(err, null, 2));
+// 	console.log(err.name.toString());
+// })
 
-var status = 0;
-var response_ok = false;
+// fetch('http://10.9.49.162:8080/api/Matches', {
+// 	method: 'POST',
+// 	headers: {
+// 		'Accept': 'application/json',
+// 		'Content-type': 'application/json'
+// 	},
+// 	body: JSON.stringify({
+// 		creator_id: 1,
+// 		target1_id: 2,
+// 		target2_id: 3
+// 	})
+// }).then(function(response) {
+// 	console.log("Then response");
+// 	status = response.status;
+// 	response_ok = response.ok;
+// 	console.log(response.status);
+// 	if (response_ok) {
+// 		console.log("Response was okay");
+// 	} else {
+// 		console.log("Response was not okay");
+// 	}
+// 	return response.json();
+// }).then(function(responseObject) {
+// 	status = responseObject.status;
+// 	console.log("Status: ");
+// 	console.log(status.toString());
+// }).catch(function(err) {
+// 	console.log(JSON.stringify(err, null, 2));
+// 	console.log(err.name.toString());
+// })
 
-fetch('http://10.9.49.162:8080/api/Matches', {
+// fetch('http://10.9.49.162:8080/api/Matches', {
+// 	method: 'GET',
+// 	headers: {
+// 		'Accept': 'application/json',
+// 		'Content-type': 'application/json'
+// 	}
+// }).then(function(response) {
+// 	console.log("Then response");
+// 	status = response.status;
+// 	response_ok = response.ok
+// 	console.log(response.status);
+// 	if (response.ok) {
+// 		console.log("Response was okay");
+// 	} else {
+// 		console.log("Response was not okay");
+// 	}
+// 	return response.json();
+// }).then(function(responseObject) {
+// 	var cId = responseObject.data[0].creator_id;
+// 	console.log("Creator ID: ");
+// 	console.log(cId.toString());
+// 	var tId = responseObject.data[0].target1_id;
+// 	console.log("Target ID: ");
+// 	console.log(tId.toString());
+// 	console.log("Status: ");
+// 	console.log(status.toString());
+// }).catch(function(err) {
+// 	console.log(JSON.stringify(err, null, 2));
+// 	console.log(err.name.toString());
+// })
+
+// 
+fetch('http://10.9.49.162:8080/api/Friendships', {
 	method: 'POST',
 	headers: {
 		'Accept': 'application/json',
 		'Content-type': 'application/json'
 	},
 	body: JSON.stringify({
-		creator_id: userId,
-		target1_id: friend1.id,
-		target2_id: friend2.id
+		user1_id: 1,
+		user2_id: 5
 	})
 }).then(function(response) {
 	console.log("Then response");
 	status = response.status;
 	response_ok = response.ok;
-	if (response.ok) {
+	console.log(response.status);
+	if (response_ok) {
 		console.log("Response was okay");
 	} else {
-		console.log("Reponse is not okay");
+		console.log("Response was not okay");
 	}
 	return response.json();
 }).then(function(responseObject) {
-	matchId = responseObject.data.match_id;
 	status = responseObject.status;
-	console.log("MatchId: ");
-	console.log(matchId.toString());
 	console.log("Status: ");
 	console.log(status.toString());
 }).catch(function(err) {
 	console.log(JSON.stringify(err, null, 2));
 	console.log(err.name.toString());
-	console.log(err.number.toString());
-	console.log(err.description.toString());
-});
+})
+
+fetch('http://10.9.49.162:8080/api/Friendships?user_id=1&user2_id=3', {
+	method: 'GET',
+	headers: {
+		'Accept': 'application/json',
+		'Content-type': 'application/json'
+	}
+}).then(function(response) {
+	console.log("Then response");
+	status = response.status;
+	response_ok = response.ok;
+	console.log(response.status);
+	if (response_ok) {
+		console.log("Response was okay");
+	} else {
+		console.log("Response was not okay");
+	}
+	return response.json();
+}).then(function(responseObject) {
+	status = responseObject.status;
+	console.log("Status: ");
+	console.log(status.toString());
+}).catch(function(err) {
+	console.log(JSON.stringify(err, null, 2));
+	console.log(err.name.toString());
+})
 
 
-console.log("After fetch");
+
+// fetch('http://10.9.49.162:8080/api/Friendships', {
+// 	method: 'POST',
+// 	headers: {
+// 		'Accept': 'application/json',
+// 		'Content-type': 'application/json'
+// 	},
+// 	body: JSON.stringify({
+// 		user1_id: 1,
+// 		user2_id: 4
+// 	})
+// }).then(function(response) {
+// 	console.log("Then response");
+// 	status = response.status;
+// 	response_ok = response.ok;
+// 	console.log(response.status);
+// 	if (response_ok) {
+// 		console.log("Response was okay");
+// 	} else {
+// 		console.log("Response was not okay");
+// 	}
+// 	return response.json();
+// }).then(function(responseObject) {
+// 	status = responseObject.status;
+// 	console.log("Status: ");
+// 	console.log(status.toString());
+// }).catch(function(err) {
+// 	console.log(JSON.stringify(err, null, 2));
+// 	console.log(err.name.toString());
+// })
 
 module.exports = {
 	friend1: friend1,
 	friend2: friend2,
-	matchId: matchId,
-	status: status,
 
 	nextFriend: nextFriend,
 	previousFriend: previousFriend,
@@ -173,27 +338,7 @@ function previousFriend(currentFriend) {
 };
 
 function matchFriends() {
-	fetch('http://localhost/api/Matches', {
-		method: 'POST',
-		headers: {
-			'Accept': 'application/json',
-			'Content-type': 'application/json'
-		},
-		body: JSON.stringify({
-			'creator_id': userId,
-			'target1_id': friend1.id,
-			'target2_id': friend2.id
-		})
-	}).then(function(response) {
-		status = response.status;
-		response_ok = response.ok;
-		return response.json();
-	}).then(function(responseObject) {
-		var object = responseObject.data;
-		matchId = object.match_id;
-
-		module.exports = matchId;
-	}).catch(function(err) {
-		// Do something
-	});
+	var match = new Object();
+	match.friend1 = friend1;
+	match.friend2 = friend2;
 };

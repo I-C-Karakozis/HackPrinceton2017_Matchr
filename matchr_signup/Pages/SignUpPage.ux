@@ -1,0 +1,35 @@
+<Page ux:Class="SignUpPage">
+    
+	<Router ux:Dependency="router" />
+    <Image Layer="Background" File="balloon.jpg" StretchMode="UniformToFill" Opacity="0.9" ContentAlignment="Center"/>
+	<JavaScript File="SignUpPage.js" />
+
+	<Panel>
+		<Fuse.iOS.StatusBarConfig Style="Light" />
+
+		<Panel ux:Name="transitionScaleGuide" Width="500%" Height="500%" Alignment="Center" HitTestMode="None" BoxSizing="FillAspect" Aspect="1" />
+
+		<TextInput ux:Class="MyTextInput" FontSize="20" PlaceholderColor="#ccc" Padding="10">
+    		<Rectangle Layer="Background" CornerRadius="3">
+        		<Stroke Width="1" Color="#ccc" />
+       			<SolidColor Color="White" />
+    		</Rectangle>
+		</TextInput>
+
+<!-- Example usage -->
+		<StackPanel Margin="10" ItemSpacing="10" Alignment="VerticalCenter">
+            <Text Font="Comfortaa" Value="Sign Up" FontSize="25" Alignment="HorizontalCenter" Padding="10" />
+    		<MyTextInput PlaceholderText="Email Address" Value="{email}" InputHint="Email" ActionStyle="Next" />
+    		<MyTextInput PlaceholderText="Username" Value="{username}" ActionStyle="Next"/>
+    		<MyTextInput PlaceholderText="Password" Value="{passwd}" IsPassword="true" ActionStyle="Next"/>
+    		<MyTextInput PlaceholderText="Repeat password" Value="{repasswd}" IsPassword="true" />
+    		<Text Alignment="HorizontalCenter" Value="{passwderr}" TextColor="Red" />
+	     	<NativeViewHost>
+    			<Button Text="Sign Up" Clicked="{signup}"/>
+    		</NativeViewHost>
+            <NativeViewHost>
+                <Button Text="Back" Clicked="{goBack}"/>
+            </NativeViewHost>
+   		</StackPanel>
+	</Panel>
+</Page>

@@ -1,0 +1,19 @@
+<Page ux:Class="HomePage">
+    <Router ux:Dependency="router" />
+    <JavaScript File="HomePage.js" />
+    <Image Layer="Background" File="balloon.jpg" StretchMode="UniformToFill" Opacity=".9" ContentAlignment="Left"/>
+    <Font File="Comfortaa Regular.ttf" ux:Global="Comfortaa" />
+    <Font File="Comfortaa Bold.ttf" ux:Global="ComfortaaBold" />
+
+    <ScrollView>
+        <StackPanel Alignment="VerticalCenter">
+            <Text Font="ComfortaaBold" Alignment="Center" Padding="10" Value=" matchr" FontSize="60"/>
+            <NativeViewHost>
+    			<Button Padding="15" Alignment="VerticalCenter" Text="Sign Up" Clicked="{gotosignup}"/>
+    		</NativeViewHost>
+    		<NativeViewHost>
+    			<Button Padding="15" Alignment="VerticalCenter" Text="Sign In" Clicked="{gotosignin}"/>
+    		</NativeViewHost>
+        </StackPanel>
+    </ScrollView>
+</Page>

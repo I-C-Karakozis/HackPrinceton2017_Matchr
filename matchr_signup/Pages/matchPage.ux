@@ -1,0 +1,29 @@
+<Page ux:Class="matchPage">
+    <StackPanel Alignment="Center">
+        <Text Font="Comfortaa" FontSize="20" Alignment="Center">make matches</Text>
+        <Text> </Text>
+        <Text TextAlignment="Center" Value="{name1}" />
+        <DockPanel Height="150" Width="300">
+            <Circle>
+                <ImageFill Url="http://cliqueimg.com/cache/posts/120978/depressing-study-reveals-the-age-men-find-women-most-attractive-120978-main.640x0c.jpg" ContentAlignment="Center"/>
+                <Stroke Width="1" Brush="#aaa" />
+            </Circle>
+            <Image Clicked="{clicked}" File="arrow-right-white.png" Height="20" Color="#fff" Dock="Right" />
+            <Image Clicked="{clicked}" File="arrow-right-white.png" Height="20" Color="#fff" Dock="Right" />
+            <Image Clicked="{clicked}" File="arrow-left-white.png" Height="20" Color="#fff" Dock="Left" />
+            <Image Clicked="{clicked}" File="arrow-left-white.png" Height="20" Color="#fff" Dock="Left" />
+        </DockPanel>
+        <Button Text="Match" Clicked="{onClick}" BoxSizing="FillAspect" Aspect="4"/>
+        <DockPanel Height="150" Width="300">
+            <Circle>
+                <ImageFill Url="http://i9.lisimg.com/1221499/500full.jpg" ContentAlignment="Center"/>
+                <Stroke Width="1" Brush="#aaa" />
+            </Circle>
+            <Image Clicked="{clicked}" File="arrow-right-white.png" Height="20" Color="#fff" Dock="Right" />
+            <Image Clicked="{clicked}" File="arrow-right-white.png" Height="20" Color="#fff" Dock="Right" />
+            <Image Clicked="{clicked}" File="arrow-left-white.png" Height="20" Color="#fff" Dock="Left" />
+            <Image Clicked="{clicked}" File="arrow-left-white.png" Height="20" Color="#fff" Dock="Left" />
+        </DockPanel>
+        <Text Font="Comfortaa" TextAlignment="Center" Value="{name2}" />
+    </StackPanel>
+</Page>

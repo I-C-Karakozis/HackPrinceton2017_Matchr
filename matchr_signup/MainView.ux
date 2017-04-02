@@ -1,0 +1,14 @@
+<App>
+	<Router ux:Name="router" />
+	<Font File="Pages/Comfortaa Regular.ttf" ux:Global="MainView/Comfortaa" />
+    <Font File="Pages/Comfortaa Bold.ttf" ux:Global="MainView/ComfortaaBold" />
+
+    <ClientPanel>
+        <Navigator DefaultPath="home">
+            <HomePage ux:Template="home" router="router" />
+            <SignUpPage ux:Template="signuppage" router="router" />
+            <SignInPage ux:Template="signinpage" router="router" />
+            <MainPage ux:Template="mainpage" router="router" />
+        </Navigator>
+    </ClientPanel>
+</App>

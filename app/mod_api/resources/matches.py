@@ -1,3 +1,4 @@
+
 from flask import request, make_response, jsonify
 from flask_restful import Resource, reqparse
 import datetime
@@ -26,12 +27,13 @@ class Matches(Resource):
             'status': 'success',
             'data': {
                 'match_id': match_id
-                }
+            }
         }
+        Returns 404 if no match with the given id was found.
         """
         args = parser.parse_args()
-        if request.query_string:
-            abort(400)
+        # if request.query_string:
+        #     abort(400)
         post_data = request.get_json()           
         if post_data.has_key('creator_id') and post_data.has_key('target1_id') and post_data.has_key('target2_id'):
             creator_id = post_data.get('creator_id')
@@ -55,12 +57,12 @@ class Matches(Resource):
             # ensure target1_id < target2_id
             target1 = min(target1_id, target2_id)
             target2 = max(target1_id, target2_id)
-            existing_match = models.Match.query(creator_id = creator_id, target1_id = target1, target2_id = target2).first()
+            existing_match = models.Match.query.filter_by(creator_id = creator_id, target1_id = target1, target2_id = target2).first()
             if not existing_match:
                 match = models.Match(
                     creator_id = creator_id ,
-                    target1_id = target1 ,
-                    target2_id = target2
+                    u1_id = target1,
+                    u2_id = target2
                     )
 
                 db.session.add(match)
@@ -69,9 +71,9 @@ class Matches(Resource):
                 response = {
                     'status': 'success',
                     'data': {
-                        'match_id': match_id
-                        }
+                        # 'match_id': match_id
                     }
+                }
                 return make_response(jsonify(response), 201)
             else:
                 response = {
@@ -86,7 +88,6 @@ class Matches(Resource):
                     } 
             return make_response(jsonify(response), 400) 
 
-        
     def get(self):
         """Returns all the matches that match the given query
         

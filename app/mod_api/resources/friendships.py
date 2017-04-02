@@ -1,5 +1,6 @@
 from flask import request, make_response, jsonify
 from flask_restful import Resource, reqparse
+import json
 
 from app import app, db, flask_bcrypt
 from app.mod_api import models
@@ -43,7 +44,7 @@ class Friendships(Resource):
             user1 = min(user1_id, user2_id)
             user2 = min(user1_id, user2_id)
 
-            existing_friendship = models.Friendship.query(user1_id = user1, user2_id = user2).first()
+            existing_friendship = models.Friendship.query.filter_by(user1_id = user1, user2_id = user2).first()
             if not existing_friendship:
                 friendship = models.Friendship(
                     user1_id = user1 ,
@@ -77,7 +78,7 @@ class Friendships(Resource):
     def get(self):
         """Returns all the friendships that match the given query
         
-        Request: GET /friendships?user_id=id&user2_id=id2
+        Request: GET /Friendships?user_id=id&user2_id=id2
             only user_id is required; user2_id should be input when a specific match is requested
         Response: HTTP 200 OK
         {
@@ -95,15 +96,15 @@ class Friendships(Resource):
         args = parser.parse_args()
 
         if len(args) == 2:
-            friendships = models.Friendship.query.filter_by(user1_id = user_id, user2_id = user2_id)
+            friendships = models.Friendship.query.filter_by(user1_id = int(args['user_id']), user2_id = int(args['user2_id']))
             response = {
                 'status': 'success',
                 'friendships': friendships
                 }
             return make_response(jsonify(response), 200)
         elif len(args) == 1:
-            friendships = models.Friendship.query.filter_by(target1_id = user_id)
-            friendships2 = models.Friendship.query.filter_by(target2_id = user_id)
+            friendships = models.Friendship.query.filter_by(target1_id = int(args['user_id']))
+            friendships2 = models.Friendship.query.filter_by(target2_id = int(args['user_id']))
             friendships = friendships + friendships2
             response = {
                 'status': 'success',
