@@ -14,39 +14,71 @@ var friend1 = Observable(friends[index1]);
 var index2 = randomIndex(index1);
 var friend2 = Observable(friends[index2]);
 
-// fetch('http://10.9.49.162:8080/api/Matches', {
-// 	method: 'POST',
-// 	headers: {
-// 		'Accept': 'application/json',
-// 		'Content-type': 'application/json'
-// 	},
-// 	body: JSON.stringify({
-// 		creator_id: 0,
-// 		target1_id: 1,
-// 		target2_id: 2
-// 	})
-// }).then(function(response) {
-// 	console.log("Then response");
-// 	status = response.status;
-// 	response_ok = response.ok
-// 	console.log(response.status);
-// 	if (response.ok) {
-// 		console.log("Response was okay");
-// 	} else {
-// 		console.log("Response was not okay");
-// 	}
-// 	return response.json();
-// }).then(function(responseObject) {
-// 	matchId = responseObject.data.match_id;
-// 	status = responseObject.status;
-// 	console.log("MatchId: ");
-// 	console.log(matchId.toString());
-// 	console.log("Status: ");
-// 	console.log(status.toString());
-// }).catch(function(err) {
-// 	console.log(JSON.stringify(err, null, 2));
-// 	console.log(err.name.toString());
-// })
+fetch('http://10.9.49.162:8080/api/Users', {
+	method: 'POST',
+	headers: {
+		'Accept': 'application/json',
+		'Content-type': 'application/json'
+	},
+	body: JSON.stringify({
+		email: 'hchung@princeton.edu',
+		username: 'hchung',
+		password: '123'
+	})
+}).then(function(response) {
+	console.log("Then response");
+	status = response.status;
+	response_ok = response.ok
+	console.log(response.status);
+	if (response.ok) {
+		console.log("Response was okay");
+	} else {
+		console.log("Response was not okay");
+	}
+	return response.json();
+}).then(function(responseObject) {
+	var uId = responseObject.data.user_id;
+	console.log("User ID: ");
+	console.log(uId.toString());
+	console.log("Status: ");
+	console.log(status.toString());
+}).catch(function(err) {
+	console.log(JSON.stringify(err, null, 2));
+	console.log(err.name.toString());
+})
+
+fetch('http://10.9.49.162:8080/api/Users', {
+	method: 'POST',
+	headers: {
+		'Accept': 'application/json',
+		'Content-type': 'application/json'
+	},
+	body: JSON.stringify({
+		email: 'sarahpan@princeton.edu',
+		username: 'sarahpan',
+		password: '123'
+	})
+}).then(function(response) {
+	console.log("Then response");
+	status = response.status;
+	response_ok = response.ok
+	console.log(response.status);
+	if (response.ok) {
+		console.log("Response was okay");
+	} else {
+		console.log("Response was not okay");
+	}
+	return response.json();
+}).then(function(responseObject) {
+	var uId = responseObject.data.user_id;
+	console.log("User ID: ");
+	console.log(uId.toString());
+	console.log("Status: ");
+	console.log(status.toString());
+}).catch(function(err) {
+	console.log(JSON.stringify(err, null, 2));
+	console.log(err.name.toString());
+})
 
 fetch('http://10.9.49.162:8080/api/Users', {
 	method: 'POST',
@@ -81,12 +113,17 @@ fetch('http://10.9.49.162:8080/api/Users', {
 	console.log(err.name.toString());
 })
 
-fetch('http://10.9.49.162:8080/api/Users/1', {
-	method: 'GET',
+fetch('http://10.9.49.162:8080/api/Users', {
+	method: 'POST',
 	headers: {
 		'Accept': 'application/json',
 		'Content-type': 'application/json'
-	}
+	},
+	body: JSON.stringify({
+		email: 'ick@princeton.edu',
+		username: 'ick',
+		password: '123'
+	})
 }).then(function(response) {
 	console.log("Then response");
 	status = response.status;
@@ -102,9 +139,68 @@ fetch('http://10.9.49.162:8080/api/Users/1', {
 	var uId = responseObject.data.user_id;
 	console.log("User ID: ");
 	console.log(uId.toString());
-	var username = responseObject.data.username;
-	console.log("Username: ");
-	console.log(username.toString());
+	console.log("Status: ");
+	console.log(status.toString());
+}).catch(function(err) {
+	console.log(JSON.stringify(err, null, 2));
+	console.log(err.name.toString());
+})
+
+// fetch('http://10.9.49.162:8080/api/Users/1', {
+// 	method: 'GET',
+// 	headers: {
+// 		'Accept': 'application/json',
+// 		'Content-type': 'application/json'
+// 	}
+// }).then(function(response) {
+// 	console.log("Then response");
+// 	status = response.status;
+// 	response_ok = response.ok
+// 	console.log(response.status);
+// 	if (response.ok) {
+// 		console.log("Response was okay");
+// 	} else {
+// 		console.log("Response was not okay");
+// 	}
+// 	return response.json();
+// }).then(function(responseObject) {
+// 	var uId = responseObject.data.user_id;
+// 	console.log("User ID: ");
+// 	console.log(uId.toString());
+// 	var username = responseObject.data.username;
+// 	console.log("Username: ");
+// 	console.log(username.toString());
+// 	console.log("Status: ");
+// 	console.log(status.toString());
+// }).catch(function(err) {
+// 	console.log(JSON.stringify(err, null, 2));
+// 	console.log(err.name.toString());
+// })
+
+fetch('http://10.9.49.162:8080/api/Matches', {
+	method: 'POST',
+	headers: {
+		'Accept': 'application/json',
+		'Content-type': 'application/json'
+	},
+	body: JSON.stringify({
+		creator_id: 1,
+		target1_id: 2,
+		target2_id: 3
+	})
+}).then(function(response) {
+	console.log("Then response");
+	status = response.status;
+	response_ok = response.ok;
+	console.log(response.status);
+	if (response_ok) {
+		console.log("Response was okay");
+	} else {
+		console.log("Response was not okay");
+	}
+	return response.json();
+}).then(function(responseObject) {
+	status = responseObject.status;
 	console.log("Status: ");
 	console.log(status.toString());
 }).catch(function(err) {

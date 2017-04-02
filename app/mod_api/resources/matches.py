@@ -1,3 +1,4 @@
+
 from flask import request, make_response, jsonify
 from flask_restful import Resource, reqparse
 import datetime
@@ -31,8 +32,8 @@ class Matches(Resource):
         Returns 404 if no match with the given id was found.
         """
         args = parser.parse_args()
-        if request.query_string:
-            abort(400)
+        # if request.query_string:
+        #     abort(400)
         post_data = request.get_json()           
         if post_data.has_key('creator_id') and post_data.has_key('target1_id') and post_data.has_key('target2_id'):
             creator_id = post_data.get('creator_id')
@@ -80,12 +81,12 @@ class Matches(Resource):
                     'message': "You have already created this match."
                     } 
                 return make_response(jsonify(response), 400)
-        else:
-            response = {
-                    'status': 'failed',
-                    'message': "Incomplete information passed."
-                    } 
-            return make_response(jsonify(response), 400) 
+            else:
+                response = {
+                        'status': 'failed',
+                        'message': "Incomplete information passed."
+                        } 
+                return make_response(jsonify(response), 400) 
 
         
     def get(self):
