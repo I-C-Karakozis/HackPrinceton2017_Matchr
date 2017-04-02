@@ -6,6 +6,7 @@
   ],
   "Includes": [
     "*",
-    "friends.js:Bundle"
+    "friends.js:Bundle",
+    "matches.js:Bundle"
   ]
 }

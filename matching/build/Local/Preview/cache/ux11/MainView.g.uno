@@ -1,6 +1,91 @@
 [Uno.Compiler.UxGenerated]
 public partial class MainView: Fuse.App
 {
+    [Uno.Compiler.UxGenerated]
+    public partial class Template: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template(MainView parent, MainView parentInstance): base("select", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template()
+        {
+        }
+        public override object New()
+        {
+            var self = new SelectPage(__parent.router);
+            self.Name = __selector0;
+            return self;
+        }
+        static global::Uno.UX.Selector __selector0 = "select";
+    }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template1: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template1(MainView parent, MainView parentInstance): base("match", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template1()
+        {
+        }
+        public override object New()
+        {
+            var self = new MatchPage(__parent.router);
+            self.Name = __selector0;
+            return self;
+        }
+        static global::Uno.UX.Selector __selector0 = "match";
+    }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template2: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template2(MainView parent, MainView parentInstance): base("matchList", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template2()
+        {
+        }
+        public override object New()
+        {
+            var self = new MatchListPage(__parent.router);
+            self.Name = __selector0;
+            return self;
+        }
+        static global::Uno.UX.Selector __selector0 = "matchList";
+    }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template3: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template3(MainView parent, MainView parentInstance): base("profile", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template3()
+        {
+        }
+        public override object New()
+        {
+            var self = new ProfilePage(__parent.router);
+            self.Name = __selector0;
+            return self;
+        }
+        static global::Uno.UX.Selector __selector0 = "profile";
+    }
+    internal Fuse.Navigation.Router router;
     static MainView()
     {
         global::Uno.UX.Resource.SetGlobalKey(Fuse.Animations.Easing.Linear, "Linear");
@@ -123,9 +208,22 @@ public partial class MainView: Fuse.App
         var temp13 = new FuseJS.Bundle();
         var temp14 = new FuseJS.FileReaderImpl();
         var temp15 = new FuseJS.UserEvents();
+        router = new Fuse.Navigation.Router();
         var temp16 = new Fuse.Controls.ClientPanel();
-        var temp17 = new SelectView();
+        var temp17 = new Fuse.Controls.Navigator();
+        var select = new Template(this, this);
+        var match = new Template1(this, this);
+        var matchList = new Template2(this, this);
+        var profile = new Template3(this, this);
+        router.Name = __selector0;
         temp16.Children.Add(temp17);
+        temp17.DefaultPath = "select";
+        temp17.Templates.Add(select);
+        temp17.Templates.Add(match);
+        temp17.Templates.Add(matchList);
+        temp17.Templates.Add(profile);
+        this.Children.Add(router);
         this.Children.Add(temp16);
     }
+    static global::Uno.UX.Selector __selector0 = "router";
 }

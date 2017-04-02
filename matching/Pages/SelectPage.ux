@@ -1,0 +1,24 @@
+<Page ux:Class="SelectPage">
+	<Router ux:Dependency="router"/>
+	<JavaScript File="NavBar.js"/>
+	<JavaScript File="SelectPage.js"/>
+
+	<Button Text="Match" Clicked="{goToSelect}"/>
+	<Button Text="Matches" Clicked="{goToMatchList}"/>
+	<Button Text="Message" Clicked="{goToMessages}"/>
+	<Button Text="Profile" Clicked="{goToProfile}"/>
+
+	<StackPanel>
+		<Text>Friend 1:</Text>
+		<Text Value="{friend1.firstName} {friend1.lastName}"/>
+		<Button Text="Next" Clicked="{nextFriend(friend1)}"/>
+		<Button Text="Prev" Clicked="{previousFriend(friend1)}"/>
+
+		<Text>Friend 2:</Text>
+		<Text Value="{friend2.firstName} {friend2.lastName}"/>
+		<Button Text="Next" Clicked="{nextFriend(friend1)}"/>
+		<Button Text="Prev" Clicked="{previousFriend(friend2)}"/>
+
+		<Button Text="Match" Clicked="{matchFriends}"/>
+	</StackPanel>
+</Page>

@@ -1,0 +1,20 @@
+<Page ux:Class="MatchListPage">
+	<Router ux:Dependency="router"/>
+	<JavaScript File="NavBar.js"/>
+	<JavaScript File="MatchListPage.js"/>
+
+	<Button Text="Match" Clicked="{goToSelect}"/>
+	<Button Text="Matches" Clicked="{goToMatchList}"/>
+	<Button Text="Message" Clicked="{goToMessages}"/>
+	<Button Text="Profile" Clicked="{goToProfile}"/>
+
+	<ScrollView>
+		<StackPanel>
+			<Each Items="{userMatches}">
+				<Button Text="{friend2.firstName} {friend2.lastName}"/>
+				<Text>Recommended by</Text>
+				<Text Value="{recommender.firstName} {recommender.lastName}"/>
+			</Each>
+		</StackPanel>
+	</ScrollView>
+</Page>

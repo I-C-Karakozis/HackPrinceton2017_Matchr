@@ -1,0 +1,15 @@
+<Page ux:Class="MatchPage">
+	<Router ux:Dependency="router"/>
+	<JavaScript File="MatchPage.js"/>
+
+	<ScrollView>
+		<StackPanel>
+			<Text>You were matched!</Text>
+			<Text Value="{match.firstName} + {match.lastName}"/>
+			<Button Text="Add"/>
+			<Button Text="Message"/>
+			<Text Value="This match was suggested by {recommender.firstName} + {recommender.lastName}."/>
+			<Button Text="Say Thanks"/>
+		</StackPanel>
+	</ScrollView>
+</Page>

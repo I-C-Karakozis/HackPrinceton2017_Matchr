@@ -18,6 +18,21 @@ var friends = [
 		id: 3,
 		firstName: "Yannis",
 		lastName: "Karakozis"
+	},
+	{
+		id: 4,
+		firstName: "Gordon",
+		lastName: "Chu"
+	},
+	{
+		id: 5,
+		firstName: "Matthew",
+		lastName: "Li"
+	},
+	{
+		id: 6,
+		firstName: "Parker",
+		lastName: "Kushima"
 	}
 ];
 
