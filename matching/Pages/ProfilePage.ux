@@ -8,5 +8,7 @@
 		<Button Text="Matches" Clicked="{goToMatchList}"/>
 		<Button Text="Message" Clicked="{goToMessages}"/>
 		<Button Text="Profile" Clicked="{goToProfile}"/>
+
+		<Text Value="{responseResult}"/>
 	</StackPanel>
 </Page>
