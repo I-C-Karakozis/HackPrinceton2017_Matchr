@@ -189,7 +189,7 @@ class FriendRequest(Resource):
 
             existing_request1 = models.FriendRequest.query(user1_id = user1_id, user2_id = user2_id).first()
             existing_request2 = models.FriendRequest.query(user1_id = user2_id, user2_id = user1_id).first()
-            if existing_request1 || existing_request2:
+            if existing_request1 or existing_request2:
                 if existing_request1:
                     db.session.delete(existing_request1)
                     db.session.commit()
