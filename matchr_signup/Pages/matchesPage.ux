@@ -35,7 +35,7 @@
                 <ScrollView>
                     <StackPanel ItemSpacing="7" Margin="7">
                         <Each Items="{userMatches}">
-                            <Panel Clicked="clicked" Height="100">
+                            <Panel Clicked="{clicked}" Height="100">
                                 <DockPanel>
                                     <Rectangle Layer="Background" CornerRadius="3" Color="#6c7a89" />
                                     <Image File="avatar.png" Height="100" Color="#fff" Dock="Left"/>

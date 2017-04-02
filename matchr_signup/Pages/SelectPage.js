@@ -104,7 +104,7 @@ function randomIndex(previousIndex) {
 
 // Get next friend in the shuffled friends list
 function nextFriend(currentFriend) {
-	if (friend === friend1) {
+	if (friend === friend1) { //friend or currentFriend?
 		var thisIndex = index1;
 		var otherIndex = index2;
 	} else {
