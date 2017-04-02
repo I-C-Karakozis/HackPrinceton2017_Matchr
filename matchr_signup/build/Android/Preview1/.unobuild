@@ -1,0 +1,4 @@
+$: 431516206
+BuildCommand: build.sh
+RunCommand: run.sh
+Product: matchr_signup.apk

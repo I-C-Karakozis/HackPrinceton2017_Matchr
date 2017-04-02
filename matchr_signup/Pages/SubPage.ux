@@ -1,0 +1,36 @@
+<Page ux:Class="SubPage">
+	<JavaScript>
+		exports.title = this.Parameter.map(function(param) {
+			return param.title;
+		});
+	</JavaScript>
+	
+	<StackPanel Alignment="Center">
+		<Text></Text>
+		<Text></Text>
+        <Panel Height="175" Width="175">
+            <Circle>
+                <ImageFill Url="http://cliqueimg.com/cache/posts/120978/depressing-study-reveals-the-age-men-find-women-most-attractive-120978-main.640x0c.jpg" ContentAlignment="TopCenter"/>
+                <Stroke Width="1" Brush="#aaa" />
+            </Circle>
+        </Panel>
+        <Text></Text>
+        <Text Alignment="Center">Matched by SOMEONE</Text>
+        <Text Alignment="Center">on DATE</Text>
+        <Text></Text>
+        <Text></Text>
+        <DockPanel>
+        	<Button Text="Add" Clicked="{onClick}" BoxSizing="FillAspect" Aspect="5" Dock="Left"/>
+
+        	<Button Text="Message" Clicked="{onClick}" BoxSizing="FillAspect" Aspect="5" Dock="Right" />
+            <Text></Text>
+        </DockPanel>
+    </StackPanel>
+
+	<Visual ux:Dependency="navBar" />
+	<Panel>
+		<AlternateRoot ParentNode="navBar">
+			<NavBarTitle Value="{title}" />
+		</AlternateRoot>
+	</Panel>
+</Page>

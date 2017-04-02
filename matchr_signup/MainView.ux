@@ -1,0 +1,12 @@
+<App>
+	<Router ux:Name="router" />
+
+    <ClientPanel>
+        <Navigator DefaultPath="home">
+            <HomePage ux:Template="home" router="router" />
+            <SignUpPage ux:Template="signuppage" router="router" />
+            <SignInPage ux:Template="signinpage" router="router" />
+            <MainPage ux:Template="mainpage" router="router" />
+        </Navigator>
+    </ClientPanel>
+</App>

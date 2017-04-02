@@ -1,0 +1,6 @@
+# view AndroidManifest.xml #generated:57
+-keep class com.apps.matchr_signup.Android_android_app_Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:24
+-keep class com.apps.matchr_signup.matchr_signup { <init>(...); }
+

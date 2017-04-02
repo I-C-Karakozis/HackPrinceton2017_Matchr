@@ -1,0 +1,66 @@
+<Page ux:Class="profilePage">
+    <StatusBarBackground Dock="Top"/>
+    <BottomBarBackground Dock="Bottom"/>
+	<Panel>
+        <MultiLayoutPanel ux:Name="headerPanel" HitTestMode="None" Alignment="Top" Height="260">
+            <Placeholder ux:Name="overBackgroundLayout">
+                <Image ux:Name="facePicture" File="avatar.png" Alignment="BottomCenter" Width="150" Height="150" Offset="0,75"/>
+            </Placeholder>
+
+            <StackPanel ux:Name="textPanel" Alignment="Center">
+                <Text ux:Class="TitleText" Color="#fff" TextAlignment="Center" />
+                <StatusBarBackground Margin="0,0,0,15"/>
+                <TitleText ux:Name="topText" FontSize="30" Margin="5">John Doe</TitleText>
+                <TitleText ux:Name="bottomText" FontSize="20"> </TitleText>
+            </StackPanel>
+                        
+            <Panel ux:Name="backgroundPicture" TransformOrigin="Anchor" Alignment="Top" Anchor="50%,0%" Background="Black">
+                <Image File="back.png" StretchMode="UniformToFill" Background="Black"/>
+            </Panel>
+
+            <Placeholder ux:Name="underBackgroundLayout" Target="facePicture"/>
+        </MultiLayoutPanel>
+        <ScrollView>
+            <ScrollingAnimation From="0" To="150">
+                <Scale Target="facePicture" Factor=".6" Easing="QuadraticInOut" />
+                <Move Target="facePicture" RelativeTo="Size" Y="-0.8" Easing="QuadraticIn"/>
+            </ScrollingAnimation>
+            <ScrollingAnimation From="125" To="0">
+                <Set headerPanel.LayoutElement="overBackgroundLayout"/>
+            </ScrollingAnimation>
+            <ScrollingAnimation From="125" To="170">
+                <Set headerPanel.LayoutElement="underBackgroundLayout"/>
+            </ScrollingAnimation>
+            <ScrollingAnimation From="150" To="1000">
+                <Move Target="facePicture" Y="-850" Easing="Linear" />
+            </ScrollingAnimation>
+
+            <ScrollingAnimation From="0" To="260">
+                <Move Target="backgroundPicture" RelativeTo="Size" Y="-0.7" Easing="QuadraticOut"/>
+                <Move Target="textPanel" RelativeTo="ParentSize" Y="-0.35" Easing="QuadraticOut"/>
+                <Move Target="bottomText" RelativeTo="ParentSize" Y="-0.3" Easing="QuadraticOut" />
+                <Change bottomText.Opacity="0" Easing="QuadraticOut"/>
+            </ScrollingAnimation>
+            <ScrollingAnimation From="50" To="250">
+                <Change statusBarConfig.Style="Light" />
+            </ScrollingAnimation>
+            <ScrollingAnimation From="0" To="-1000">
+                <Scale Target="backgroundPicture" Factor="4" />
+                <Move Target="facePicture" Y="800"/>
+            </ScrollingAnimation>
+
+            <StackPanel Padding="0,370,0,0">
+                <Text ux:Class="BodyText" Color="#355566" TextWrapping="Wrap" />
+                <Text Alignment="Center">Edit Picture</Text>
+
+                <Rectangle Height="2" Margin="50,0" Color="#E1E1E1"/>
+
+                <BodyText FontSize="16" Margin="50,40,50,0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus faucibus libero eu nisi mollis, ac consequat augue finibus. Vivamus pulvinar ut tortor eu ultricies. Aliquam consectetur quam sed dapibus eleifend. Vestibulum consequat lorem iaculis efficitur dignissim. Mauris sagittis aliquam varius. In venenatis neque nec mauris egestas aliquet. Integer posuere condimentum ante quis pharetra. Donec non ipsum sed nisl sollicitudin pharetra vel a nisl. Vestibulum consequat, odio id faucibus rutrum, tortor mauris elementum dui, eget ornare urna ligula nec metus.
+                </BodyText>
+            </StackPanel>
+        </ScrollView>
+    </Panel>
+    <iOS.StatusBarConfig ux:Name="statusBarConfig" Style="Dark"/>
+    <StatusBarBackground Dock="Top" />
+</Page>

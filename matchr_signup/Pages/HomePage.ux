@@ -1,0 +1,17 @@
+<Page ux:Class="HomePage">
+    <Router ux:Dependency="router" />
+
+    <JavaScript File="HomePage.js" />
+
+    <ScrollView>
+        <StackPanel Alignment="VerticalCenter">
+            <Text Alignment="Center" Padding="10" Value=" matchr" FontSize="60"/>
+            <NativeViewHost>
+    			<Button Padding="15" Alignment="VerticalCenter" Text="Sign Up" Clicked="{gotosignup}"/>
+    		</NativeViewHost>
+    		<NativeViewHost>
+    			<Button Padding="15" Alignment="VerticalCenter" Text="Sign In" Clicked="{gotosignin}"/>
+    		</NativeViewHost>
+        </StackPanel>
+    </ScrollView>
+</Page>
