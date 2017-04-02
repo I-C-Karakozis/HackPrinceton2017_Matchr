@@ -3,12 +3,12 @@
 	<JavaScript File="NavBar.js"/>
 	<JavaScript File="SelectPage.js"/>
 
-	<Button Text="Match" Clicked="{goToSelect}"/>
-	<Button Text="Matches" Clicked="{goToMatchList}"/>
-	<Button Text="Message" Clicked="{goToMessages}"/>
-	<Button Text="Profile" Clicked="{goToProfile}"/>
-
 	<StackPanel>
+		<Button Text="Match" Clicked="{goToSelect}"/>
+		<Button Text="Matches" Clicked="{goToMatchList}"/>
+		<Button Text="Message" Clicked="{goToMessages}"/>
+		<Button Text="Profile" Clicked="{goToProfile}"/>
+
 		<Text>Friend 1:</Text>
 		<Text Value="{friend1.firstName} {friend1.lastName}"/>
 		<Button Text="Next" Clicked="{nextFriend(friend1)}"/>

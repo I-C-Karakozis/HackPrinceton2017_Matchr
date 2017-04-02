@@ -3,8 +3,10 @@
 	<JavaScript File="NavBar.js"/>
 	<JavaScript File="ProfilePage.js"/>
 
-	<Button Text="Match" Clicked="{goToSelect}"/>
-	<Button Text="Matches" Clicked="{goToMatchList}"/>
-	<Button Text="Message" Clicked="{goToMessages}"/>
-	<Button Text="Profile" Clicked="{goToProfile}"/>
+	<StackPanel>
+		<Button Text="Match" Clicked="{goToSelect}"/>
+		<Button Text="Matches" Clicked="{goToMatchList}"/>
+		<Button Text="Message" Clicked="{goToMessages}"/>
+		<Button Text="Profile" Clicked="{goToProfile}"/>
+	</StackPanel>
 </Page>

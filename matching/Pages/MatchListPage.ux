@@ -3,13 +3,13 @@
 	<JavaScript File="NavBar.js"/>
 	<JavaScript File="MatchListPage.js"/>
 
-	<Button Text="Match" Clicked="{goToSelect}"/>
-	<Button Text="Matches" Clicked="{goToMatchList}"/>
-	<Button Text="Message" Clicked="{goToMessages}"/>
-	<Button Text="Profile" Clicked="{goToProfile}"/>
-
 	<ScrollView>
 		<StackPanel>
+			<Button Text="Match" Clicked="{goToSelect}"/>
+			<Button Text="Matches" Clicked="{goToMatchList}"/>
+			<Button Text="Message" Clicked="{goToMessages}"/>
+			<Button Text="Profile" Clicked="{goToProfile}"/>
+
 			<Each Items="{userMatches}">
 				<Button Text="{friend2.firstName} {friend2.lastName}"/>
 				<Text>Recommended by</Text>

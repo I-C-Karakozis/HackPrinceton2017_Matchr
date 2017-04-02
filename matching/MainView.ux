@@ -4,8 +4,8 @@
 	<ClientPanel>
 		<Navigator DefaultPath="select">
 			<SelectPage ux:Template="select" router="router"/>
-			<MatchPage ux:Template="match" router="router"/>
 			<MatchListPage ux:Template="matchList" router="router"/>
+			<MessagesPage ux:Template="messages" router="router"/>
 			<ProfilePage ux:Template="profile" router="router"/>
 		</Navigator>
 	</ClientPanel>

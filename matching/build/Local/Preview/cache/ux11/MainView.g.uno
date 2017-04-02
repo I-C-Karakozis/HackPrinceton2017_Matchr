@@ -27,7 +27,7 @@ public partial class MainView: Fuse.App
     {
         [Uno.WeakReference] internal readonly MainView __parent;
         [Uno.WeakReference] internal readonly MainView __parentInstance;
-        public Template1(MainView parent, MainView parentInstance): base("match", false)
+        public Template1(MainView parent, MainView parentInstance): base("matchList", false)
         {
             __parent = parent;
             __parentInstance = parentInstance;
@@ -37,18 +37,18 @@ public partial class MainView: Fuse.App
         }
         public override object New()
         {
-            var self = new MatchPage(__parent.router);
+            var self = new MatchListPage(__parent.router);
             self.Name = __selector0;
             return self;
         }
-        static global::Uno.UX.Selector __selector0 = "match";
+        static global::Uno.UX.Selector __selector0 = "matchList";
     }
     [Uno.Compiler.UxGenerated]
     public partial class Template2: Uno.UX.Template
     {
         [Uno.WeakReference] internal readonly MainView __parent;
         [Uno.WeakReference] internal readonly MainView __parentInstance;
-        public Template2(MainView parent, MainView parentInstance): base("matchList", false)
+        public Template2(MainView parent, MainView parentInstance): base("messages", false)
         {
             __parent = parent;
             __parentInstance = parentInstance;
@@ -58,11 +58,11 @@ public partial class MainView: Fuse.App
         }
         public override object New()
         {
-            var self = new MatchListPage(__parent.router);
+            var self = new MessagesPage(__parent.router);
             self.Name = __selector0;
             return self;
         }
-        static global::Uno.UX.Selector __selector0 = "matchList";
+        static global::Uno.UX.Selector __selector0 = "messages";
     }
     [Uno.Compiler.UxGenerated]
     public partial class Template3: Uno.UX.Template
@@ -212,15 +212,15 @@ public partial class MainView: Fuse.App
         var temp16 = new Fuse.Controls.ClientPanel();
         var temp17 = new Fuse.Controls.Navigator();
         var select = new Template(this, this);
-        var match = new Template1(this, this);
-        var matchList = new Template2(this, this);
+        var matchList = new Template1(this, this);
+        var messages = new Template2(this, this);
         var profile = new Template3(this, this);
         router.Name = __selector0;
         temp16.Children.Add(temp17);
         temp17.DefaultPath = "select";
         temp17.Templates.Add(select);
-        temp17.Templates.Add(match);
         temp17.Templates.Add(matchList);
+        temp17.Templates.Add(messages);
         temp17.Templates.Add(profile);
         this.Children.Add(router);
         this.Children.Add(temp16);
