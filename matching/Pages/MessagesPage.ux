@@ -1,0 +1,12 @@
+<Page ux:Class="MessagesPage">
+	<Router ux:Dependency="router"/>
+	<JavaScript File="NavBar.js"/>
+	<JavaScript File="MessagesPage.js"/>
+
+	<StackPanel>
+		<Button Text="Match" Clicked="{goToSelect}"/>
+		<Button Text="Matches" Clicked="{goToMatchList}"/>
+		<Button Text="Message" Clicked="{goToMessages}"/>
+		<Button Text="Profile" Clicked="{goToProfile}"/>
+	</StackPanel>
+</Page>

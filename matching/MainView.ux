@@ -1,0 +1,12 @@
+<App>
+	<Router ux:Name="router"/>
+
+	<ClientPanel>
+		<Navigator DefaultPath="select">
+			<SelectPage ux:Template="select" router="router"/>
+			<MatchListPage ux:Template="matchList" router="router"/>
+			<MessagesPage ux:Template="messages" router="router"/>
+			<ProfilePage ux:Template="profile" router="router"/>
+		</Navigator>
+	</ClientPanel>
+</App>
